@@ -1,0 +1,3392 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, width=device-width">
+
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap" />
+    <style>
+        * {
+            margin: 0%;
+            padding: 0%;
+        }
+
+        button {
+            background: none;
+            /* Remove default button background */
+            border: none;
+            /* Remove default button border */
+            font-size: 16px;
+            color: #333;
+            /* Adjust text color */
+            cursor: pointer;
+            padding: 10px 20px;
+            /* Add spacing */
+            text-align: center;
+            border-radius: 5px;
+            /* Optional: add rounded corners */
+            transition: background-color 0.3s, color 0.3s;
+            /* Add hover effect */
+        }
+
+        button:hover {
+            background-color: #f0f0f0;
+            /* Change background on hover */
+            color: #000;
+            /* Change text color on hover */
+        }
+
+        button:focus {
+            outline: none;
+            /* Remove focus outline */
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+            /* Optional: add focus effect */
+        }
+
+        .image-2-icon {
+            position: absolute;
+            top: calc(50% - 40px);
+            left: 300px;
+            width: 125.3px;
+            height: 80px;
+            object-fit: cover;
+        }
+
+        .home {
+            position: absolute;
+            top: calc(50% - 12px);
+            left: 0px;
+            text-decoration: underline;
+            font-weight: 500;
+            background: linear-gradient(178.73deg, #8e8e8e, #00008b 27.52%, #9e3623 75.99%, #c0c0c0);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .about-us {
+            position: absolute;
+            top: calc(50% - 12px);
+            left: 113px;
+            font-weight: 500;
+        }
+
+        .aga-ai {
+            position: absolute;
+            top: calc(50% - 12px);
+            left: 258px;
+            font-weight: 500;
+        }
+
+        .smart-investment {
+            position: absolute;
+            top: calc(50% - 12px);
+            left: 381px;
+            font-weight: 500;
+        }
+
+        .contact-us {
+            position: absolute;
+            top: calc(50% - 12px);
+            left: 607px;
+            font-weight: 500;
+        }
+
+        .home-parent {
+            position: absolute;
+            top: calc(50% - 12px);
+            left: 562px;
+            width: 715px;
+            height: 24px;
+        }
+
+        .group-childs {
+            position: absolute;
+            height: 83.33%;
+            width: 16.81%;
+            top: 8.33%;
+            right: 83.19%;
+            bottom: 8.33%;
+            left: 0%;
+            max-width: 100%;
+            max-height: 100%;
+        }
+
+        .lets-talk {
+            position: absolute;
+            top: calc(50% - 12px);
+            left: 34px;
+            font-weight: 500;
+        }
+
+        .group-parents {
+            position: absolute;
+            height: 42.86%;
+            width: 74.84%;
+            top: 28.57%;
+            right: 2.58%;
+            bottom: 28.57%;
+            left: 2.58%;
+        }
+
+        .cta-1 {
+            position: absolute;
+            top: calc(50% - 28px);
+            left: 1381px;
+            box-shadow: 0px 4px 54px 14px rgba(209, 209, 209, 0.2);
+            border-radius: 12px;
+            background: linear-gradient(178.73deg, #8e8e8e, #00008b 27.52%, #9e3623 75.99%, #c0c0c0);
+            width: 159px;
+            height: 56px;
+            color: #fff;
+        }
+
+        .image-2-parent {
+            width: 100%;
+            position: relative;
+            height: 120px;
+            overflow: hidden;
+            text-align: left;
+            font-size: 20px;
+            color: #222;
+            font-family: Inter;
+        }
+
+        .after {
+            position: absolute;
+            bottom: 0px;
+            left: 421px;
+            filter: blur(66px);
+            border-radius: 360px;
+            background-color: rgba(20, 29, 74, 0.55);
+            width: 550px;
+            height: 170px;
+        }
+
+        .subscribe-to-the {
+            position: absolute;
+            top: 40px;
+            left: calc(50% - 291px);
+            font-family: Montserrat;
+        }
+
+        .well-keep-you {
+            margin: 0;
+        }
+
+        .well-keep-you-container1 {
+            width: 100%;
+        }
+
+        .well-keep-you-container {
+            position: absolute;
+            top: 100.5px;
+            left: calc(50% - 231.11px);
+            font-size: 14px;
+            line-height: 21px;
+            color: #a1a1b2;
+            display: flex;
+            align-items: center;
+            width: 462.8px;
+            height: 42px;
+        }
+
+        .email {
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            display: flex;
+            align-items: center;
+            width: 37.4px;
+            height: 18px;
+        }
+
+        .divplaceholder {
+            position: absolute;
+            width: calc(100% - 26px);
+            top: 9px;
+            right: 13px;
+            left: 13px;
+            height: 18px;
+            overflow: hidden;
+        }
+
+        .form-input {
+            position: absolute;
+            top: 161px;
+            left: 513px;
+            border-radius: 8px;
+            background-color: #171726;
+            border: 1px solid #36364d;
+            box-sizing: border-box;
+            width: 250px;
+            height: 36px;
+            text-align: left;
+            font-size: 15px;
+            color: #757575;
+        }
+
+        .subscribe {
+            position: absolute;
+            top: 10px;
+            left: 18px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 59.3px;
+            height: 15px;
+        }
+
+        .form-button {
+            position: absolute;
+            height: calc(100% - 240px);
+            top: 162px;
+            bottom: 78px;
+            left: 782.97px;
+            border-radius: 8px;
+            background: linear-gradient(178.73deg, #8e8e8e, #00008b 27.52%, #9e3623 75.99%, #c0c0c0);
+            width: 94.9px;
+            font-size: 13.3px;
+        }
+
+        .form-label {
+            position: absolute;
+            top: 219px;
+            left: 513px;
+            border-radius: 3px;
+            background-color: #171726;
+            border: 1px solid #36364d;
+            box-sizing: border-box;
+            width: 18px;
+            height: 18px;
+        }
+
+        .public-offer {
+            color: #ddb18b;
+        }
+
+        .form-label-container {
+            position: absolute;
+            top: 221px;
+            left: 539px;
+            font-size: 12px;
+            text-align: left;
+            display: flex;
+            align-items: center;
+            width: 332.8px;
+            height: 14px;
+            color: #a1a1b2;
+        }
+
+        .divsubscribe {
+            position: absolute;
+            top: 3226px;
+            left: calc(50% - 696px);
+            border-radius: 12px;
+            background-color: #05050d;
+            width: 1392px;
+            height: 275px;
+            overflow: hidden;
+            text-align: center;
+            font-size: 32px;
+            color: #fff;
+        }
+
+        .div {
+            position: absolute;
+            top: 7.45px;
+            left: 11.23px;
+            display: flex;
+            align-items: center;
+            width: 7.7px;
+            height: 14.9px;
+        }
+
+        .spanpage-numbers {
+            position: absolute;
+            top: 0px;
+            left: calc(50% - 71.7px);
+            border-radius: 3.73px;
+            background-color: #303f60;
+            width: 29.8px;
+            height: 29.8px;
+            color: #fff;
+        }
+
+        .link-2 {
+            position: absolute;
+            top: 7.45px;
+            left: 41.04px;
+            display: flex;
+            align-items: center;
+            width: 7.7px;
+            height: 14.9px;
+        }
+
+        .div1 {
+            position: absolute;
+            top: 7.45px;
+            left: 70.14px;
+            display: flex;
+            align-items: center;
+            width: 9px;
+            height: 14.9px;
+        }
+
+        .link-5 {
+            position: absolute;
+            top: 7.45px;
+            left: 100.64px;
+            display: flex;
+            align-items: center;
+            width: 7.7px;
+            height: 14.9px;
+        }
+
+        .link-svg {
+            position: absolute;
+            top: calc(50% - 9.31px);
+            left: calc(50% + 53.1px);
+            width: 18.6px;
+            height: 18.6px;
+            overflow: hidden;
+        }
+
+        .spanpage-numbers-parent {
+            position: absolute;
+            top: 0px;
+            left: calc(50% + 195px);
+            width: 143.4px;
+            height: 29.8px;
+        }
+
+        .heading-3 {
+            position: absolute;
+            top: 1px;
+            left: 1px;
+            line-height: 24px;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            width: 231px;
+            height: 24px;
+        }
+
+        .a-broker-dedicated {
+            position: absolute;
+            top: 35.5px;
+            left: 1px;
+            font-size: 16px;
+            line-height: 22px;
+            color: rgba(34, 34, 34, 0.6);
+            display: flex;
+            align-items: center;
+            width: 692.7px;
+            height: 110px;
+        }
+
+        .divseotext-wrap {
+            position: absolute;
+            width: 100%;
+            top: 0px;
+            right: 0px;
+            left: 0px;
+            height: 170px;
+            overflow: hidden;
+        }
+
+        .show-more {
+            position: absolute;
+            top: 8px;
+            left: calc(50% - 40.16px);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 80.6px;
+            height: 19px;
+        }
+
+        .link {
+            position: absolute;
+            top: 192px;
+            left: calc(50% - 351px);
+            border-radius: 8px;
+            background-color: #36364d;
+            width: 132px;
+            height: 35px;
+            text-align: center;
+            font-size: 16px;
+            color: #fff;
+        }
+
+        .divseotext-wrap-parent {
+            position: absolute;
+            width: 100%;
+            top: 74.99px;
+            right: 0px;
+            left: 0px;
+            height: 227px;
+            font-size: 20px;
+        }
+
+        .group-parent {
+            position: absolute;
+            top: 2849.03px;
+            left: calc(50% - 618px);
+            width: 702px;
+            height: 302px;
+            font-size: 13.04px;
+        }
+
+        .section-icon {
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            width: 22.4px;
+            height: 22.4px;
+        }
+
+        .section-recommended {
+            position: absolute;
+            top: 0px;
+            left: 29.81px;
+            line-height: 22.35px;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            width: 126.3px;
+            height: 22.4px;
+        }
+
+        .section-parent {
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            width: 156.1px;
+            height: 22.4px;
+        }
+
+        .section-link {
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            line-height: 16.76px;
+            display: flex;
+            align-items: center;
+            width: 64px;
+            height: 16.8px;
+        }
+
+        .section {
+            position: absolute;
+            top: calc(50% - 1.88px);
+            left: 70.24px;
+            border-radius: 9.31px;
+            background-color: rgba(34, 34, 34, 0.6);
+            width: 3.7px;
+            height: 3.7px;
+        }
+
+        .section-dec {
+            position: absolute;
+            top: 0px;
+            left: 80.49px;
+            line-height: 16.76px;
+            display: flex;
+            align-items: center;
+            width: 34.7px;
+            height: 16.8px;
+        }
+
+        .section-link1 {
+            position: absolute;
+            top: calc(50% - 1.88px);
+            left: 121.44px;
+            border-radius: 9.31px;
+            background-color: rgba(34, 34, 34, 0.6);
+            width: 3.7px;
+            height: 3.7px;
+        }
+
+        .section-link2 {
+            position: absolute;
+            top: 0px;
+            left: 131.69px;
+            line-height: 16.76px;
+            display: flex;
+            align-items: center;
+            width: 74.5px;
+            height: 16.8px;
+        }
+
+        .section-link-our-platform-parent {
+            position: absolute;
+            top: 193.73px;
+            left: 0px;
+            width: 206.2px;
+            height: 16.8px;
+        }
+
+        .section-link3 {
+            position: absolute;
+            top: 225.29px;
+            left: 0px;
+            font-size: 15px;
+            line-height: 22.35px;
+            font-weight: 500;
+            color: #222;
+            display: flex;
+            align-items: center;
+            width: 257px;
+            height: 44px;
+        }
+
+        .section-link-container {
+            position: absolute;
+            top: 280.81px;
+            left: 0px;
+            font-size: 13.04px;
+            line-height: 19.56px;
+            display: flex;
+            align-items: center;
+            width: 237.5px;
+            height: 117.4px;
+        }
+
+        .section-link-child {
+            position: absolute;
+            height: calc(100% - 0.1px);
+            width: calc(100% - 0.3px);
+            top: 0.29px;
+            right: 0.27px;
+            bottom: -0.19px;
+            left: 0.03px;
+            border-radius: 6px;
+            max-width: 100%;
+            overflow: hidden;
+            max-height: 100%;
+            object-fit: cover;
+        }
+
+        .min-read {
+            position: absolute;
+            top: 3.73px;
+            left: 7.45px;
+            line-height: 16.76px;
+            display: flex;
+            align-items: center;
+            width: 52.8px;
+            height: 16.8px;
+        }
+
+        .divread {
+            position: absolute;
+            right: 7.39px;
+            bottom: 7.47px;
+            border-radius: 3.73px;
+            background-color: #fff;
+            width: 67.4px;
+            height: 24.2px;
+        }
+
+        .section-link4 {
+            position: absolute;
+            width: calc(100% - 3.7px);
+            top: 0px;
+            right: 3.7px;
+            left: 0px;
+            border-radius: 7.45px;
+            height: 175.1px;
+            overflow: hidden;
+            color: #000;
+        }
+
+        .group-parent1 {
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            width: 257px;
+            height: 398.2px;
+        }
+
+        .section-link-container2 {
+            position: absolute;
+            top: 225.29px;
+            left: 0px;
+            font-size: 14.9px;
+            line-height: 22.35px;
+            font-weight: 500;
+            color: #222;
+            display: flex;
+            align-items: center;
+            width: 238.8px;
+            height: 44.7px;
+        }
+
+        .section-link-container4 {
+            position: absolute;
+            top: 280.81px;
+            left: 0px;
+            font-size: 13.04px;
+            line-height: 19.56px;
+            display: flex;
+            align-items: center;
+            width: 248.3px;
+            height: 136.9px;
+        }
+
+        .section-link-item {
+            position: absolute;
+            height: calc(100% - 0.1px);
+            width: calc(100% - 0.3px);
+            top: 0.29px;
+            right: 0.51px;
+            bottom: -0.19px;
+            left: -0.21px;
+            border-radius: 6px;
+            max-width: 100%;
+            overflow: hidden;
+            max-height: 100%;
+            object-fit: cover;
+        }
+
+        .section-link8 {
+            position: absolute;
+            width: 100%;
+            top: 0px;
+            right: 0px;
+            left: 0px;
+            border-radius: 7.45px;
+            height: 175.1px;
+            overflow: hidden;
+            color: #000;
+        }
+
+        .group-parent2 {
+            position: absolute;
+            top: 0px;
+            left: 330px;
+            width: 253.3px;
+            height: 417.7px;
+        }
+
+        .section2 {
+            position: absolute;
+            top: calc(50% - 1.88px);
+            left: 70.25px;
+            border-radius: 9.31px;
+            background-color: rgba(34, 34, 34, 0.6);
+            width: 3.7px;
+            height: 3.7px;
+        }
+
+        .section-link10 {
+            position: absolute;
+            top: calc(50% - 1.88px);
+            left: 121.45px;
+            border-radius: 9.31px;
+            background-color: rgba(34, 34, 34, 0.6);
+            width: 3.7px;
+            height: 3.7px;
+        }
+
+        .section-link12 {
+            position: absolute;
+            top: 225.29px;
+            left: 0px;
+            font-size: 14.9px;
+            line-height: 22.35px;
+            font-weight: 500;
+            color: #222;
+        }
+
+        .section-link-container6 {
+            position: absolute;
+            top: 258.46px;
+            left: 0px;
+            font-size: 13.04px;
+            line-height: 19.56px;
+            display: flex;
+            align-items: center;
+            width: 252.1px;
+            height: 117.4px;
+        }
+
+        .section-link-inner {
+            position: absolute;
+            height: calc(100% - 0.1px);
+            width: calc(100% - 0.3px);
+            top: 0.29px;
+            right: -0.25px;
+            bottom: -0.19px;
+            left: 0.55px;
+            border-radius: 6px;
+            max-width: 100%;
+            overflow: hidden;
+            max-height: 100%;
+            object-fit: cover;
+        }
+
+        .min-read2 {
+            position: absolute;
+            top: 3.73px;
+            left: 7.45px;
+            line-height: 16.76px;
+            display: flex;
+            align-items: center;
+            width: 59.1px;
+            height: 16.8px;
+        }
+
+        .divread2 {
+            position: absolute;
+            right: 7.37px;
+            bottom: 7.47px;
+            border-radius: 3.73px;
+            background-color: #fff;
+            width: 73.7px;
+            height: 24.2px;
+        }
+
+        .group-parent3 {
+            position: absolute;
+            top: 0px;
+            left: 656.34px;
+            width: 253.3px;
+            height: 375.8px;
+        }
+
+        .section-link-container9 {
+            position: absolute;
+            top: 280.81px;
+            left: 0px;
+            font-size: 13.04px;
+            line-height: 19.56px;
+            display: flex;
+            align-items: center;
+            width: 253.3px;
+            height: 117.4px;
+        }
+
+        .rectangle-icon {
+            position: absolute;
+            height: calc(100% - 0.1px);
+            width: calc(100% - 0.3px);
+            top: 0.29px;
+            right: -0.01px;
+            bottom: -0.19px;
+            left: 0.31px;
+            border-radius: 6px;
+            max-width: 100%;
+            overflow: hidden;
+            max-height: 100%;
+            object-fit: cover;
+        }
+
+        .group-parent4 {
+            position: absolute;
+            top: 0px;
+            left: 982.67px;
+            width: 253.3px;
+            height: 398.2px;
+        }
+
+        .group-div {
+            position: absolute;
+            top: 45px;
+            left: 0px;
+            width: 1236px;
+            height: 417.7px;
+            font-size: 11.18px;
+            color: rgba(34, 34, 34, 0.6);
+        }
+
+        .group-container {
+            position: absolute;
+            top: 851px;
+            left: 302px;
+            width: 1236px;
+            height: 462.7px;
+        }
+
+        .all-articles {
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            line-height: 22.35px;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            width: 92.7px;
+            height: 22.4px;
+        }
+
+        .link-technical {
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            line-height: 16.76px;
+            display: flex;
+            align-items: center;
+            width: 92.5px;
+            height: 16.8px;
+        }
+
+        .before {
+            position: absolute;
+            top: calc(50% - 1.88px);
+            left: 98.64px;
+            border-radius: 9.31px;
+            background-color: rgba(34, 34, 34, 0.6);
+            width: 3.7px;
+            height: 3.7px;
+        }
+
+        .mar-24 {
+            position: absolute;
+            top: 0px;
+            left: 108.89px;
+            line-height: 16.76px;
+            display: flex;
+            align-items: center;
+            width: 35.2px;
+            height: 16.8px;
+        }
+
+        .link1 {
+            position: absolute;
+            top: calc(50% - 1.88px);
+            left: 150.34px;
+            border-radius: 9.31px;
+            background-color: rgba(34, 34, 34, 0.6);
+            width: 3.7px;
+            height: 3.7px;
+        }
+
+        .link-mike {
+            position: absolute;
+            top: 0px;
+            left: 160.59px;
+            line-height: 16.76px;
+            display: flex;
+            align-items: center;
+            width: 74.5px;
+            height: 16.8px;
+        }
+
+        .link-technical-analysis-parent {
+            position: absolute;
+            top: 193.73px;
+            left: 0px;
+            width: 235.1px;
+            height: 16.8px;
+        }
+
+        .link-flag-container {
+            position: absolute;
+            top: 224.93px;
+            left: 0px;
+            font-size: 14.9px;
+            line-height: 22.35px;
+            font-weight: 500;
+            color: #222;
+            display: flex;
+            align-items: center;
+            width: 239.2px;
+            height: 44.7px;
+        }
+
+        .link-kickstart-container {
+            position: absolute;
+            top: 280.81px;
+            left: 0px;
+            font-size: 13.04px;
+            line-height: 19.56px;
+            display: flex;
+            align-items: center;
+            width: 248px;
+            height: 136.9px;
+        }
+
+        .link-child {
+            position: absolute;
+            height: calc(100% - 0.1px);
+            width: calc(100% - 0.3px);
+            top: -0.11px;
+            right: 0.27px;
+            bottom: 0.21px;
+            left: 0.03px;
+            border-radius: 6px;
+            max-width: 100%;
+            overflow: hidden;
+            max-height: 100%;
+            object-fit: cover;
+        }
+
+        .group-parent7 {
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            width: 253.3px;
+            height: 417.7px;
+        }
+
+        .link-hammer-container {
+            position: absolute;
+            top: 224.93px;
+            left: 0px;
+            font-size: 14.9px;
+            line-height: 22.35px;
+            font-weight: 500;
+            color: #222;
+            display: flex;
+            align-items: center;
+            width: 207px;
+            height: 67.1px;
+        }
+
+        .link-master-container {
+            position: absolute;
+            top: 303.16px;
+            left: 0px;
+            font-size: 13.04px;
+            line-height: 19.56px;
+            display: flex;
+            align-items: center;
+            width: 252.1px;
+            height: 97.8px;
+        }
+
+        .link-item {
+            position: absolute;
+            height: calc(100% - 0.1px);
+            width: calc(100% - 0.3px);
+            top: -0.11px;
+            right: 0.51px;
+            bottom: 0.21px;
+            left: -0.21px;
+            border-radius: 6px;
+            max-width: 100%;
+            overflow: hidden;
+            max-height: 100%;
+            object-fit: cover;
+        }
+
+        .group-parent8 {
+            position: absolute;
+            top: 0px;
+            left: 326px;
+            width: 253.3px;
+            height: 401px;
+        }
+
+        .link-market {
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            line-height: 16.76px;
+            display: flex;
+            align-items: center;
+            width: 73px;
+            height: 16.8px;
+        }
+
+        .before2 {
+            position: absolute;
+            top: calc(50% - 1.88px);
+            left: 79.21px;
+            border-radius: 9.31px;
+            background-color: rgba(34, 34, 34, 0.6);
+            width: 3.7px;
+            height: 3.7px;
+        }
+
+        .mar-242 {
+            position: absolute;
+            top: 0px;
+            left: 89.46px;
+            line-height: 16.76px;
+            display: flex;
+            align-items: center;
+            width: 35.2px;
+            height: 16.8px;
+        }
+
+        .link5 {
+            position: absolute;
+            top: calc(50% - 1.88px);
+            left: 130.91px;
+            border-radius: 9.31px;
+            background-color: rgba(34, 34, 34, 0.6);
+            width: 3.7px;
+            height: 3.7px;
+        }
+
+        .link-ruth {
+            position: absolute;
+            top: 0px;
+            left: 141.16px;
+            line-height: 16.76px;
+            display: flex;
+            align-items: center;
+            width: 79.8px;
+            height: 16.8px;
+        }
+
+        .link-market-review-parent {
+            position: absolute;
+            top: 193.73px;
+            left: 0px;
+            width: 220.9px;
+            height: 16.8px;
+        }
+
+        .link-the-container {
+            position: absolute;
+            top: 224.93px;
+            left: 0px;
+            font-size: 14.9px;
+            line-height: 22.35px;
+            font-weight: 500;
+            color: #222;
+            display: flex;
+            align-items: center;
+            width: 247.5px;
+            height: 44.7px;
+        }
+
+        .link-delve-container {
+            position: absolute;
+            top: 280.81px;
+            left: 0px;
+            font-size: 13.04px;
+            line-height: 19.56px;
+            display: flex;
+            align-items: center;
+            width: 248.1px;
+            height: 117.4px;
+        }
+
+        .link-inner {
+            position: absolute;
+            height: calc(100% - 0.1px);
+            width: calc(100% - 0.3px);
+            top: -0.11px;
+            right: -0.25px;
+            bottom: 0.21px;
+            left: 0.55px;
+            border-radius: 6px;
+            max-width: 100%;
+            overflow: hidden;
+            max-height: 100%;
+            object-fit: cover;
+        }
+
+        .group-parent9 {
+            position: absolute;
+            top: 0px;
+            left: 652px;
+            width: 253.3px;
+            height: 398.2px;
+        }
+
+        .link-indicators {
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            line-height: 16.76px;
+            display: flex;
+            align-items: center;
+            width: 50px;
+            height: 16.8px;
+        }
+
+        .before3 {
+            position: absolute;
+            top: calc(50% - 1.88px);
+            left: 56.14px;
+            border-radius: 9.31px;
+            background-color: #737380;
+            width: 3.7px;
+            height: 3.7px;
+        }
+
+        .mar-243 {
+            position: absolute;
+            top: 0px;
+            left: 66.39px;
+            line-height: 16.76px;
+            display: flex;
+            align-items: center;
+            width: 35.2px;
+            height: 16.8px;
+        }
+
+        .link7 {
+            position: absolute;
+            top: calc(50% - 1.88px);
+            left: 107.86px;
+            border-radius: 9.31px;
+            background-color: #737380;
+            width: 3.7px;
+            height: 3.7px;
+        }
+
+        .link-mike2 {
+            position: absolute;
+            top: 0px;
+            left: 118.1px;
+            line-height: 16.76px;
+            display: flex;
+            align-items: center;
+            width: 74.5px;
+            height: 16.8px;
+        }
+
+        .link-indicators-parent {
+            position: absolute;
+            top: 193.73px;
+            left: 0px;
+            width: 192.6px;
+            height: 16.8px;
+        }
+
+        .link-aroon-container {
+            position: absolute;
+            top: 224.93px;
+            left: 0px;
+            font-size: 14.9px;
+            line-height: 22.35px;
+            font-weight: 500;
+            color: #222;
+            display: flex;
+            align-items: center;
+            width: 228.9px;
+            height: 44.7px;
+        }
+
+        .link-explore-container {
+            position: absolute;
+            top: 280.81px;
+            left: 0px;
+            font-size: 13.04px;
+            line-height: 19.56px;
+            color: rgba(34, 34, 34, 0.6);
+            display: flex;
+            align-items: center;
+            width: 249.6px;
+            height: 156.5px;
+        }
+
+        .link-child1 {
+            position: absolute;
+            height: calc(100% - 0.1px);
+            width: calc(100% - 0.3px);
+            top: -0.11px;
+            right: -0.01px;
+            bottom: 0.21px;
+            left: 0.31px;
+            border-radius: 6px;
+            max-width: 100%;
+            overflow: hidden;
+            max-height: 100%;
+            object-fit: cover;
+        }
+
+        .group-parent10 {
+            position: absolute;
+            top: 0px;
+            left: 978px;
+            width: 253.3px;
+            height: 437.3px;
+            color: #737380;
+        }
+
+        .group-parent6 {
+            position: absolute;
+            top: 54.35px;
+            left: 0px;
+            width: 1231.3px;
+            height: 437.3px;
+            font-size: 11.18px;
+            color: rgba(34, 34, 34, 0.6);
+        }
+
+        .all-articles-parent {
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            width: 1231.3px;
+            height: 491.6px;
+        }
+
+        .before4 {
+            position: absolute;
+            top: calc(50% - 1.88px);
+            left: 79.22px;
+            border-radius: 9.31px;
+            background-color: rgba(34, 34, 34, 0.6);
+            width: 3.7px;
+            height: 3.7px;
+        }
+
+        .link9 {
+            position: absolute;
+            top: calc(50% - 1.88px);
+            left: 130.92px;
+            border-radius: 9.31px;
+            background-color: rgba(34, 34, 34, 0.6);
+            width: 3.7px;
+            height: 3.7px;
+        }
+
+        .link-us-container {
+            position: absolute;
+            top: 224.93px;
+            left: 0px;
+            font-size: 14.9px;
+            line-height: 22.35px;
+            font-weight: 500;
+            color: #222;
+            display: flex;
+            align-items: center;
+            width: 245.4px;
+            height: 67.1px;
+        }
+
+        .link-find-container {
+            position: absolute;
+            top: 302.28px;
+            left: 0px;
+            font-size: 13.04px;
+            line-height: 19.56px;
+            display: flex;
+            align-items: center;
+            width: 249.9px;
+            height: 117.4px;
+        }
+
+        .link-child2 {
+            position: absolute;
+            height: calc(100% - 0.1px);
+            width: calc(100% - 0.3px);
+            top: 0.33px;
+            right: 0.27px;
+            bottom: -0.23px;
+            left: 0.03px;
+            border-radius: 6px;
+            max-width: 100%;
+            overflow: hidden;
+            max-height: 100%;
+            object-fit: cover;
+        }
+
+        .group-parent12 {
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            width: 253.3px;
+            height: 419.6px;
+        }
+
+        .link-trading {
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            line-height: 16.76px;
+            display: flex;
+            align-items: center;
+            width: 133.4px;
+            height: 16.8px;
+        }
+
+        .before5 {
+            position: absolute;
+            top: calc(50% - 10.23px);
+            left: 139.59px;
+            border-radius: 9.31px;
+            background-color: rgba(34, 34, 34, 0.6);
+            width: 3.7px;
+            height: 3.7px;
+        }
+
+        .feb-24 {
+            position: absolute;
+            top: 0px;
+            left: 149.84px;
+            line-height: 16.76px;
+            display: flex;
+            align-items: center;
+            width: 33.9px;
+            height: 16.8px;
+        }
+
+        .link11 {
+            position: absolute;
+            top: calc(50% + 6.53px);
+            left: 0px;
+            border-radius: 9.31px;
+            background-color: rgba(34, 34, 34, 0.6);
+            width: 3.7px;
+            height: 3.7px;
+        }
+
+        .link-ivetta {
+            position: absolute;
+            top: 16.76px;
+            left: 10.24px;
+            line-height: 16.76px;
+            display: flex;
+            align-items: center;
+            width: 62.8px;
+            height: 16.8px;
+        }
+
+        .link-trading-psychology-basi-parent {
+            position: absolute;
+            top: 193.73px;
+            left: 0px;
+            width: 183.7px;
+            height: 33.5px;
+        }
+
+        .link-demo {
+            position: absolute;
+            top: 242.16px;
+            left: 0px;
+            font-size: 14.9px;
+            line-height: 22.35px;
+            font-weight: 500;
+            color: #222;
+            display: flex;
+            align-items: center;
+            width: 198.2px;
+            height: 22.4px;
+        }
+
+        .link-discover-container {
+            position: absolute;
+            top: 274.33px;
+            left: 0px;
+            font-size: 13.04px;
+            line-height: 19.56px;
+            display: flex;
+            align-items: center;
+            width: 253.3px;
+            height: 136.9px;
+        }
+
+        .link-child3 {
+            position: absolute;
+            height: calc(100% - 0.1px);
+            width: calc(100% - 0.3px);
+            top: 0.33px;
+            right: 0.51px;
+            bottom: -0.23px;
+            left: -0.21px;
+            border-radius: 6px;
+            max-width: 100%;
+            overflow: hidden;
+            max-height: 100%;
+            object-fit: cover;
+        }
+
+        .group-parent13 {
+            position: absolute;
+            top: 0px;
+            left: 326.34px;
+            width: 253.3px;
+            height: 411.2px;
+        }
+
+        .feb-241 {
+            position: absolute;
+            top: 0px;
+            left: 89.46px;
+            line-height: 16.76px;
+            display: flex;
+            align-items: center;
+            width: 33.9px;
+            height: 16.8px;
+        }
+
+        .link13 {
+            position: absolute;
+            top: calc(50% - 1.88px);
+            left: 129.54px;
+            border-radius: 9.31px;
+            background-color: rgba(34, 34, 34, 0.6);
+            width: 3.7px;
+            height: 3.7px;
+        }
+
+        .link-ruth2 {
+            position: absolute;
+            top: 0px;
+            left: 139.79px;
+            line-height: 16.76px;
+            display: flex;
+            align-items: center;
+            width: 79.8px;
+            height: 16.8px;
+        }
+
+        .link-market-review-container {
+            position: absolute;
+            top: 193.73px;
+            left: 0px;
+            width: 219.6px;
+            height: 16.8px;
+        }
+
+        .link-us-container2 {
+            position: absolute;
+            top: 224.93px;
+            left: 0px;
+            font-size: 14.9px;
+            line-height: 22.35px;
+            font-weight: 500;
+            color: #222;
+            display: flex;
+            align-items: center;
+            width: 221.4px;
+            height: 44.7px;
+        }
+
+        .link-learn-container {
+            position: absolute;
+            top: 280.81px;
+            left: 0px;
+            font-size: 13.04px;
+            line-height: 19.56px;
+            display: flex;
+            align-items: center;
+            width: 251.2px;
+            height: 117.4px;
+        }
+
+        .link-child4 {
+            position: absolute;
+            height: calc(100% - 0.1px);
+            width: calc(100% - 0.3px);
+            top: 0.33px;
+            right: -0.25px;
+            bottom: -0.23px;
+            left: 0.55px;
+            border-radius: 6px;
+            max-width: 100%;
+            overflow: hidden;
+            max-height: 100%;
+            object-fit: cover;
+        }
+
+        .group-parent14 {
+            position: absolute;
+            top: 0px;
+            left: 652.68px;
+            width: 253.3px;
+            height: 398.2px;
+        }
+
+        .before7 {
+            position: absolute;
+            top: calc(50% - 1.88px);
+            left: 56.14px;
+            border-radius: 9.31px;
+            background-color: rgba(34, 34, 34, 0.6);
+            width: 3.7px;
+            height: 3.7px;
+        }
+
+        .feb-242 {
+            position: absolute;
+            top: 0px;
+            left: 66.39px;
+            line-height: 16.76px;
+            display: flex;
+            align-items: center;
+            width: 33.9px;
+            height: 16.8px;
+        }
+
+        .link15 {
+            position: absolute;
+            top: calc(50% - 1.88px);
+            left: 106.48px;
+            border-radius: 9.31px;
+            background-color: rgba(34, 34, 34, 0.6);
+            width: 3.7px;
+            height: 3.7px;
+        }
+
+        .link-mike3 {
+            position: absolute;
+            top: 0px;
+            left: 116.73px;
+            line-height: 16.76px;
+            display: flex;
+            align-items: center;
+            width: 74.5px;
+            height: 16.8px;
+        }
+
+        .link-indicators-group {
+            position: absolute;
+            top: 193.73px;
+            left: 0px;
+            width: 191.3px;
+            height: 16.8px;
+        }
+
+        .link-adx-container {
+            position: absolute;
+            top: 224.93px;
+            left: 0px;
+            font-size: 14.9px;
+            line-height: 22.35px;
+            font-weight: 500;
+            color: #222;
+            display: flex;
+            align-items: center;
+            width: 251.6px;
+            height: 44.7px;
+        }
+
+        .link-explore-container2 {
+            position: absolute;
+            top: 280.81px;
+            left: 0px;
+            font-size: 13.04px;
+            line-height: 19.56px;
+            display: flex;
+            align-items: center;
+            width: 245.2px;
+            height: 156.5px;
+        }
+
+        .link-child5 {
+            position: absolute;
+            height: calc(100% - 0.1px);
+            width: calc(100% - 0.3px);
+            top: 0.33px;
+            right: -0.01px;
+            bottom: -0.23px;
+            left: 0.31px;
+            border-radius: 6px;
+            max-width: 100%;
+            overflow: hidden;
+            max-height: 100%;
+            object-fit: cover;
+        }
+
+        .group-parent15 {
+            position: absolute;
+            top: 0px;
+            left: 979.01px;
+            width: 253.3px;
+            height: 437.3px;
+        }
+
+        .group-parent11 {
+            position: absolute;
+            top: 520.6px;
+            left: 0px;
+            width: 1232.3px;
+            height: 437.3px;
+            font-size: 11.18px;
+            color: rgba(34, 34, 34, 0.6);
+        }
+
+        .group-parent5 {
+            position: absolute;
+            top: 1362px;
+            left: 302px;
+            width: 1232.3px;
+            height: 957.9px;
+            color: #36364d;
+        }
+
+        .link-bullish-container {
+            position: absolute;
+            top: 224.82px;
+            left: 329.24px;
+            line-height: 22.35px;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            width: 252.5px;
+            height: 67.1px;
+        }
+
+        .link-the-container2 {
+            position: absolute;
+            top: 224.93px;
+            left: 0px;
+            font-size: 14.9px;
+            line-height: 22.35px;
+            font-weight: 500;
+            color: #222;
+            display: flex;
+            align-items: center;
+            width: 247.5px;
+            height: 67.1px;
+        }
+
+        .link-discover-container2 {
+            position: absolute;
+            top: 303.17px;
+            left: 0px;
+            font-size: 13.04px;
+            line-height: 19.56px;
+            display: flex;
+            align-items: center;
+            width: 249.8px;
+            height: 117.4px;
+        }
+
+        .link-child6 {
+            position: absolute;
+            height: calc(100% - 0.1px);
+            width: calc(100% - 0.3px);
+            top: -0.22px;
+            right: 0.27px;
+            bottom: 0.32px;
+            left: 0.03px;
+            border-radius: 6px;
+            max-width: 100%;
+            overflow: hidden;
+            max-height: 100%;
+            object-fit: cover;
+        }
+
+        .group-parent17 {
+            position: absolute;
+            top: 0.22px;
+            left: 0px;
+            width: 253.3px;
+            height: 420.5px;
+        }
+
+        .feb-244 {
+            position: absolute;
+            top: 0px;
+            left: 108.89px;
+            line-height: 16.76px;
+            display: flex;
+            align-items: center;
+            width: 33.9px;
+            height: 16.8px;
+        }
+
+        .link19 {
+            position: absolute;
+            top: calc(50% - 1.88px);
+            left: 148.98px;
+            border-radius: 9.31px;
+            background-color: rgba(34, 34, 34, 0.6);
+            width: 3.7px;
+            height: 3.7px;
+        }
+
+        .link-mike4 {
+            position: absolute;
+            top: 0px;
+            left: 159.22px;
+            line-height: 16.76px;
+            display: flex;
+            align-items: center;
+            width: 74.5px;
+            height: 16.8px;
+        }
+
+        .link-technical-analysis-container {
+            position: absolute;
+            top: 193.73px;
+            left: 0px;
+            width: 233.7px;
+            height: 16.8px;
+        }
+
+        .link-explore-container4 {
+            position: absolute;
+            top: 303.17px;
+            left: 0px;
+            font-size: 13.04px;
+            line-height: 19.56px;
+            display: flex;
+            align-items: center;
+            width: 252.3px;
+            height: 117.4px;
+        }
+
+        .link-child7 {
+            position: absolute;
+            height: calc(100% - 0.1px);
+            width: calc(100% - 0.3px);
+            top: -0.22px;
+            right: 0.51px;
+            bottom: 0.32px;
+            left: -0.21px;
+            border-radius: 6px;
+            max-width: 100%;
+            overflow: hidden;
+            max-height: 100%;
+            object-fit: cover;
+        }
+
+        .group-parent18 {
+            position: absolute;
+            top: 0.22px;
+            left: 326.34px;
+            width: 253.3px;
+            height: 420.5px;
+        }
+
+        .link-inflation-container {
+            position: absolute;
+            top: 224.93px;
+            left: 0px;
+            font-size: 14.9px;
+            line-height: 22.35px;
+            font-weight: 500;
+            color: #222;
+            display: flex;
+            align-items: center;
+            width: 210.2px;
+            height: 44.7px;
+        }
+
+        .link-find-container2 {
+            position: absolute;
+            top: 280.81px;
+            left: 0px;
+            font-size: 13.04px;
+            line-height: 19.56px;
+            display: flex;
+            align-items: center;
+            width: 249.9px;
+            height: 136.9px;
+        }
+
+        .link-child8 {
+            position: absolute;
+            height: calc(100% - 0.1px);
+            width: calc(100% - 0.3px);
+            top: -0.22px;
+            right: -0.25px;
+            bottom: 0.32px;
+            left: 0.55px;
+            border-radius: 6px;
+            max-width: 100%;
+            overflow: hidden;
+            max-height: 100%;
+            object-fit: cover;
+        }
+
+        .group-parent19 {
+            position: absolute;
+            top: 0.22px;
+            left: 652.67px;
+            width: 253.3px;
+            height: 417.7px;
+        }
+
+        .link-indicators-container {
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            width: 191.3px;
+            height: 16.8px;
+        }
+
+        .link-indicators-container1 {
+            position: absolute;
+            top: 224.93px;
+            left: 0px;
+            font-size: 14.9px;
+            line-height: 22.35px;
+            font-weight: 500;
+            color: #222;
+            display: flex;
+            align-items: center;
+            width: 147.5px;
+            height: 44.7px;
+        }
+
+        .link-discover-container4 {
+            position: absolute;
+            top: 280.81px;
+            left: 0px;
+            font-size: 13.04px;
+            line-height: 19.56px;
+            display: flex;
+            align-items: center;
+            width: 253.2px;
+            height: 117.4px;
+        }
+
+        .link-child9 {
+            position: absolute;
+            height: calc(100% - 0.1px);
+            width: calc(100% - 0.3px);
+            top: -0.22px;
+            right: -0.01px;
+            bottom: 0.32px;
+            left: 0.31px;
+            border-radius: 6px;
+            max-width: 100%;
+            overflow: hidden;
+            max-height: 100%;
+            object-fit: cover;
+        }
+
+        .group-parent20 {
+            position: absolute;
+            top: 0px;
+            left: 979.01px;
+            width: 253.3px;
+            height: 398.2px;
+        }
+
+        .group-parent16 {
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            width: 1232.3px;
+            height: 420.7px;
+            font-size: 11.18px;
+            color: rgba(34, 34, 34, 0.6);
+        }
+
+        .link-bullish-and-bearish-eng-parent {
+            position: absolute;
+            top: 2368.29px;
+            left: 302px;
+            width: 1232.3px;
+            height: 420.7px;
+            font-size: 14.9px;
+        }
+
+        .section-icon1 {
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            width: 24px;
+            height: 24px;
+        }
+
+        .section-hot {
+            position: absolute;
+            top: 0px;
+            left: 32px;
+            line-height: 24px;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            width: 87.4px;
+            height: 24px;
+        }
+
+        .section-group {
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            width: 119.4px;
+            height: 24px;
+        }
+
+        .group-1 {
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            line-height: 18px;
+            display: flex;
+            align-items: center;
+            width: 79px;
+            height: 18px;
+        }
+
+        .group-1-2 {
+            position: absolute;
+            top: calc(50% - 2px);
+            left: 85.66px;
+            border-radius: 10px;
+            background-color: #222;
+            width: 4px;
+            height: 4px;
+        }
+
+        .group-11 {
+            position: absolute;
+            top: 0px;
+            left: 96.66px;
+            line-height: 18px;
+            display: flex;
+            align-items: center;
+            width: 37.8px;
+            height: 18px;
+        }
+
+        .group-1-2-link {
+            position: absolute;
+            top: calc(50% - 2px);
+            left: 141.17px;
+            border-radius: 10px;
+            background-color: #222;
+            width: 4px;
+            height: 4px;
+        }
+
+        .group-12 {
+            position: absolute;
+            top: 0px;
+            left: 152.17px;
+            line-height: 18px;
+            display: flex;
+            align-items: center;
+            width: 80px;
+            height: 18px;
+        }
+
+        .group-1-2-link-trading-parent {
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            width: 232.2px;
+            height: 18px;
+        }
+
+        .group-13 {
+            position: absolute;
+            top: 34px;
+            left: 0px;
+            font-size: 16px;
+            line-height: 24px;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            width: 464px;
+            height: 24px;
+        }
+
+        .group-1-container {
+            position: absolute;
+            top: 70px;
+            left: 0px;
+            font-size: 14px;
+            line-height: 21px;
+            display: flex;
+            align-items: center;
+            width: 472px;
+            height: 63px;
+        }
+
+        .group-parent24 {
+            position: absolute;
+            top: 404px;
+            left: 0px;
+            width: 472px;
+            height: 133px;
+        }
+
+        .image-icon {
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            top: 0px;
+            right: 0px;
+            bottom: 0px;
+            left: 0px;
+            border-radius: 12px;
+            max-width: 100%;
+            overflow: hidden;
+            max-height: 100%;
+            object-fit: cover;
+        }
+
+        .min-read16 {
+            position: absolute;
+            top: 4px;
+            left: 8px;
+            line-height: 18px;
+            display: flex;
+            align-items: center;
+            width: 56.7px;
+            height: 18px;
+        }
+
+        .divread16 {
+            position: absolute;
+            right: 10.7px;
+            bottom: 10px;
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.06);
+            border-radius: 4px;
+            background-color: #fff;
+            width: 72.3px;
+            height: 26px;
+        }
+
+        .image-parent {
+            position: absolute;
+            height: calc(100% - 151px);
+            width: calc(100% - 3px);
+            top: 0px;
+            right: 0px;
+            bottom: 151px;
+            left: 3px;
+            color: #000;
+        }
+
+        .group-parent23 {
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            width: 518px;
+            height: 537px;
+        }
+
+        .group-2 {
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            line-height: 18px;
+            display: flex;
+            align-items: center;
+            width: 78.4px;
+            height: 18px;
+        }
+
+        .group-2-2 {
+            position: absolute;
+            top: calc(50% - 2px);
+            left: 85.05px;
+            border-radius: 10px;
+            background-color: #222;
+            width: 4px;
+            height: 4px;
+        }
+
+        .group-21 {
+            position: absolute;
+            top: 0px;
+            left: 96.05px;
+            line-height: 18px;
+            display: flex;
+            align-items: center;
+            width: 37.8px;
+            height: 18px;
+        }
+
+        .group-2-2-link {
+            position: absolute;
+            top: calc(50% - 2px);
+            left: 140.56px;
+            border-radius: 10px;
+            background-color: #222;
+            width: 4px;
+            height: 4px;
+        }
+
+        .group-22 {
+            position: absolute;
+            top: 0px;
+            left: 151.56px;
+            line-height: 18px;
+            display: flex;
+            align-items: center;
+            width: 85.7px;
+            height: 18px;
+        }
+
+        .group-2-2-link-market-parent {
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            width: 237.2px;
+            height: 18px;
+        }
+
+        .group-2-container {
+            position: absolute;
+            top: 34px;
+            left: 0px;
+            font-size: 16px;
+            line-height: 24px;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            width: 540px;
+        }
+
+        .group-2-container2 {
+            position: absolute;
+            top: 94px;
+            left: 0px;
+            font-size: 14px;
+            line-height: 21px;
+            display: flex;
+            align-items: center;
+            width: 469px;
+            height: 63px;
+        }
+
+        .group-parent26 {
+            position: absolute;
+            top: 404px;
+            left: 0px;
+            width: 540px;
+            height: 157px;
+        }
+
+        .image-group {
+            position: absolute;
+            height: calc(100% - 175px);
+            width: calc(100% - 25px);
+            top: 0px;
+            right: 25px;
+            bottom: 175px;
+            left: 0px;
+            color: #000;
+        }
+
+        .group-parent25 {
+            position: absolute;
+            top: 0px;
+            left: 625px;
+            width: 540px;
+            height: 561px;
+        }
+
+        .group-parent22 {
+            position: absolute;
+            top: 50px;
+            left: 0px;
+            width: 1165px;
+            height: 561px;
+            font-size: 12px;
+        }
+
+        .group-parent21 {
+            position: absolute;
+            top: 80px;
+            left: 302px;
+            width: 1165px;
+            height: 611px;
+            font-size: 20px;
+        }
+
+        .all-rights-reserved {
+            position: absolute;
+            top: calc(50% - 13px);
+            left: calc(50% - 218px);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 436px;
+            height: 26px;
+        }
+
+        .background {
+            position: absolute;
+            width: calc(100% + 2px);
+            top: 431px;
+            right: -2px;
+            left: 0px;
+            background-color: #303f60;
+            height: 66px;
+            text-align: center;
+            color: #fff;
+        }
+
+        .border {
+            position: absolute;
+            height: 78.47%;
+            width: 97.5%;
+            top: 3.62%;
+            right: 1.25%;
+            bottom: 17.91%;
+            left: 1.25%;
+            border: 1px solid #cde0ef;
+            box-sizing: border-box;
+        }
+
+        .heading-31 {
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            font-size: 19.06px;
+            line-height: 24px;
+            text-transform: uppercase;
+            font-weight: 600;
+        }
+
+        .home {
+            position: absolute;
+            top: -1px;
+            left: 0px;
+            line-height: 25.5px;
+        }
+
+        .item-link {
+            position: absolute;
+            top: 53.75px;
+            left: 0px;
+            width: 73.5px;
+            height: 25.5px;
+            font-size: 16.73px;
+        }
+
+        .item-link1 {
+            position: absolute;
+            top: 94.25px;
+            left: 0px;
+            width: 66.7px;
+            height: 25.5px;
+        }
+
+        .item-link2 {
+            position: absolute;
+            top: 135px;
+            left: 0px;
+            width: 139px;
+            height: 25px;
+        }
+
+        .item-link3 {
+            position: absolute;
+            top: 175.25px;
+            left: 0px;
+            width: 84.3px;
+            height: 25.5px;
+            font-size: 16.34px;
+        }
+
+        .contact {
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            line-height: 25.5px;
+            display: flex;
+            align-items: center;
+            width: 99.4px;
+            height: 25.5px;
+        }
+
+        .item-link4 {
+            position: absolute;
+            top: 215.75px;
+            left: 0px;
+            width: 99.2px;
+            height: 25.5px;
+            font-size: 16.34px;
+        }
+
+        .heading-3-information-parent {
+            position: absolute;
+            top: 74px;
+            left: 459.75px;
+            width: 139px;
+            height: 241.3px;
+            font-size: 16.6px;
+        }
+
+        .heading-32 {
+            position: absolute;
+            top: 0px;
+            left: 0.61px;
+            line-height: 24px;
+            text-transform: uppercase;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            width: 86px;
+            height: 24px;
+        }
+
+        .icon {
+            position: absolute;
+            top: 24.59px;
+            left: 0.25px;
+            width: 20px;
+            height: 20px;
+            overflow: hidden;
+        }
+
+        .abcgmailcom {
+            position: absolute;
+            top: -0.41px;
+            left: 35.25px;
+            line-height: 24px;
+            display: flex;
+            align-items: center;
+            width: 143.4px;
+            height: 24px;
+        }
+
+        .item {
+            position: absolute;
+            width: calc(100% - 46px);
+            top: 54px;
+            right: 45.64px;
+            left: 0.36px;
+            height: 39px;
+            font-size: 15.63px;
+        }
+
+        .div2 {
+            position: absolute;
+            top: -0.41px;
+            left: 35.25px;
+            line-height: 24px;
+            display: flex;
+            align-items: center;
+            width: 143.5px;
+            height: 24px;
+        }
+
+        .item1 {
+            position: absolute;
+            width: calc(100% - 46px);
+            top: 93px;
+            right: 45.64px;
+            left: 0.36px;
+            height: 39px;
+            font-size: 15.5px;
+        }
+
+        .aga-global-usa-container {
+            position: absolute;
+            top: 3px;
+            left: 35.64px;
+            line-height: 24px;
+            display: flex;
+            align-items: center;
+            width: 266px;
+            height: 71px;
+        }
+
+        .item2 {
+            position: absolute;
+            width: 100%;
+            top: 132px;
+            right: 0px;
+            left: 0px;
+            height: 74px;
+            font-size: 15.88px;
+        }
+
+        .heading-3-contact-parent {
+            position: absolute;
+            top: 74px;
+            left: 688.75px;
+            width: 297px;
+            height: 206px;
+            font-size: 17.34px;
+        }
+
+        .empowering-brands-to {
+            position: absolute;
+            top: 80.79px;
+            left: 0.25px;
+            line-height: 30.4px;
+            display: flex;
+            align-items: center;
+            width: 261.4px;
+            height: 91.2px;
+        }
+
+        .item-link5 {
+            position: absolute;
+            top: 10px;
+            left: 0px;
+            border-radius: 18px;
+            width: 36px;
+            height: 36px;
+        }
+
+        .item-link6 {
+            position: absolute;
+            top: 10px;
+            left: 61px;
+            border-radius: 18px;
+            width: 36px;
+            height: 36px;
+        }
+
+        .item-link7 {
+            position: absolute;
+            top: 10px;
+            left: 122px;
+            border-radius: 18px;
+            width: 36px;
+            height: 36px;
+        }
+
+        .item-link8 {
+            position: absolute;
+            top: 10px;
+            left: 183px;
+            border-radius: 18px;
+            width: 36px;
+            height: 36px;
+        }
+
+        .list {
+            position: absolute;
+            width: calc(100% - 0.3px);
+            top: 184.97px;
+            right: 0.05px;
+            left: 0.25px;
+            height: 46px;
+            overflow: hidden;
+        }
+
+        .image-1-icon {
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            width: 125.3px;
+            height: 80px;
+            object-fit: cover;
+        }
+
+        .empowering-brands-to-reach-the-parent {
+            position: absolute;
+            top: 74px;
+            left: 102px;
+            width: 267.8px;
+            height: 231px;
+            font-size: 15.63px;
+        }
+
+        .envelope-regular-1-icon {
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            width: 22px;
+            height: 25.8px;
+            overflow: hidden;
+        }
+
+        .subscribe-to-newsletter {
+            position: absolute;
+            top: 2.86px;
+            left: 38px;
+            font-weight: 600;
+            display: inline-block;
+            width: 211px;
+            height: 21px;
+        }
+
+        .envelope-regular-1-parent {
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            width: 249px;
+            height: 25.8px;
+        }
+
+        .enter-your-name {
+            position: absolute;
+            top: 12.4px;
+            left: 22px;
+            display: inline-block;
+            width: 109px;
+            height: 16.2px;
+        }
+
+        .group-child {
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            border-radius: 10px;
+            border: 1px solid #bababa;
+            box-sizing: border-box;
+            width: 262px;
+            height: 45.8px;
+        }
+
+        .enter-your-name-parent {
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            width: 262px;
+            height: 45.8px;
+        }
+
+        .enter-your-e-mail {
+            position: absolute;
+            top: 14.31px;
+            left: 22px;
+            display: inline-block;
+            width: 114px;
+            height: 16.2px;
+        }
+
+        .enter-your-e-mail-parent {
+            position: absolute;
+            top: 56.44px;
+            left: 0px;
+            width: 262px;
+            height: 45.8px;
+        }
+
+        .group-parent28 {
+            position: absolute;
+            top: 48.56px;
+            left: 0px;
+            width: 262px;
+            height: 102.2px;
+            font-size: 14px;
+        }
+
+        .group-inner {
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            border-radius: 10px;
+            background-color: rgba(239, 235, 206, 0);
+            border: 1px solid #bababa;
+            box-sizing: border-box;
+            width: 50px;
+            height: 47.7px;
+        }
+
+        .paper-plane-solid-1-icon {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            width: 29px;
+            height: 27.7px;
+            overflow: hidden;
+        }
+
+        .rectangle-parent {
+            position: absolute;
+            top: 169px;
+            left: 0px;
+            width: 50px;
+            height: 47.7px;
+        }
+
+        .group-parent27 {
+            position: absolute;
+            top: 74px;
+            left: 1076px;
+            width: 262px;
+            height: 216.7px;
+            font-size: 18px;
+            color: #2f2f2f;
+        }
+
+        .footer {
+            position: absolute;
+            bottom: 0px;
+            left: calc(50% - 720px);
+            background-color: #f9f9f9;
+            width: 1440px;
+            height: 497px;
+            overflow: hidden;
+            font-size: 14px;
+            color: #333;
+            font-family: Inter;
+        }
+
+        .blog-page {
+            width: 100%;
+            position: relative;
+            background-color: #fff;
+            height: 4098px;
+            text-align: left;
+            font-size: 18.63px;
+            color: #222;
+            font-family: Roboto;
+        }
+    </style>
+
+
+
+</head>
+
+<body>
+
+    <div class="image-2-parent">
+        <img class="image-2-icon" alt="" src="assets/image 1.png">
+
+        <div class="home-parent">
+            <button class="home" onclick="location.href='homepage.html'">Home</button>
+            <button class="about-us" onclick="location.href='aboutus.html'">About Us</button>
+            <button class="aga-ai" onclick="location.href='agaAI.html'">AGA AI</button>
+            <button class="smart-investment" onclick="location.href='smartInvest.html'">Smart Investment</button>
+            <button class="contact-us" onclick="location.href='contactus.html'">Contact Us</button>
+        </div>
+        <div class="cta-1">
+            <div class="group-parents">
+                <img class="group-childs" alt="" src="assets/Group 1.png">
+
+                <div class="lets-talk">Let’s talk</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="blog-page">
+        <div class="divsubscribe">
+            <div class="after">
+            </div>
+            <b class="subscribe-to-the">Subscribe to the AGA’s Global Blog</b>
+            <div class="well-keep-you-container">
+                <span class="well-keep-you-container1">
+                    <p class="well-keep-you">We'll keep you updated on the latest trading news that matters most, along
+                        with fresh insights and valuable tips.</p>
+                </span>
+            </div>
+            <div class="form-input">
+                <div class="divplaceholder">
+                    <div class="email">Email</div>
+                </div>
+            </div>
+            <div class="form-button">
+                <div class="subscribe">Subscribe</div>
+            </div>
+            <div class="form-label">
+            </div>
+            <div class="form-label-container">
+                <span class="well-keep-you-container1">
+                    <span>I have read and accepted the following agreement: </span>
+                    <span class="public-offer">Public offer</span>
+                </span>
+            </div>
+        </div>
+        <div class="group-parent">
+            <div class="spanpage-numbers-parent">
+                <div class="spanpage-numbers">
+                    <div class="div">1</div>
+                </div>
+                <div class="link-2">2</div>
+                <div class="div1">…</div>
+                <div class="link-5">5</div>
+                <img class="link-svg" alt="" src="Link → SVG.svg">
+            </div>
+            <div class="divseotext-wrap-parent">
+                <div class="divseotext-wrap">
+                    <div class="heading-3">AGA GlobalTrading Blog</div>
+                    <div class="a-broker-dedicated">A broker dedicated to its users must have a trading blog at its
+                        core. AGA's official blog serves as a valuable resource for traders of all levels, offering the
+                        latest market updates, trading insights, strategies, instructional videos, interviews with
+                        experts, and more. It's a comprehensive hub of relevant and helpful information essential for
+                        traders' success,</div>
+                </div>
+                <div class="link">
+                    <div class="show-more">Show more</div>
+                </div>
+            </div>
+        </div>
+        <div class="group-container">
+            <div class="section-parent">
+                <img class="section-icon" alt="" src="assets/icon-hot.svg.png">
+                <div class="section-recommended">Recommended</div>
+            </div>
+            <div class="group-div">
+                <div class="group-parent1">
+                    <div class="section-link-our-platform-parent">
+                        <div class="section-link">Our Platform</div>
+                        <div class="section">
+                        </div>
+                        <div class="section-dec">Dec 23</div>
+                        <div class="section-link1">
+                        </div>
+                        <div class="section-link2">Mike Chainster</div>
+                    </div>
+                    <div class="section-link3">AGA Global Platform: How to Register and Deposit Funds</div>
+                    <div class="section-link-container">
+                        <span class="well-keep-you-container1">
+                            <p class="well-keep-you">This guide will provide you with detailed</p>
+                            <p class="well-keep-you">instructions on how to complete both</p>
+                            <p class="well-keep-you">procedures. Discover how simple and</p>
+                            <p class="well-keep-you">straightforward the process is, even for</p>
+                            <p class="well-keep-you">novice traders. Learn how to top up your</p>
+                            <p class="well-keep-you">trading balance in a matter of minutes. ...</p>
+                        </span>
+                    </div>
+                    <div class="section-link4">
+                        <img class="section-link-child" alt="" src="assets/Rectangle 70.png">
+                        <div class="divread">
+                            <div class="min-read">9 min read</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="group-parent2">
+                    <div class="section-link-our-platform-parent">
+                        <div class="section-link">Our Platform</div>
+                        <div class="section">
+                        </div>
+                        <div class="section-dec">Dec 23</div>
+                        <div class="section-link1">
+                        </div>
+                        <div class="section-link2">Mike Chainster</div>
+                    </div>
+                    <div class="section-link-container2">
+                        <span class="well-keep-you-container1">
+                            <p class="well-keep-you">AGA Global Platform: How to Draw</p>
+                            <p class="well-keep-you">Support, Resistance, and Trendlines</p>
+                        </span>
+                    </div>
+                    <div class="section-link-container4">
+                        <span class="well-keep-you-container1">
+                            <p class="well-keep-you">Learn how to draw support and resistance</p>
+                            <p class="well-keep-you">lines and adjust them. Find out where to</p>
+                            <p class="well-keep-you">find drawing tools on the platform and how</p>
+                            <p class="well-keep-you">to apply them to charts. Explore some</p>
+                            <p class="well-keep-you">useful tips and tricks. Delve into the details</p>
+                            <p class="well-keep-you">of the drawing tools on the Binolla</p>
+                            <p class="well-keep-you">platform....</p>
+                        </span>
+                    </div>
+                    <div class="section-link8">
+                        <img class="section-link-item" alt="" src="assets/Rectangle 70 (1).png">
+                        <div class="divread">
+                            <div class="min-read">9 min read</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="group-parent3">
+                    <div class="section-link-our-platform-parent">
+                        <div class="section-link">Our Platform</div>
+                        <div class="section2">
+                        </div>
+                        <div class="section-dec">Dec 23</div>
+                        <div class="section-link10">
+                        </div>
+                        <div class="section-link2">Mike Chainster</div>
+                    </div>
+                    <div class="section-link12">AGA Global Platform: How to Trade</div>
+                    <div class="section-link-container6">
+                        <span class="well-keep-you-container1">
+                            <p class="well-keep-you">Read our guide about how to trade on the</p>
+                            <p class="well-keep-you">Binolla platform. Delve into details on how</p>
+                            <p class="well-keep-you">to place your first digital option trade, set</p>
+                            <p class="well-keep-you">expiration, investment, and other</p>
+                            <p class="well-keep-you">parameters of the deal. Prepare yourself for</p>
+                            <p class="well-keep-you">opening your first trade at Binolla. ...</p>
+                        </span>
+                    </div>
+                    <div class="section-link8">
+                        <img class="section-link-inner" alt="" src="assets/Rectangle 70 (3).png">
+                        <div class="divread2">
+                            <div class="min-read2">12 min read</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="group-parent4">
+                    <div class="section-link-our-platform-parent">
+                        <div class="section-link">Our Platform</div>
+                        <div class="section2">
+                        </div>
+                        <div class="section-dec">Dec 23</div>
+                        <div class="section-link1">
+                        </div>
+                        <div class="section-link2">Mike Chainster</div>
+                    </div>
+                    <div class="section-link12">
+                        <p class="well-keep-you">AGA Global Platform: How to Use</p>
+                        <p class="well-keep-you">Indicators</p>
+                    </div>
+                    <div class="section-link-container9">
+                        <span class="well-keep-you-container1">
+                            <p class="well-keep-you">Read more about how to add indicators to</p>
+                            <p class="well-keep-you">charts and set them up. Discover how to</p>
+                            <p class="well-keep-you">add several indicators and remove them.</p>
+                            <p class="well-keep-you">With this guide, you will learn how to set up</p>
+                            <p class="well-keep-you">any of the available indicators in a matter of</p>
+                            <p class="well-keep-you">seconds, even if you are new to trading....</p>
+                        </span>
+                    </div>
+                    <div class="section-link8">
+                        <img class="rectangle-icon" alt="" src="assets/Rectangle 70 (4).png">
+                        <div class="divread">
+                            <div class="min-read">6 min read</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="group-parent5">
+            <div class="all-articles-parent">
+                <div class="all-articles">All Articles</div>
+                <div class="group-parent6">
+                    <div class="group-parent7">
+                        <div class="link-technical-analysis-parent">
+                            <div class="link-technical">Technical Analysis</div>
+                            <div class="before">
+                            </div>
+                            <div class="mar-24">Mar 24</div>
+                            <div class="link1">
+                            </div>
+                            <div class="link-mike">Mike Chainster</div>
+                        </div>
+                        <div class="link-flag-container">
+                            <span class="well-keep-you-container1">
+                                <p class="well-keep-you">Flag Pattern for Successful Trading:</p>
+                                <p class="well-keep-you">How to Use Price Corrections</p>
+                            </span>
+                        </div>
+                        <div class="link-kickstart-container">
+                            <span class="well-keep-you-container1">
+                                <p class="well-keep-you">Kickstart your trading with one of the</p>
+                                <p class="well-keep-you">simplest trading patterns. Learn more</p>
+                                <p class="well-keep-you">about how to find flags on various charts.</p>
+                                <p class="well-keep-you">Delve into some original flag pattern</p>
+                                <p class="well-keep-you">strategies and start using them in your</p>
+                                <p class="well-keep-you">everyday trading routine. Find some useful</p>
+                                <p class="well-keep-you">recommendations on how to trade flags. ...</p>
+                            </span>
+                        </div>
+                        <div class="section-link8">
+                            <img class="link-child" alt="" src="assets/Rectangle 70 (5).png">
+                            <div class="divread2">
+                                <div class="min-read2">11 min read</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="group-parent8">
+                        <div class="link-technical-analysis-parent">
+                            <div class="link-technical">Technical Analysis</div>
+                            <div class="before">
+                            </div>
+                            <div class="mar-24">Mar 24</div>
+                            <div class="link1">
+                            </div>
+                            <div class="link-mike">Mike Chainster</div>
+                        </div>
+                        <div class="link-hammer-container">
+                            <span class="well-keep-you-container1">
+                                <p class="well-keep-you">Hammer and Inverted Hammer</p>
+                                <p class="well-keep-you">Patterns: How to Catch Market</p>
+                                <p class="well-keep-you">Reversals with High Probability</p>
+                            </span>
+                        </div>
+                        <div class="link-master-container">
+                            <span class="well-keep-you-container1">
+                                <p class="well-keep-you">Master the hammer pattern and start using</p>
+                                <p class="well-keep-you">it in your trading strategies. Learn all the ins</p>
+                                <p class="well-keep-you">and outs of this Japanese candlestick</p>
+                                <p class="well-keep-you">formation. Find out more about how to find</p>
+                                <p class="well-keep-you">market reversals with hammers. ...</p>
+                            </span>
+                        </div>
+                        <div class="section-link8">
+                            <img class="link-item" alt="" src="assets/Rectangle 70 (3).png">
+                            <div class="divread2">
+                                <div class="min-read2">10 min read</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="group-parent9">
+                        <div class="link-market-review-parent">
+                            <div class="link-market">Market Review</div>
+                            <div class="before2">
+                            </div>
+                            <div class="mar-242">Mar 24</div>
+                            <div class="link5">
+                            </div>
+                            <div class="link-ruth">Ruth Karmacker</div>
+                        </div>
+                        <div class="link-the-container">
+                            <span class="well-keep-you-container1">
+                                <p class="well-keep-you">The FOMC Meeting in Focus: What to</p>
+                                <p class="well-keep-you">Expect from the Week Ahead</p>
+                            </span>
+                        </div>
+                        <div class="link-delve-container">
+                            <span class="well-keep-you-container1">
+                                <p class="well-keep-you">Delve into the main fundamentals that may</p>
+                                <p class="well-keep-you">bring volatility to the financial markets this</p>
+                                <p class="well-keep-you">week. Find out more about the upcoming</p>
+                                <p class="well-keep-you">FOMC meeting and its possible impact on</p>
+                                <p class="well-keep-you">major currencies. Explore EUR/USD and</p>
+                                <p class="well-keep-you">GBP/USD charts. ...</p>
+                            </span>
+                        </div>
+                        <div class="section-link8">
+                            <img class="link-inner" alt="" src="assets/Rectangle 70 (4).png">
+                            <div class="divread">
+                                <div class="min-read">3 min read</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="group-parent10">
+                        <div class="link-indicators-parent">
+                            <div class="link-indicators">Indicators</div>
+                            <div class="before3">
+                            </div>
+                            <div class="mar-243">Mar 24</div>
+                            <div class="link7">
+                            </div>
+                            <div class="link-mike2">Mike Chainster</div>
+                        </div>
+                        <div class="link-aroon-container">
+                            <span class="well-keep-you-container1">
+                                <p class="well-keep-you">Aroon Indicator: How to Apply It to</p>
+                                <p class="well-keep-you">Your Trading Strategies</p>
+                            </span>
+                        </div>
+                        <div class="link-explore-container">
+                            <span class="well-keep-you-container1">
+                                <p class="well-keep-you">Explore a unique Aroon indicator—an in-</p>
+                                <p class="well-keep-you">depth exploration of a highly advanced</p>
+                                <p class="well-keep-you">technical analysis tool. Dive into the</p>
+                                <p class="well-keep-you">specifics of applying it to charts, adjusting</p>
+                                <p class="well-keep-you">settings, and seamlessly incorporating it</p>
+                                <p class="well-keep-you">into your trading routine. Uncover intriguing</p>
+                                <p class="well-keep-you">strategies that leverage the Aroon</p>
+                                <p class="well-keep-you">indicator's ...</p>
+                            </span>
+                        </div>
+                        <div class="section-link8">
+                            <img class="link-child1" alt="" src="assets/Rectangle 70 (2).png">
+                            <div class="divread2">
+                                <div class="min-read2">13 min read</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="group-parent11">
+                <div class="group-parent12">
+                    <div class="link-market-review-parent">
+                        <div class="link-market">Market Review</div>
+                        <div class="before4">
+                        </div>
+                        <div class="mar-242">Mar 24</div>
+                        <div class="link9">
+                        </div>
+                        <div class="link-ruth">Ruth Karmacker</div>
+                    </div>
+                    <div class="link-us-container">
+                        <span class="well-keep-you-container1">
+                            <p class="well-keep-you">US Labor Market Data, ECB, and BOC</p>
+                            <p class="well-keep-you">Meetings in Focus: What to Expect</p>
+                            <p class="well-keep-you">from This Trading Week </p>
+                        </span>
+                    </div>
+                    <div class="link-find-container">
+                        <span class="well-keep-you-container1">
+                            <p class="well-keep-you">Find out more about the events that are</p>
+                            <p class="well-keep-you">likely to bring more volatility to the financial</p>
+                            <p class="well-keep-you">markets this week. Discover the key</p>
+                            <p class="well-keep-you">fundamentals from the US, Eurozone, and</p>
+                            <p class="well-keep-you">Canada that will be the main movers in the</p>
+                            <p class="well-keep-you">following days....</p>
+                        </span>
+                    </div>
+                    <div class="section-link8">
+                        <img class="link-child2" alt="" src="assets/Rectangle 70 (2).png">
+                        <div class="divread">
+                            <div class="min-read">4 min read</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="group-parent13">
+                    <div class="link-trading-psychology-basi-parent">
+                        <div class="link-trading">Trading Psychology Basics</div>
+                        <div class="before5">
+                        </div>
+                        <div class="feb-24">Feb 24</div>
+                        <div class="link11">
+                        </div>
+                        <div class="link-ivetta">Ivetta Garcia</div>
+                    </div>
+                    <div class="link-demo">Demo Trading Tips and Tricks</div>
+                    <div class="link-discover-container">
+                        <span class="well-keep-you-container1">
+                            <p class="well-keep-you">Discover all the pros and cons of demo</p>
+                            <p class="well-keep-you">trading. Learn more about the main</p>
+                            <p class="well-keep-you">mistakes that traders make when they trade</p>
+                            <p class="well-keep-you">on demo. Delve into recommendations on</p>
+                            <p class="well-keep-you">how to use the demo mode and benefit</p>
+                            <p class="well-keep-you">from such training. Find some basic</p>
+                            <p class="well-keep-you">strategies to practice in the demo mode....</p>
+                        </span>
+                    </div>
+                    <div class="section-link8">
+                        <img class="link-child3" alt="" src="assets/Rectangle 70 (5).png">
+                        <div class="divread2">
+                            <div class="min-read2">15 min read</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="group-parent14">
+                    <div class="link-market-review-container">
+                        <div class="link-market">Market Review</div>
+                        <div class="before2">
+                        </div>
+                        <div class="feb-241">Feb 24</div>
+                        <div class="link13">
+                        </div>
+                        <div class="link-ruth2">Ruth Karmacker</div>
+                    </div>
+                    <div class="link-us-container2">
+                        <span class="well-keep-you-container1">
+                            <p class="well-keep-you">US Data in Focus: Traders Should</p>
+                            <p class="well-keep-you">Prepare for Higher Volatility</p>
+                        </span>
+                    </div>
+                    <div class="link-learn-container">
+                        <span class="well-keep-you-container1">
+                            <p class="well-keep-you">Learn more about the fundamentals that</p>
+                            <p class="well-keep-you">will have a major impact on price</p>
+                            <p class="well-keep-you">fluctuations this week. Discover the</p>
+                            <p class="well-keep-you">EUR/USD perspectives for the week ahead.</p>
+                            <p class="well-keep-you">Find out more about how the upcoming</p>
+                            <p class="well-keep-you">data may influence the financial markets. ...</p>
+                        </span>
+                    </div>
+                    <div class="section-link8">
+                        <img class="link-child4" alt="" src="assets/Rectangle 70 (1).png">
+                        <div class="divread">
+                            <div class="min-read">4 min read</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="group-parent15">
+                    <div class="link-indicators-group">
+                        <div class="link-indicators">Indicators</div>
+                        <div class="before7">
+                        </div>
+                        <div class="feb-242">Feb 24</div>
+                        <div class="link15">
+                        </div>
+                        <div class="link-mike3">Mike Chainster</div>
+                    </div>
+                    <div class="link-adx-container">
+                        <span class="well-keep-you-container1">
+                            <p class="well-keep-you">ADX Indicator in Trading: How to Curb</p>
+                            <p class="well-keep-you">The Lines</p>
+                        </span>
+                    </div>
+                    <div class="link-explore-container2">
+                        <span class="well-keep-you-container1">
+                            <p class="well-keep-you">Explore the fundamentals of the ADX</p>
+                            <p class="well-keep-you">indicator, uncover its formula, and gain</p>
+                            <p class="well-keep-you">insight into this technical analysis tool.</p>
+                            <p class="well-keep-you">Learn about the detailed description of the</p>
+                            <p class="well-keep-you">ADX indicator and discover practical</p>
+                            <p class="well-keep-you">suggestions on its application. Dive into</p>
+                            <p class="well-keep-you">various strategies involving the ADX</p>
+                            <p class="well-keep-you">indicator. ...</p>
+                        </span>
+                    </div>
+                    <div class="section-link8">
+                        <img class="link-child5" alt="" src="assets/Rectangle 70 (4).png">
+                        <div class="divread2">
+                            <div class="min-read2">12 min read</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="link-bullish-and-bearish-eng-parent">
+            <div class="link-bullish-container">
+                <span class="well-keep-you-container1">
+                    <p class="well-keep-you">Bullish and Bearish Engulfing: Secrets</p>
+                    <p class="well-keep-you">that You Should Know Before Trading</p>
+                    <p class="well-keep-you">These Patterns</p>
+                </span>
+            </div>
+            <div class="group-parent16">
+                <div class="group-parent17">
+                    <div class="link-market-review-container">
+                        <div class="link-market">Market Review</div>
+                        <div class="before4">
+                        </div>
+                        <div class="feb-241">Feb 24</div>
+                        <div class="link13">
+                        </div>
+                        <div class="link-ruth2">Ruth Karmacker</div>
+                    </div>
+                    <div class="link-the-container2">
+                        <span class="well-keep-you-container1">
+                            <p class="well-keep-you">The FOMC Meeting in Focus: What to</p>
+                            <p class="well-keep-you">Expect from the Voting Members’</p>
+                            <p class="well-keep-you">Comments</p>
+                        </span>
+                    </div>
+                    <div class="link-discover-container2">
+                        <span class="well-keep-you-container1">
+                            <p class="well-keep-you">Discover the upcoming news releases that</p>
+                            <p class="well-keep-you">may change the market situation. Find out</p>
+                            <p class="well-keep-you">more about the FOMC and RBA meeting</p>
+                            <p class="well-keep-you">minutes. Learn more about other important</p>
+                            <p class="well-keep-you">sets of data that may impact the currency</p>
+                            <p class="well-keep-you">market. ...</p>
+                        </span>
+                    </div>
+                    <div class="section-link8">
+                        <img class="link-child6" alt="" src="assets/Rectangle 70 (3).png">
+                        <div class="divread">
+                            <div class="min-read">4 min read</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="group-parent18">
+                    <div class="link-technical-analysis-container">
+                        <div class="link-technical">Technical Analysis</div>
+                        <div class="before">
+                        </div>
+                        <div class="feb-244">Feb 24</div>
+                        <div class="link19">
+                        </div>
+                        <div class="link-mike4">Mike Chainster</div>
+                    </div>
+                    <div class="link-explore-container4">
+                        <span class="well-keep-you-container1">
+                            <p class="well-keep-you">Explore one of the most popular Japanese</p>
+                            <p class="well-keep-you">candlestick patterns. Delve into its meaning</p>
+                            <p class="well-keep-you">and basic strategies. Discover the main</p>
+                            <p class="well-keep-you">features of the bullish engulfing pattern and</p>
+                            <p class="well-keep-you">learn some secrets for newcomers and</p>
+                            <p class="well-keep-you">skilled traders. ...</p>
+                        </span>
+                    </div>
+                    <div class="section-link8">
+                        <img class="link-child7" alt="" src="assets/Rectangle 70 (5).png">
+                        <div class="divread2">
+                            <div class="min-read2">12 min read</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="group-parent19">
+                    <div class="link-market-review-container">
+                        <div class="link-market">Market Review</div>
+                        <div class="before2">
+                        </div>
+                        <div class="feb-241">Feb 24</div>
+                        <div class="link13">
+                        </div>
+                        <div class="link-ruth2">Ruth Karmacker</div>
+                    </div>
+                    <div class="link-inflation-container">
+                        <span class="well-keep-you-container1">
+                            <p class="well-keep-you">Inflation Data is Ahead: What to</p>
+                            <p class="well-keep-you">Expect This Week</p>
+                        </span>
+                    </div>
+                    <div class="link-find-container2">
+                        <span class="well-keep-you-container1">
+                            <p class="well-keep-you">Find out more about the upcoming inflation</p>
+                            <p class="well-keep-you">data releases in the United States and the</p>
+                            <p class="well-keep-you">United Kingdom. Discover how these</p>
+                            <p class="well-keep-you">reports may influence the main Forex</p>
+                            <p class="well-keep-you">currencies. Learn more about EUR/USD</p>
+                            <p class="well-keep-you">main prospects for the week, day, and</p>
+                            <p class="well-keep-you">several hours. ...</p>
+                        </span>
+                    </div>
+                    <div class="section-link8">
+                        <img class="link-child8" alt="" src="assets/Rectangle 70 (2).png">
+                        <div class="divread">
+                            <div class="min-read">5 min read</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="group-parent20">
+                    <div class="link-indicators-group">
+                        <div class="link-indicators-container">
+                            <div class="link-indicators">Indicators</div>
+                            <div class="before7">
+                            </div>
+                            <div class="feb-242">Feb 24</div>
+                            <div class="link15">
+                            </div>
+                            <div class="link-mike3">Mike Chainster</div>
+                        </div>
+                    </div>
+                    <div class="link-indicators-container1">
+                        <span class="well-keep-you-container1">
+                            <p class="well-keep-you">Indicators for Trading:</p>
+                            <p class="well-keep-you">Recommendations</p>
+                        </span>
+                    </div>
+                    <div class="link-discover-container4">
+                        <span class="well-keep-you-container1">
+                            <p class="well-keep-you">Discover the basics of indicators for</p>
+                            <p class="well-keep-you">trading. Learn more about all the ins and</p>
+                            <p class="well-keep-you">outs of these technical analysis tools. Delve</p>
+                            <p class="well-keep-you">into the strategies that you can use in your</p>
+                            <p class="well-keep-you">trading routine. A detailed review for</p>
+                            <p class="well-keep-you">beginner and experienced traders. ...</p>
+                        </span>
+                    </div>
+                    <div class="section-link8">
+                        <img class="link-child9" alt="" src="assets/Rectangle 70 (4).png">
+                        <div class="divread2">
+                            <div class="min-read2">10 min read</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="group-parent21">
+            <div class="section-group">
+                <img class="section-icon1" alt="" src="assets/icon-hot.svg.png">
+                <div class="section-hot">Hot News</div>
+            </div>
+            <div class="group-parent22">
+                <div class="group-parent23">
+                    <div class="group-parent24">
+                        <div class="group-1-2-link-trading-parent">
+                            <div class="group-1">Trading Basics</div>
+                            <div class="group-1-2">
+                            </div>
+                            <div class="group-11">Mar 24</div>
+                            <div class="group-1-2-link">
+                            </div>
+                            <div class="group-12">Lehaz Khan</div>
+                        </div>
+                        <div class="group-13">Trading with Cashback and Bonuses: Main Features and Benefits</div>
+                        <div class="group-1-container">
+                            <span class="well-keep-you-container1">
+                                <p class="well-keep-you">Learn more about how cashback can change your trading results.
+                                </p>
+                                <p class="well-keep-you">calculations to see how you can increase your profit and ROI
+                                    with cashback.</p>
+                                <p class="well-keep-you">examples of trading with cashback based on different
+                                    probabilities. ...</p>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="image-parent">
+                        <img class="image-icon" alt="" src="assets/tab.png">
+                        <div class="divread16">
+                            <div class="min-read16">5 min read</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="group-parent25">
+                    <div class="group-parent26">
+                        <div class="group-2-2-link-market-parent">
+                            <div class="group-2">Market Review</div>
+                            <div class="group-2-2">
+                            </div>
+                            <div class="group-21">Mar 24</div>
+                            <div class="group-2-2-link">
+                            </div>
+                            <div class="group-22">Israr Barcha</div>
+                        </div>
+                        <div class="group-2-container">
+                            <span class="well-keep-you-container1">
+                                <p class="well-keep-you">The Week Ahead: US CPI Data, UK Labor Market, and GDP
+                                    Statistics Are On</p>
+                                <p class="well-keep-you">the Way</p>
+                            </span>
+                        </div>
+                        <div class="group-2-container2">
+                            <span class="well-keep-you-container1">
+                                <p class="well-keep-you">Learn more about the key events that are likely to move prices
+                                    this week. </p>
+                                <p class="well-keep-you">macroeconomic fundamentals and tap into the current situation
+                                    with the </p>
+                                <p class="well-keep-you">pairs. Augment your own analysis with our expert review. ...
+                                </p>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="image-group">
+                        <img class="image-icon" alt="" src="assets/oho.png">
+                        <div class="divread16">
+                            <div class="min-read16">5 min read</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <div class="background">
+                <div class="all-rights-reserved">© 2024 All Rights Reserved. Design by Salman.UI UX</div>
+            </div>
+            <div class="border">
+            </div>
+            <div class="heading-3-information-parent">
+                <div class="heading-31">Quick links</div>
+                <div class="item-link">
+                    <div class="home">Home</div>
+                </div>
+                <div class="item-link1">
+                    <div class="home">About Us</div>
+                </div>
+                <div class="item-link2">
+                    <div class="home">Smart Investment</div>
+                </div>
+                <div class="item-link3">
+                    <div class="home">Aga Al</div>
+                </div>
+                <div class="item-link4">
+                    <div class="contact">Contact</div>
+                </div>
+            </div>
+            <div class="heading-3-contact-parent">
+                <div class="heading-32">Contact</div>
+                <div class="item">
+                    <i class="fas fa-envelope icon"></i>
+                    <div class="abcgmailcom">abc@gmail.com</div>
+                </div>
+                <div class="item1">
+                    <i class="fas fa-phone icon"></i> <!-- Phone icon -->
+                    <div class="div2">+92 3488 400 155</div>
+                </div>
+                <div class="item2">
+                    <i class="fas fa-map-marker-alt icon"></i> <!-- Location icon -->
+                    <div class="aga-global-usa-container">
+                        <span class="well-keep-you-container1">
+                            <p class="well-keep-you">AGA GLOBAL USA US</p>
+                            <p class="well-keep-you">DIVISION 2 Granite Avenue Milton, MA 02186</p>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="empowering-brands-to-reach-the-parent">
+                <div class="empowering-brands-to">Empowering brands to reach their fullest potential through innovative
+                    digital marketing solutions.</div>
+                <div class="list">
+                    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+                          <i class="fab fa-facebook item-link5"></i>
+                          <i class="fab fa-twitter item-link6"></i>
+                          <i class="fab fa-google item-link7"></i>
+                          <i class="fab fa-instagram item-link8"></i>
+                </div>
+                <img class="image-1-icon" alt="" src="assets/image 1.png">
+            </div>
+            <div class="group-parent27">
+                <div class="envelope-regular-1-parent">
+                    <i class="fas fa-envelope envelope-regular-1-icon"></i>
+                    <div class="subscribe-to-newsletter">Subscribe to Newsletter</div>
+                </div>
+                <div class="group-parent28">
+                    <div class="enter-your-name-parent">
+                        <div class="enter-your-name">Enter your name</div>
+                        <div class="group-child">
+                        </div>
+                    </div>
+                    <div class="enter-your-e-mail-parent">
+                        <div class="enter-your-e-mail">Enter your e-mail</div>
+                        <div class="group-child">
+                        </div>
+                    </div>
+                </div>
+                <div class="rectangle-parent">
+                    <div class="group-inner">
+                    </div>
+                    <i class="fas fa-paper-plane paper-plane-solid-1-icon"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+</body>
+
+</html>

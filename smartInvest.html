@@ -1,0 +1,918 @@
+<!DOCTYPE html>
+<html>
+<head>
+  	<meta charset="utf-8">
+  	<meta name="viewport" content="initial-scale=1, width=device-width">
+  	
+  	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" />
+  	
+  	<style>
+        *{
+            margin: 0%;
+            padding: 0%;
+        }
+
+        button {
+    background: none; /* Remove default button background */
+    border: none; /* Remove default button border */
+    font-size: 16px;
+    color: #333; /* Adjust text color */
+    cursor: pointer;
+    padding: 10px 20px; /* Add spacing */
+    text-align: center;
+    border-radius: 5px; /* Optional: add rounded corners */
+    transition: background-color 0.3s, color 0.3s; /* Add hover effect */
+}
+
+button:hover {
+    background-color: #f0f0f0; /* Change background on hover */
+    color: #000; /* Change text color on hover */
+}
+
+button:focus {
+    outline: none; /* Remove focus outline */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5); /* Optional: add focus effect */
+}
+
+
+.image-1-icon {
+  	position: absolute;
+  	top: calc(50% - 40px);
+  	left: 300px;
+  	width: 125.3px;
+  	height: 80px;
+  	object-fit: cover;
+}
+.home {
+  	position: absolute;
+  	top: calc(50% - 12px);
+  	left: 0px;
+  	text-decoration: underline;
+  	font-weight: 500;
+  	background: linear-gradient(178.73deg, #8e8e8e, #00008b 27.52%, #9e3623 75.99%, #c0c0c0);
+  	-webkit-background-clip: text;
+  	-webkit-text-fill-color: transparent;
+}
+.about-us {
+  	position: absolute;
+  	top: calc(50% - 12px);
+  	left: 113px;
+  	font-weight: 500;
+}
+.aga-ai {
+  	position: absolute;
+  	top: calc(50% - 12px);
+  	left: 258px;
+  	font-weight: 500;
+}
+.smart-investment {
+  	position: absolute;
+  	top: calc(50% - 12px);
+  	left: 381px;
+  	font-weight: 500;
+}
+.contact-us {
+  	position: absolute;
+  	top: calc(50% - 12px);
+  	left: 607px;
+  	font-weight: 500;
+}
+.home-parent {
+  	position: absolute;
+  	top: calc(50% - 12px);
+  	left: 562px;
+  	width: 715px;
+  	height: 24px;
+}
+.group-child {
+  	position: absolute;
+  	height: 83.33%;
+  	width: 16.81%;
+  	top: 8.33%;
+  	right: 83.19%;
+  	bottom: 8.33%;
+  	left: 0%;
+  	max-width: 100%;
+  	max-height: 100%;
+}
+.lets-talk {
+  	position: absolute;
+  	top: calc(50% - 12px);
+  	left: 34px;
+  	font-weight: 500;
+}
+.group-parent {
+  	position: absolute;
+  	height: 42.86%;
+  	width: 74.84%;
+  	top: 28.57%;
+  	right: 2.58%;
+  	bottom: 28.57%;
+  	left: 2.58%;
+}
+.cta-1 {
+  	position: absolute;
+  	top: calc(50% - 28px);
+  	left: 1381px;
+  	box-shadow: 0px 4px 54px 14px rgba(209, 209, 209, 0.2);
+  	border-radius: 12px;
+  	background: linear-gradient(178.73deg, #8e8e8e, #00008b 27.52%, #9e3623 75.99%, #c0c0c0);
+  	width: 159px;
+  	height: 56px;
+  	color: #fff;
+}
+.image-1-parent {
+  	position: absolute;
+  	top: 0px;
+  	left: 0px;
+  	width: 1580px;
+  	height: 120px;
+  	overflow: hidden;
+}
+.image-icon {
+  	position: absolute;
+  	top: 0px;
+  	left: 0px;
+  	width: 2140px;
+  	height: 650px;
+  	object-fit: cover;
+}
+        .aga-ai-system {
+            position: absolute;
+            top: calc(50% - 75px);
+            left: calc(50% - 302px);
+            display: inline-block;
+            width: 604px;
+        }
+        .image-parent {
+            position: absolute;
+            top: 120px;
+            left: 0px;
+            width: 2040px;
+            height: 586px;
+            overflow: hidden;
+            font-size: 62px;
+            color: #fff;
+        }
+        .all-rights-reserved {
+            position: absolute;
+            top: calc(50% - 13px);
+            left: calc(50% - 218px);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 436px;
+            height: 26px;
+        }
+        .background {
+            position: absolute;
+            width: calc(100% + 2px);
+            top: 431px;
+            right: -2px;
+            left: 0px;
+            background-color: #303f60;
+            height: 66px;
+            text-align: center;
+            color: #fff;
+        }
+        .border {
+            position: absolute;
+            height: 78.47%;
+            width: 97.5%;
+            top: 3.62%;
+            right: 1.25%;
+            bottom: 17.91%;
+            left: 1.25%;
+            border: 1px solid #cde0ef;
+            box-sizing: border-box;
+        }
+        .heading-3 {
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            font-size: 19.06px;
+            line-height: 24px;
+            text-transform: uppercase;
+            font-weight: 600;
+        }
+        .item-link {
+            position: absolute;
+            top: 53.75px;
+            left: 0px;
+            width: 73.5px;
+            height: 25.5px;
+            font-size: 16.73px;
+        }
+        .item-link1 {
+            position: absolute;
+            top: 94.25px;
+            left: 0px;
+            width: 66.7px;
+            height: 25.5px;
+        }
+        .item-link2 {
+            position: absolute;
+            top: 135px;
+            left: 0px;
+            width: 139px;
+            height: 25px;
+        }
+        .aga-al {
+            position: absolute;
+            top: -1px;
+            left: 0px;
+            line-height: 25.5px;
+        }
+        .item-link3 {
+            position: absolute;
+            top: 175.25px;
+            left: 0px;
+            width: 84.3px;
+            height: 25.5px;
+            font-size: 16.34px;
+        }
+        .contact {
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            line-height: 25.5px;
+            display: flex;
+            align-items: center;
+            width: 99.4px;
+            height: 25.5px;
+        }
+        .item-link4 {
+            position: absolute;
+            top: 215.75px;
+            left: 0px;
+            width: 99.2px;
+            height: 25.5px;
+            font-size: 16.34px;
+        }
+        .heading-3-information-parent {
+            position: absolute;
+            top: 74px;
+            left: 459.75px;
+            width: 139px;
+            height: 241.3px;
+            font-size: 16.6px;
+        }
+        .heading-31 {
+            position: absolute;
+            top: 0px;
+            left: 0.61px;
+            line-height: 24px;
+            text-transform: uppercase;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            width: 86px;
+            height: 24px;
+        }
+        .icon {
+            position: absolute;
+            top: 24.59px;
+            left: 0.25px;
+            width: 20px;
+            height: 20px;
+            overflow: hidden;
+        }
+        .abcgmailcom {
+            position: absolute;
+            top: -0.41px;
+            left: 35.25px;
+            line-height: 24px;
+            display: flex;
+            align-items: center;
+            width: 143.4px;
+            height: 24px;
+        }
+        .item {
+            position: absolute;
+            width: calc(100% - 46px);
+            top: 54px;
+            right: 45.64px;
+            left: 0.36px;
+            height: 39px;
+            font-size: 15.63px;
+        }
+        .div {
+            position: absolute;
+            top: -0.41px;
+            left: 35.25px;
+            line-height: 24px;
+            display: flex;
+            align-items: center;
+            width: 143.5px;
+            height: 24px;
+        }
+        .item1 {
+            position: absolute;
+            width: calc(100% - 46px);
+            top: 93px;
+            right: 45.64px;
+            left: 0.36px;
+            height: 39px;
+            font-size: 15.5px;
+        }
+        .aga-global-usa {
+            margin: 0;
+        }
+        .aga-global-usa-container1 {
+            width: 100%;
+        }
+        .aga-global-usa-container {
+            position: absolute;
+            top: 3px;
+            left: 35.64px;
+            line-height: 24px;
+            display: flex;
+            align-items: center;
+            width: 266px;
+            height: 71px;
+        }
+        .item2 {
+            position: absolute;
+            width: 100%;
+            top: 132px;
+            right: 0px;
+            left: 0px;
+            height: 74px;
+            font-size: 15.88px;
+        }
+        .heading-3-contact-parent {
+            position: absolute;
+            top: 74px;
+            left: 688.75px;
+            width: 297px;
+            height: 206px;
+            font-size: 17.34px;
+        }
+        .empowering-brands-to {
+            position: absolute;
+            top: 80.79px;
+            left: 0.25px;
+            line-height: 30.4px;
+            display: flex;
+            align-items: center;
+            width: 261.4px;
+            height: 91.2px;
+        }
+        .item-link5 {
+            position: absolute;
+            top: 10px;
+            left: 0px;
+            border-radius: 18px;
+            width: 36px;
+            height: 36px;
+        }
+        .item-link6 {
+            position: absolute;
+            top: 10px;
+            left: 61px;
+            border-radius: 18px;
+            width: 36px;
+            height: 36px;
+        }
+        .item-link7 {
+            position: absolute;
+            top: 10px;
+            left: 122px;
+            border-radius: 18px;
+            width: 36px;
+            height: 36px;
+        }
+        .item-link8 {
+            position: absolute;
+            top: 10px;
+            left: 183px;
+            border-radius: 18px;
+            width: 36px;
+            height: 36px;
+        }
+        .list {
+            position: absolute;
+            width: calc(100% - 0.3px);
+            top: 184.97px;
+            right: 0.05px;
+            left: 0.25px;
+            height: 46px;
+            overflow: hidden;
+        }
+        .image-1-icon1 {
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            width: 125.3px;
+            height: 80px;
+            object-fit: cover;
+        }
+        .empowering-brands-to-reach-the-parent {
+            position: absolute;
+            top: 74px;
+            left: 102px;
+            width: 267.8px;
+            height: 231px;
+            font-size: 15.63px;
+        }
+        .envelope-regular-1-icon {
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            width: 22px;
+            height: 25.8px;
+            overflow: hidden;
+        }
+        .subscribe-to-newsletter {
+            position: absolute;
+            top: 2.86px;
+            left: 38px;
+            font-weight: 600;
+            display: inline-block;
+            width: 211px;
+            height: 21px;
+        }
+        .envelope-regular-1-parent {
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            width: 249px;
+            height: 25.8px;
+        }
+        .enter-your-name {
+            position: absolute;
+            top: 12.4px;
+            left: 22px;
+            display: inline-block;
+            width: 109px;
+            height: 16.2px;
+        }
+        .group-item {
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            border-radius: 10px;
+            border: 1px solid #bababa;
+            box-sizing: border-box;
+            width: 262px;
+            height: 45.8px;
+        }
+        .enter-your-name-parent {
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            width: 262px;
+            height: 45.8px;
+        }
+        .enter-your-e-mail {
+            position: absolute;
+            top: 14.31px;
+            left: 22px;
+            display: inline-block;
+            width: 114px;
+            height: 16.2px;
+        }
+        .enter-your-e-mail-parent {
+            position: absolute;
+            top: 56.44px;
+            left: 0px;
+            width: 262px;
+            height: 45.8px;
+        }
+        .group-div {
+            position: absolute;
+            top: 48.56px;
+            left: 0px;
+            width: 262px;
+            height: 102.2px;
+            font-size: 14px;
+        }
+        .rectangle-div {
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            border-radius: 10px;
+            background-color: rgba(239, 235, 206, 0);
+            border: 1px solid #bababa;
+            box-sizing: border-box;
+            width: 50px;
+            height: 47.7px;
+        }
+        .paper-plane-solid-1-icon {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            width: 29px;
+            height: 27.7px;
+            overflow: hidden;
+        }
+        .rectangle-parent {
+            position: absolute;
+            top: 169px;
+            left: 0px;
+            width: 50px;
+            height: 47.7px;
+        }
+        .group-container {
+            position: absolute;
+            top: 74px;
+            left: 1076px;
+            width: 262px;
+            height: 216.7px;
+            font-size: 18px;
+            color: #2f2f2f;
+        }
+        .footer {
+            position: absolute;
+            top: 1863px;
+            background-color: #f9f9f9;
+            width: 100%;
+            height: 497px;
+            overflow: hidden;
+            text-align: left;
+            font-size: 14px;
+            color: #333;
+        }
+        .multi-flow-risk-free-al {
+            position: absolute;
+            top: calc(50% - 14.5px);
+            left: 60px;
+            font-weight: 500;
+        }
+        .details-of-the {
+            position: absolute;
+            top: calc(50% - 14.5px);
+            left: calc(50% - 124.5px);
+            font-weight: 500;
+        }
+        .details-of-the-product-wrapper {
+            position: absolute;
+            top: calc(50% - 35.5px);
+            left: 1525px;
+            border-radius: 110px;
+            border: 1px solid #fff;
+            box-sizing: border-box;
+            width: 355px;
+            height: 71px;
+            overflow: hidden;
+        }
+        .multi-flow-risk-free-al-quant-parent {
+            position: absolute;
+            top: 706px;
+            border-radius: 0px 0px 20px 20px;
+            background-color: #303f60;
+            width: 100%;
+            height: 115px;
+            overflow: hidden;
+            font-size: 24px;
+            color: #fff;
+        }
+        .one-of-the {
+            position: absolute;
+            top: 68px;
+            left: calc(50% - 533.5px);
+            letter-spacing: 0.01em;
+            display: inline-block;
+            width: 1067px;
+        }
+        .we-provide {
+            position: absolute;
+            top: 0px;
+            left: calc(50% - 100.5px);
+            font-size: 36px;
+            letter-spacing: 0.01em;
+            font-weight: 600;
+            text-align: left;
+        }
+        .one-of-the-few-trading-systems-parent {
+            position: absolute;
+            top: 0px;
+            left: calc(50% - 533.5px);
+            width: 1067px;
+            height: 140px;
+        }
+        .image-icon1 {
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            width: 369px;
+            height: 288px;
+            object-fit: cover;
+        }
+        .al-risk-hedging {
+            position: absolute;
+            top: 318px;
+            left: calc(50% - 92.5px);
+            letter-spacing: 0.01em;
+            font-weight: 500;
+            text-align: center;
+        }
+        .al-risk-hedging-container {
+            position: absolute;
+            top: 363px;
+            left: calc(50% - 162.5px);
+            font-size: 16px;
+            line-height: 21px;
+            display: inline-block;
+            width: 325px;
+        }
+        .read-more {
+            position: absolute;
+            top: calc(50% - 12px);
+            left: calc(50% - 51.5px);
+            font-weight: 500;
+        }
+        .read-more-wrapper {
+            position: absolute;
+            top: 567px;
+            left: calc(50% - 120.5px);
+            border-radius: 120px;
+            background: linear-gradient(178.73deg, #8e8e8e, #00008b 27.52%, #9e3623 75.99%, #c0c0c0);
+            width: 241px;
+            height: 56px;
+            overflow: hidden;
+            font-size: 20px;
+            color: #fff;
+        }
+        .image-group {
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            border-radius: 20px;
+            border: 1px solid #303f60;
+            box-sizing: border-box;
+            width: 370px;
+            height: 663px;
+            overflow: hidden;
+        }
+        .investor-protection {
+            position: absolute;
+            top: 318px;
+            left: calc(50% - 111.5px);
+            letter-spacing: 0.01em;
+            font-weight: 500;
+            text-align: center;
+        }
+        .image-container {
+            position: absolute;
+            top: 0px;
+            left: 411px;
+            border-radius: 20px;
+            border: 1px solid #303f60;
+            box-sizing: border-box;
+            width: 370px;
+            height: 663px;
+            overflow: hidden;
+        }
+        .multiple-traffic-access {
+            position: absolute;
+            top: 318px;
+            left: calc(50% - 133.5px);
+            letter-spacing: 0.01em;
+            font-weight: 500;
+            text-align: center;
+        }
+        .frame-div {
+            position: absolute;
+            top: 0px;
+            left: 822px;
+            border-radius: 20px;
+            border: 1px solid #303f60;
+            box-sizing: border-box;
+            width: 370px;
+            height: 663px;
+            overflow: hidden;
+        }
+        .frame-parent {
+            position: absolute;
+            top: 0px;
+            left: 76px;
+            width: 1191px;
+            height: 662px;
+        }
+        .frame-icon {
+            position: absolute;
+            top: 301px;
+            left: 0px;
+            border-radius: 120px;
+            width: 60px;
+            height: 60px;
+            overflow: hidden;
+        }
+        .group-child1 {
+            position: absolute;
+            top: 301px;
+            left: 1283px;
+            border-radius: 120px;
+            width: 60px;
+            height: 60px;
+            overflow: hidden;
+        }
+        .group-parent2 {
+            position: absolute;
+            top: 200px;
+            left: 0px;
+            width: 1343px;
+            height: 662px;
+            text-align: left;
+            font-size: 24px;
+        }
+        .group-parent1 {
+            position: absolute;
+            top: 901px;
+            left: calc(50% - 671px);
+            width: 1343px;
+            height: 862px;
+        }
+        .aga-ai-page {
+            width: 100%;
+            position: relative;
+            background-color: #fff;
+            height: 2360px;
+            overflow: hidden;
+            text-align: center;
+            font-size: 20px;
+            color: #222;
+            font-family: Inter;
+        }
+
+
+    </style>
+  	
+</head>
+<body>
+  	
+  	<div class="aga-ai-page">
+    		<div class="image-1-parent">
+      			<img class="image-1-icon" alt="" src="assets/image 1.png">
+      			
+      			<div class="home-parent">
+                    <button class="home" onclick="location.href='index.html'">Home</button>
+                    <button class="about-us" onclick="location.href='aboutus.html'">About Us</button>
+                    <button class="aga-ai" onclick="location.href='agaAI.html'">AGA AI</button>
+                    <button class="smart-investment">Smart Investment</button>
+                    <button class="contact-us" onclick="location.href='contactus.html'">Contact Us</button>
+      			</div>
+      			<div class="cta-1">
+        				<div class="group-parent">
+          					<img class="group-child" alt="" src="assets/Group 1.png">
+          					
+          					<div class="lets-talk">Let’s talk</div>
+        				</div>
+      			</div>
+    		</div>
+    		<div class="image-parent">
+      			<img class="image-icon" alt="" src="assets/Ai.png">
+      			
+      			<b class="aga-ai-system">AGA AI system for quantitative gol</b>
+    		</div>
+    		<div class="footer">
+      			<div class="background">
+        				<div class="all-rights-reserved">© 2024 All Rights Reserved. Design by Salman.UI UX</div>
+      			</div>
+      			<div class="border">
+      			</div>
+      			<div class="heading-3-information-parent">
+        				<div class="heading-3">Quick links</div>
+        				<div class="item-link">
+          					<div class="aga-al">Home</div>
+        				</div>
+        				<div class="item-link1">
+          					<div class="aga-al">About Us</div>
+        				</div>
+        				<div class="item-link2">
+          					<div class="aga-al">Smart Investment</div>
+        				</div>
+        				<div class="item-link3">
+          					<div class="aga-al">Aga Al</div>
+        				</div>
+        				<div class="item-link4">
+          					<div class="contact">Contact</div>
+        				</div>
+      			</div>
+      			<div class="heading-3-contact-parent">
+        				<div class="heading-31">Contact</div>
+        				<div class="item">
+                            <i class="fas fa-envelope icon"></i>
+          					
+          					<div class="abcgmailcom">abc@gmail.com</div>
+        				</div>
+        				<div class="item1">
+                      
+                            <i class="fas fa-phone icon"></i> <!-- Phone icon -->
+          					
+          					<div class="div">+92 3488 400 155</div>
+        				</div>
+        				<div class="item2">
+                        
+                            <i class="fas fa-map-marker-alt icon"></i> <!-- Location icon -->
+          					
+          					<div class="aga-global-usa-container">
+            						<span class="aga-global-usa-container1">
+              							<p class="aga-global-usa">AGA GLOBAL USA US</p>
+              							<p class="aga-global-usa">DIVISION 2 Granite Avenue Milton, MA 02186</p>
+            						</span>
+          					</div>
+        				</div>
+      			</div>
+      			<div class="empowering-brands-to-reach-the-parent">
+        				<div class="empowering-brands-to">Empowering brands to reach their fullest potential through innovative digital marketing solutions.</div>
+        				<div class="list">
+                            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+                            <i class="fab fa-facebook item-link5"></i>
+                            <i class="fab fa-twitter item-link6"></i>
+                            <i class="fab fa-google item-link7"></i>
+                            <i class="fab fa-instagram item-link8"></i>
+          					
+        				</div>
+        				<img class="image-1-icon1" alt="" src="assets/image 1.png">
+        				
+      			</div>
+      			<div class="group-container">
+        				<div class="envelope-regular-1-parent">
+                            <i class="fas fa-envelope envelope-regular-1-icon"></i>
+          					
+          					<div class="subscribe-to-newsletter">Subscribe to Newsletter</div>
+        				</div>
+        				<div class="group-div">
+          					<div class="enter-your-name-parent">
+            						<div class="enter-your-name">Enter your name</div>
+            						<div class="group-item">
+            						</div>
+          					</div>
+          					<div class="enter-your-e-mail-parent">
+            						<div class="enter-your-e-mail">Enter your e-mail</div>
+            						<div class="group-item">
+            						</div>
+          					</div>
+        				</div>
+        				<div class="rectangle-parent">
+          					<div class="rectangle-div">
+          					</div>
+          					<i class="fas fa-paper-plane paper-plane-solid-1-icon"></i>
+          					
+        				</div>
+      			</div>
+    		</div>
+    		<div class="multi-flow-risk-free-al-quant-parent">
+      			<div class="multi-flow-risk-free-al">Multi-Flow, Risk-Free Al Quantitative Trading</div>
+      			<div class="details-of-the-product-wrapper">
+                    <button class="details-of-the" onclick="location.href='blog.html'" style="color: white; font-size: 26px; left: 10%; top: 15%;">Details of the product</button>
+
+      			</div>
+    		</div>
+    		<div class="group-parent1">
+      			<div class="one-of-the-few-trading-systems-parent">
+        				<div class="one-of-the">One of the few trading systems on the market that never liquidates, the Al automatic analysis and trading system built through the Quantum algorithm fundamentally eliminates the risks caused by high leverage in financial transactions.</div>
+        				<div class="we-provide">We Provide</div>
+      			</div>
+      			<div class="group-parent2">
+        				<div class="frame-parent">
+          					<div class="image-group">
+            						<img class="image-icon1" alt="" src="assets/robot.png">
+            						
+            						<div class="al-risk-hedging">Al Risk Hedging</div>
+            						<div class="al-risk-hedging-container">
+              							<p class="aga-global-usa">Al Risk Hedging Is A Strategy That Uses Artificial Intelligence Technology To Manage And Mitigate Risks In Financial Markets. Through Machine Learning And</p>
+              							<p class="aga-global-usa">Data Analysis, Al Systems Can Monitor</p>
+              							<p class="aga-global-usa">Market Dynamics In Real Time, Predict</p>
+              							<p class="aga-global-usa">Potential Risks, And Automatically Perform</p>
+              							<p class="aga-global-usa">Hedging </p>
+            						</div>
+            						<div class="read-more-wrapper">
+              							<div class="read-more">Read more</div>
+            						</div>
+          					</div>
+          					<div class="image-container">
+            						<img class="image-icon1" alt="" src="assets/radar.png">
+            						
+            						<div class="investor-protection">Investor Protection</div>
+            						<div class="al-risk-hedging-container">Investor Protection Refers To Protecting The Rights And Interests Of Investors Through Legal, Regulatory Measures And Market Mechanisms, Preventing Risks Such As Fraud And Information Asymmetry, And Ensuring Market Fairness And Transparency.</div>
+            						<div class="read-more-wrapper">
+              							<div class="read-more">Read more</div>
+            						</div>
+          					</div>
+          					<div class="frame-div">
+            						<img class="image-icon1" alt="" src="assets/code.png">
+            						
+            						<div class="multiple-traffic-access">Multiple Traffic Access</div>
+            						<div class="al-risk-hedging-container">Multi-Traffic Access Is A Technology That Accesses Data Traffic Through Multiple Channels Or Interfaces To Improve System Reliability, Performance And Scalability. It Improves Service Stability Through Balancing To Distribute Traffic Pressure To Ensure Service Continuity Even If Any Channel Fails.</div>
+            						<div class="read-more-wrapper">
+              							<div class="read-more">Read more</div>
+            						</div>
+          					</div>
+        				</div>
+        				<img class="frame-icon" alt="" src="assets/Frame 13.png">
+        				
+        				<img class="group-child1" alt="" src="assets/Frame 14.png">
+        				
+      			</div>
+    		</div>
+  	</div>
+  	
+  	
+  	
+  	
+</body>
+</html>

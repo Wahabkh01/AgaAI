@@ -1,0 +1,2684 @@
+<!DOCTYPE html>
+<html>
+<head>
+  	<meta charset="utf-8">
+  	<meta name="viewport" content="initial-scale=1, width=device-width">
+
+  	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" />
+    <style>
+
+* {
+            margin: 0%;
+            padding: 0%;
+        }
+
+        button {
+            background: none;
+            /* Remove default button background */
+            border: none;
+            /* Remove default button border */
+            font-size: 16px;
+            color: #333;
+            /* Adjust text color */
+            cursor: pointer;
+            padding: 10px 20px;
+            /* Add spacing */
+            text-align: center;
+            border-radius: 5px;
+            /* Optional: add rounded corners */
+            transition: background-color 0.3s, color 0.3s;
+            /* Add hover effect */
+        }
+
+        button:hover {
+            background-color: #f0f0f0;
+            /* Change background on hover */
+            color: #000;
+            /* Change text color on hover */
+        }
+
+        button:focus {
+            outline: none;
+            /* Remove focus outline */
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+            /* Optional: add focus effect */
+        }
+        .key-metrics {
+  	position: absolute;
+  	top: 0px;
+  	left: 142px;
+  	font-weight: 500;
+}
+.contract-data {
+  	position: absolute;
+  	top: 0px;
+  	left: 301px;
+  	font-weight: 500;
+}
+.overview {
+  	position: absolute;
+  	top: 0px;
+  	left: 2px;
+  	font-weight: 500;
+}
+.group-child {
+  	position: absolute;
+  	top: 40px;
+  	left: 0px;
+  	border-radius: 10px 10px 0px 0px;
+  	background-color: #ddb18b;
+  	width: 96px;
+  	height: 4px;
+}
+.overview-parent {
+  	position: absolute;
+  	top: 0px;
+  	left: 0px;
+  	width: 96px;
+  	height: 44px;
+  	color: #333;
+}
+.key-metrics-parent {
+  	position: absolute;
+  	top: 21px;
+  	left: 99px;
+  	width: 435px;
+  	height: 44px;
+}
+.market-sentiment-page-inner {
+  	position: absolute;
+  	top: 156px;
+  	left: calc(50% - 720px);
+  	border-radius: 0px 0px 12px 12px;
+  	background-color: #f3f3f3;
+  	width: 1440px;
+  	height: 65px;
+  	overflow: hidden;
+  	color: #b1b1b1;
+}
+.all {
+  	position: absolute;
+  	top: calc(50% - 12px);
+  	left: 0px;
+  	font-weight: 500;
+  	color: #000;
+}
+.usdt {
+  	position: absolute;
+  	top: calc(50% - 12px);
+  	left: 90px;
+  	font-weight: 500;
+}
+.usde {
+  	position: absolute;
+  	top: calc(50% - 12px);
+  	left: 393px;
+  	font-weight: 500;
+}
+.eur {
+  	position: absolute;
+  	top: calc(50% - 12px);
+  	left: 514px;
+  	font-weight: 500;
+}
+.brd {
+  	position: absolute;
+  	top: calc(50% - 12px);
+  	left: 620px;
+  	font-weight: 500;
+}
+.usdc {
+  	position: absolute;
+  	top: calc(50% - 12px);
+  	left: 0px;
+  	font-weight: 500;
+}
+.fees {
+  	position: absolute;
+  	top: calc(50% - 6.5px);
+  	left: calc(50% - 14.5px);
+  	font-weight: 500;
+}
+.fees-wrapper {
+  	position: absolute;
+  	top: 2px;
+  	left: 69px;
+  	border-radius: 3px;
+  	background-color: #fcf9ef;
+  	width: 47px;
+  	height: 17px;
+  	overflow: hidden;
+  	font-size: 10px;
+  	color: #f7a600;
+}
+.usdc-parent {
+  	position: absolute;
+  	top: calc(50% - 12px);
+  	left: 211px;
+  	width: 116px;
+  	height: 24px;
+}
+.all-parent {
+  	position: absolute;
+  	top: calc(50% - 12px);
+  	left: 121px;
+  	width: 661px;
+  	height: 24px;
+}
+.group-wrapper {
+  	position: absolute;
+  	top: 402.5px;
+  	left: -0.5px;
+  	border: 1px solid #ededed;
+  	box-sizing: border-box;
+  	width: 1441px;
+  	height: 71px;
+  	overflow: hidden;
+  	font-size: 20px;
+  	color: #999;
+}
+.trading-pairs {
+  	position: absolute;
+  	top: 21px;
+  	left: 100px;
+  	font-weight: 500;
+}
+.last-traded-price {
+  	position: absolute;
+  	top: 21px;
+  	left: 391px;
+  	font-weight: 500;
+}
+.h-change {
+  	position: absolute;
+  	top: 0px;
+  	left: 0px;
+  	font-weight: 500;
+}
+.h-high {
+  	position: absolute;
+  	top: 0px;
+  	left: 152px;
+  	font-weight: 500;
+}
+.h-low {
+  	position: absolute;
+  	top: 0px;
+  	left: 266px;
+  	font-weight: 500;
+}
+.h-trading-volume {
+  	position: absolute;
+  	top: 0px;
+  	left: 376px;
+  	font-weight: 500;
+}
+.charts {
+  	position: absolute;
+  	top: 0px;
+  	left: 568px;
+  	font-weight: 500;
+}
+.trade {
+  	position: absolute;
+  	top: 0px;
+  	left: 683px;
+  	font-weight: 500;
+}
+.h-change-parent {
+  	position: absolute;
+  	top: 21px;
+  	left: 570px;
+  	width: 725px;
+  	height: 18px;
+}
+.trading-pairs-parent {
+  	position: absolute;
+  	top: 473px;
+  	left: 0px;
+  	border-bottom: 1px solid #ededed;
+  	box-sizing: border-box;
+  	width: 1440px;
+  	height: 64.5px;
+  	overflow: hidden;
+  	color: #999;
+}
+.usdt1 {
+  	color: #999;
+}
+.btcusdt {
+  	position: absolute;
+  	top: 1px;
+  	left: 26px;
+  	font-weight: 500;
+}
+.bitcoin-1-icon {
+  	position: absolute;
+  	top: 0px;
+  	left: 0px;
+  	width: 20px;
+  	height: 20px;
+  	object-fit: cover;
+}
+.x {
+  	position: absolute;
+  	top: calc(50% - 5.5px);
+  	left: calc(50% - 9px);
+  	font-weight: 500;
+}
+.x-wrapper {
+  	position: absolute;
+  	top: 3px;
+  	left: 114px;
+  	border-radius: 3px;
+  	background-color: #fcf9ef;
+  	width: 32px;
+  	height: 15px;
+  	overflow: hidden;
+  	font-size: 9px;
+  	color: #f7a600;
+}
+.btcusdt-parent {
+  	position: absolute;
+  	top: 0px;
+  	left: 39px;
+  	width: 146px;
+  	height: 20px;
+}
+.vector-icon {
+  	position: absolute;
+  	height: 70%;
+  	width: 7.57%;
+  	top: 15%;
+  	right: 92.43%;
+  	bottom: 15%;
+  	left: 0%;
+  	max-width: 100%;
+  	overflow: hidden;
+  	max-height: 100%;
+}
+.group-container {
+  	position: absolute;
+  	top: 27px;
+  	left: 100px;
+  	width: 185px;
+  	height: 20px;
+  	font-size: 16px;
+}
+.div {
+  	position: absolute;
+  	top: 29px;
+  	left: 391px;
+  	font-weight: 500;
+}
+.div1 {
+  	position: absolute;
+  	top: 29px;
+  	left: 570px;
+  	font-weight: 500;
+  	color: #d60404;
+}
+.div2 {
+  	position: absolute;
+  	top: 29px;
+  	left: 722px;
+  	font-weight: 500;
+}
+.div3 {
+  	position: absolute;
+  	top: 29px;
+  	left: 836px;
+  	font-weight: 500;
+}
+.b-usdt {
+  	position: absolute;
+  	top: 29px;
+  	left: 946px;
+  	font-weight: 500;
+}
+.trade1 {
+  	position: absolute;
+  	top: 8px;
+  	left: calc(50% - 21px);
+  	font-weight: 500;
+}
+.trade-wrapper {
+  	position: absolute;
+  	top: 0px;
+  	left: 57px;
+  	border-radius: 6px;
+  	background: linear-gradient(178.73deg, #8e8e8e, #00008b 27.52%, #9e3623 75.99%, #c0c0c0);
+  	width: 84px;
+  	height: 35px;
+  	overflow: hidden;
+}
+.details {
+  	position: absolute;
+  	top: 9px;
+  	left: calc(50% - 70.5px);
+  	color: #ddb18b;
+}
+.frame-group {
+  	position: absolute;
+  	top: 24px;
+  	left: 1253px;
+  	width: 141px;
+  	height: 35px;
+  	color: #fff;
+}
+.group-parent {
+  	position: absolute;
+  	top: 537px;
+  	left: 0px;
+  	border-bottom: 1px solid #ededed;
+  	box-sizing: border-box;
+  	width: 1440px;
+  	height: 75.5px;
+  	overflow: hidden;
+}
+.frame-div {
+  	position: absolute;
+  	top: 762px;
+  	left: 0px;
+  	border-bottom: 1px solid #ededed;
+  	box-sizing: border-box;
+  	width: 1440px;
+  	height: 75.5px;
+  	overflow: hidden;
+}
+.group-parent1 {
+  	position: absolute;
+  	top: 987px;
+  	left: 0px;
+  	border-bottom: 1px solid #ededed;
+  	box-sizing: border-box;
+  	width: 1440px;
+  	height: 75.5px;
+  	overflow: hidden;
+}
+.group-parent3 {
+  	position: absolute;
+  	top: 1212px;
+  	left: 0px;
+  	border-bottom: 1px solid #ededed;
+  	box-sizing: border-box;
+  	width: 1440px;
+  	height: 75.5px;
+  	overflow: hidden;
+}
+.group-parent5 {
+  	position: absolute;
+  	top: 1437px;
+  	left: 0px;
+  	border-bottom: 1px solid #ededed;
+  	box-sizing: border-box;
+  	width: 1440px;
+  	height: 75.5px;
+  	overflow: hidden;
+}
+.xrpusdt {
+  	position: absolute;
+  	top: 1px;
+  	left: 27px;
+  	font-weight: 500;
+}
+.group-item {
+  	position: absolute;
+  	height: 100%;
+  	width: 13.7%;
+  	top: 0%;
+  	right: 86.3%;
+  	bottom: 0%;
+  	left: 0%;
+  	max-width: 100%;
+  	overflow: hidden;
+  	max-height: 100%;
+}
+.x-wrapper3 {
+  	position: absolute;
+  	top: 3px;
+  	left: 114px;
+  	border-radius: 3px;
+  	background-color: #fcf9ef;
+  	width: 32px;
+  	height: 15px;
+  	overflow: hidden;
+  	font-size: 9px;
+  	color: #ffbd4a;
+}
+.div20 {
+  	position: absolute;
+  	top: 28px;
+  	left: 391px;
+  	font-weight: 500;
+}
+.div21 {
+  	position: absolute;
+  	top: 28px;
+  	left: 577px;
+  	font-weight: 500;
+  	color: #d60404;
+}
+.div22 {
+  	position: absolute;
+  	top: 28px;
+  	left: 722px;
+  	font-weight: 500;
+}
+.div23 {
+  	position: absolute;
+  	top: 30px;
+  	left: 841px;
+  	font-weight: 500;
+}
+.b-usdt5 {
+  	position: absolute;
+  	top: 28px;
+  	left: 953px;
+  	font-weight: 500;
+}
+.frame-parent4 {
+  	position: absolute;
+  	top: 20px;
+  	left: 1253px;
+  	width: 141px;
+  	height: 35px;
+  	color: #fff;
+}
+.group-parent7 {
+  	position: absolute;
+  	top: 612px;
+  	left: calc(50% - 720px);
+  	border-bottom: 1px solid #ededed;
+  	box-sizing: border-box;
+  	width: 1440px;
+  	height: 75.5px;
+  	overflow: hidden;
+}
+.group-parent9 {
+  	position: absolute;
+  	top: 837px;
+  	left: calc(50% - 720px);
+  	border-bottom: 1px solid #ededed;
+  	box-sizing: border-box;
+  	width: 1440px;
+  	height: 75.5px;
+  	overflow: hidden;
+}
+.group-parent11 {
+  	position: absolute;
+  	top: 1062px;
+  	left: calc(50% - 720px);
+  	border-bottom: 1px solid #ededed;
+  	box-sizing: border-box;
+  	width: 1440px;
+  	height: 75.5px;
+  	overflow: hidden;
+}
+.group-parent13 {
+  	position: absolute;
+  	top: 1287px;
+  	left: calc(50% - 720px);
+  	border-bottom: 1px solid #ededed;
+  	box-sizing: border-box;
+  	width: 1440px;
+  	height: 75.5px;
+  	overflow: hidden;
+}
+.group-parent15 {
+  	position: absolute;
+  	top: 1512px;
+  	left: calc(50% - 720px);
+  	border-bottom: 1px solid #ededed;
+  	box-sizing: border-box;
+  	width: 1440px;
+  	height: 75.5px;
+  	overflow: hidden;
+}
+.div41 {
+  	position: absolute;
+  	top: 29px;
+  	left: 577px;
+  	font-weight: 500;
+  	color: #d60404;
+}
+.div42 {
+  	position: absolute;
+  	top: 30px;
+  	left: 722px;
+  	font-weight: 500;
+}
+.div43 {
+  	position: absolute;
+  	top: 28px;
+  	left: 840px;
+  	font-weight: 500;
+}
+.b-usdt10 {
+  	position: absolute;
+  	top: 26px;
+  	left: 953px;
+  	font-weight: 500;
+}
+.frame-parent9 {
+  	position: absolute;
+  	top: 22px;
+  	left: 1253px;
+  	width: 141px;
+  	height: 35px;
+  	color: #fff;
+}
+.group-parent17 {
+  	position: absolute;
+  	top: 687px;
+  	left: calc(50% - 720px);
+  	border-bottom: 1px solid #ededed;
+  	box-sizing: border-box;
+  	width: 1440px;
+  	height: 75.5px;
+  	overflow: hidden;
+}
+.group-parent19 {
+  	position: absolute;
+  	top: 912px;
+  	left: calc(50% - 720px);
+  	border-bottom: 1px solid #ededed;
+  	box-sizing: border-box;
+  	width: 1440px;
+  	height: 75.5px;
+  	overflow: hidden;
+}
+.group-parent21 {
+  	position: absolute;
+  	top: 1137px;
+  	left: calc(50% - 720px);
+  	border-bottom: 1px solid #ededed;
+  	box-sizing: border-box;
+  	width: 1440px;
+  	height: 75.5px;
+  	overflow: hidden;
+}
+.group-parent23 {
+  	position: absolute;
+  	top: 1362px;
+  	left: calc(50% - 720px);
+  	border-bottom: 1px solid #ededed;
+  	box-sizing: border-box;
+  	width: 1440px;
+  	height: 75.5px;
+  	overflow: hidden;
+}
+.group-parent25 {
+  	position: absolute;
+  	top: 1587px;
+  	left: calc(50% - 720px);
+  	border-bottom: 1px solid #ededed;
+  	box-sizing: border-box;
+  	width: 1440px;
+  	height: 75.5px;
+  	overflow: hidden;
+}
+.frame-parent {
+  	position: absolute;
+  	top: 772px;
+  	left: calc(50% - 720px);
+  	box-shadow: 0px 4px 15px 4px rgba(216, 216, 216, 0.25);
+  	border-radius: 0px 0px 12px 12px;
+  	background-color: #fefefe;
+  	width: 1440px;
+  	height: 1719px;
+  	overflow: hidden;
+  	font-size: 15px;
+}
+.line-div {
+  	position: absolute;
+  	top: 12px;
+  	left: 378px;
+  	border-right: 0.5px solid #d7d7d7;
+  	box-sizing: border-box;
+  	width: 0.5px;
+  	height: 292.5px;
+}
+.top-gainers {
+  	position: absolute;
+  	top: 0px;
+  	left: 6px;
+  	font-weight: 500;
+}
+.div60 {
+  	position: absolute;
+  	top: 0px;
+  	left: 164px;
+  	font-weight: 500;
+}
+.div61 {
+  	position: absolute;
+  	top: 0px;
+  	left: 277px;
+  	font-weight: 500;
+  	color: #20b26c;
+}
+.btcusdt5 {
+  	position: absolute;
+  	top: 0px;
+  	left: 32px;
+  	font-weight: 500;
+}
+.bitcoin-1-icon5 {
+  	position: absolute;
+  	top: 1px;
+  	left: 0px;
+  	width: 20px;
+  	height: 20px;
+  	object-fit: cover;
+}
+.btcusdt-parent3 {
+  	position: absolute;
+  	top: 0px;
+  	left: 0px;
+  	width: 118px;
+  	height: 22px;
+}
+.group-frame {
+  	position: absolute;
+  	top: 0px;
+  	left: 0px;
+  	width: 340px;
+  	height: 22px;
+}
+.group-wrapper1 {
+  	position: absolute;
+  	top: 144px;
+  	left: 0px;
+  	width: 340px;
+  	height: 22px;
+}
+.div64 {
+  	position: absolute;
+  	top: 0px;
+  	left: 163px;
+  	font-weight: 500;
+}
+.div65 {
+  	position: absolute;
+  	top: 0px;
+  	left: 276px;
+  	font-weight: 500;
+  	color: #20b26c;
+}
+.group-child8 {
+  	position: absolute;
+  	height: 90.91%;
+  	width: 17.09%;
+  	top: 4.55%;
+  	right: 82.91%;
+  	bottom: 4.55%;
+  	left: 0%;
+  	max-width: 100%;
+  	overflow: hidden;
+  	max-height: 100%;
+}
+.xrpusdt-parent3 {
+  	position: absolute;
+  	top: 0px;
+  	left: 0px;
+  	width: 117px;
+  	height: 22px;
+}
+.container {
+  	position: absolute;
+  	top: 48px;
+  	left: 0px;
+  	width: 339px;
+  	height: 22px;
+}
+.parent1 {
+  	position: absolute;
+  	top: 192px;
+  	left: 0px;
+  	width: 339px;
+  	height: 22px;
+}
+.parent2 {
+  	position: absolute;
+  	top: 96px;
+  	left: 0px;
+  	width: 339px;
+  	height: 22px;
+}
+.parent3 {
+  	position: absolute;
+  	top: 240px;
+  	left: 0px;
+  	width: 339px;
+  	height: 22px;
+}
+.group-parent28 {
+  	position: absolute;
+  	top: 54px;
+  	left: 0px;
+  	width: 340px;
+  	height: 262px;
+  	color: #333;
+}
+.top-gainers-parent {
+  	position: absolute;
+  	top: 0px;
+  	left: 0px;
+  	width: 340px;
+  	height: 316px;
+}
+.line-parent {
+  	position: absolute;
+  	top: 0px;
+  	left: 0px;
+  	width: 378px;
+  	height: 316px;
+}
+.div73 {
+  	position: absolute;
+  	top: 0px;
+  	left: 277px;
+  	font-weight: 500;
+  	color: #df0000;
+}
+.div77 {
+  	position: absolute;
+  	top: 0px;
+  	left: 276px;
+  	font-weight: 500;
+  	color: #df0000;
+}
+.line-group {
+  	position: absolute;
+  	top: 0px;
+  	left: 458px;
+  	width: 378px;
+  	height: 316px;
+}
+.line-container {
+  	position: absolute;
+  	top: 0px;
+  	left: 916px;
+  	width: 378px;
+  	height: 316px;
+}
+.group-parent27 {
+  	position: absolute;
+  	top: 809px;
+  	left: 333px;
+  	width: 1294px;
+  	height: 316px;
+  	text-align: left;
+  	font-size: 18px;
+  	color: #000;
+}
+.favorites {
+  	position: absolute;
+  	top: 18px;
+  	left: 0px;
+  	font-weight: 500;
+}
+.derivatives {
+  	position: absolute;
+  	top: 18px;
+  	left: 301px;
+  	font-weight: 500;
+}
+.derivatives1 {
+  	position: absolute;
+  	top: 18px;
+  	left: 463px;
+  	font-weight: 500;
+}
+.spot {
+  	position: absolute;
+  	top: calc(50% - 15.5px);
+  	left: calc(50% - 25px);
+  	font-weight: 500;
+}
+.spot-wrapper {
+  	position: absolute;
+  	top: 0px;
+  	left: 141px;
+  	background-color: #fff;
+  	width: 116px;
+  	height: 69px;
+  	overflow: hidden;
+  	color: #333;
+}
+.favorites-parent {
+  	position: absolute;
+  	top: 78px;
+  	left: 74px;
+  	width: 581px;
+  	height: 69px;
+}
+.search {
+  	position: absolute;
+  	top: 1px;
+  	left: 48px;
+  	font-weight: 500;
+}
+.group-child22 {
+  	position: absolute;
+  	height: 100%;
+  	width: 22.22%;
+  	top: 0%;
+  	right: 77.78%;
+  	bottom: 0%;
+  	left: 0%;
+  	max-width: 100%;
+  	overflow: hidden;
+  	max-height: 100%;
+}
+.search-parent {
+  	position: absolute;
+  	top: 19px;
+  	left: 46px;
+  	width: 108px;
+  	height: 24px;
+}
+.group-wrapper6 {
+  	position: absolute;
+  	top: 60px;
+  	left: calc(50% + 365px);
+  	border-radius: 10px;
+  	background-color: #fff;
+  	border: 1px solid #e8e8e8;
+  	box-sizing: border-box;
+  	width: 264px;
+  	height: 63px;
+  	overflow: hidden;
+  	font-size: 18px;
+}
+.markets {
+  	position: absolute;
+  	top: 0px;
+  	left: 0px;
+  	font-weight: 600;
+}
+.markets-wrapper {
+  	position: absolute;
+  	top: 16px;
+  	left: 65px;
+  	width: 126px;
+  	height: 39px;
+  	font-size: 32px;
+  	color: #333;
+}
+.group-parent31 {
+  	position: absolute;
+  	top: 624px;
+  	left: calc(50% - 670px);
+  	border-radius: 6px 6px 0px 0px;
+  	background-color: #f9fafc;
+  	border-bottom: 1px solid #ededed;
+  	box-sizing: border-box;
+  	width: 1340px;
+  	height: 148px;
+  	overflow: hidden;
+  	font-size: 22px;
+  	color: #999;
+}
+.group-child23 {
+  	position: absolute;
+  	top: 0px;
+  	left: 0px;
+  	border-radius: 10px;
+  	background-color: #f3f3f3;
+  	width: 350px;
+  	height: 277px;
+  	overflow: hidden;
+}
+.market-sentiment {
+  	position: absolute;
+  	top: 1px;
+  	left: 0px;
+  	font-weight: 500;
+}
+.group-child24 {
+  	position: absolute;
+  	height: 75.88%;
+  	width: 15.69%;
+  	top: 12.41%;
+  	right: 0%;
+  	bottom: 11.71%;
+  	left: 84.31%;
+  	max-width: 100%;
+  	overflow: hidden;
+  	max-height: 100%;
+  	object-fit: contain;
+}
+.group-parent33 {
+  	position: absolute;
+  	height: 73.91%;
+  	width: 29.68%;
+  	top: 0%;
+  	right: 0%;
+  	bottom: 26.09%;
+  	left: 70.32%;
+  	font-size: 14px;
+  	color: #ddb18b;
+}
+.market-sentiment-parent {
+  	position: absolute;
+  	top: 16px;
+  	left: 17px;
+  	width: 315.7px;
+  	height: 23px;
+}
+.long {
+  	position: absolute;
+  	top: 0px;
+  	left: 0px;
+}
+.short {
+  	position: absolute;
+  	top: 0px;
+  	left: 260px;
+}
+.long-parent {
+  	position: absolute;
+  	top: 165px;
+  	left: 9px;
+  	width: 294px;
+  	height: 16px;
+}
+.image-20-icon {
+  	position: absolute;
+  	top: 0px;
+  	left: 0px;
+  	width: 311px;
+  	height: 139px;
+  	object-fit: cover;
+}
+.div97 {
+  	position: absolute;
+  	top: 0px;
+  	left: 262px;
+  	color: #ef454a;
+}
+.parent16 {
+  	position: absolute;
+  	top: 139px;
+  	left: 17px;
+  	width: 276px;
+  	height: 13px;
+}
+.image-20-parent {
+  	position: absolute;
+  	top: 0px;
+  	left: 0px;
+  	width: 311px;
+  	height: 152px;
+  	font-size: 11px;
+  	color: #20b26c;
+}
+.group-parent34 {
+  	position: absolute;
+  	top: 71px;
+  	left: 22px;
+  	width: 311px;
+  	height: 181px;
+  	text-align: left;
+  	font-size: 13px;
+}
+.frame-parent14 {
+  	position: absolute;
+  	top: 0px;
+  	left: 0px;
+  	width: 350px;
+  	height: 277px;
+}
+.group-child26 {
+  	position: absolute;
+  	height: 100%;
+  	width: 41.52%;
+  	top: 0%;
+  	right: 0%;
+  	bottom: 0%;
+  	left: 58.48%;
+  	max-width: 100%;
+  	overflow: hidden;
+  	max-height: 100%;
+}
+.usd {
+  	position: absolute;
+  	top: 19px;
+  	left: 99px;
+  	font-weight: 500;
+}
+.current-eth-gas {
+  	position: absolute;
+  	top: 0px;
+  	left: 0px;
+  	font-weight: 500;
+  	color: #999;
+}
+.gwei {
+  	position: absolute;
+  	top: 38px;
+  	left: 0px;
+  	font-weight: 500;
+}
+.div98 {
+  	position: absolute;
+  	top: 17px;
+  	left: 0px;
+  	font-size: 12px;
+  	font-weight: 500;
+}
+.current-eth-gas-parent {
+  	position: absolute;
+  	top: 0px;
+  	left: 0px;
+  	width: 73px;
+  	height: 49px;
+  	color: #333;
+}
+.usd-parent {
+  	position: absolute;
+  	top: 3px;
+  	left: 0px;
+  	width: 153px;
+  	height: 49px;
+}
+.group-parent36 {
+  	position: absolute;
+  	height: 36.84%;
+  	width: 100%;
+  	top: 0%;
+  	right: 0%;
+  	bottom: 63.16%;
+  	left: 0%;
+}
+.b-usdt15 {
+  	position: absolute;
+  	top: 19px;
+  	left: 57px;
+  	font-weight: 500;
+  	color: #333;
+}
+.div99 {
+  	position: absolute;
+  	top: 17px;
+  	left: 6px;
+  	font-size: 12px;
+  	font-weight: 500;
+  	color: #20b26c;
+}
+.trading-volume-parent {
+  	position: absolute;
+  	top: 0px;
+  	left: 0px;
+  	width: 119px;
+  	height: 32px;
+}
+.group-wrapper7 {
+  	position: absolute;
+  	top: 3px;
+  	left: 0px;
+  	width: 119px;
+  	height: 32px;
+}
+.group-parent37 {
+  	position: absolute;
+  	height: 36.84%;
+  	width: 100%;
+  	top: 63.16%;
+  	right: 0%;
+  	bottom: 0%;
+  	left: 0%;
+}
+.group-parent35 {
+  	position: absolute;
+  	height: 54.87%;
+  	width: 82.57%;
+  	top: 23.1%;
+  	right: 8.86%;
+  	bottom: 22.02%;
+  	left: 8.57%;
+}
+.group-parent38 {
+  	position: absolute;
+  	height: 77.27%;
+  	width: 30.75%;
+  	top: 9.09%;
+  	right: 0%;
+  	bottom: 13.64%;
+  	left: 69.25%;
+  	font-size: 14px;
+  	color: #ddb18b;
+}
+.market-data-parent {
+  	position: absolute;
+  	top: 17px;
+  	left: 23px;
+  	width: 304.7px;
+  	height: 22px;
+  	font-size: 18px;
+  	color: #333;
+}
+.frame-parent15 {
+  	position: absolute;
+  	top: 0px;
+  	left: 416px;
+  	width: 350px;
+  	height: 277px;
+  	font-size: 9px;
+  	color: #999;
+}
+.div100 {
+  	position: absolute;
+  	top: 0px;
+  	left: 147px;
+  	font-weight: 500;
+  	color: #ef454a;
+}
+.span {
+  	color: #ef454a;
+}
+.chrp-724 {
+  	position: absolute;
+  	top: 0px;
+  	left: 221px;
+  	font-weight: 500;
+}
+.nft-parent {
+  	position: absolute;
+  	top: 0px;
+  	left: 0px;
+  	width: 297px;
+  	height: 16px;
+}
+.group-wrapper13 {
+  	position: absolute;
+  	top: 48px;
+  	left: 0px;
+  	width: 297px;
+  	height: 16px;
+}
+.group-wrapper17 {
+  	position: absolute;
+  	top: 96px;
+  	left: 0px;
+  	width: 297px;
+  	height: 16px;
+}
+.group-wrapper21 {
+  	position: absolute;
+  	top: 144px;
+  	left: 0px;
+  	width: 297px;
+  	height: 16px;
+}
+.group-parent40 {
+  	position: absolute;
+  	top: 0px;
+  	left: 0px;
+  	width: 297px;
+  	height: 160px;
+}
+.group-wrapper8 {
+  	position: absolute;
+  	top: 59px;
+  	left: 0px;
+  	width: 297px;
+  	height: 160px;
+}
+.trending-sectors-wrapper {
+  	position: absolute;
+  	top: 0px;
+  	left: 0px;
+  	width: 148px;
+  	height: 22px;
+  	font-size: 18px;
+}
+.group-parent39 {
+  	position: absolute;
+  	top: 29px;
+  	left: 26px;
+  	width: 297px;
+  	height: 219px;
+}
+.frame-parent16 {
+  	position: absolute;
+  	top: 0px;
+  	left: 832px;
+  	width: 350px;
+  	height: 277px;
+  	font-size: 13px;
+}
+.group-parent32 {
+  	position: absolute;
+  	top: 287px;
+  	left: 429px;
+  	width: 1182px;
+  	height: 277px;
+  	font-size: 18px;
+}
+.image-2-icon {
+  	position: absolute;
+  	top: calc(50% - 40px);
+  	left: 100px;
+  	width: 125.3px;
+  	height: 80px;
+  	object-fit: cover;
+}
+.about-us {
+  	position: absolute;
+  	top: calc(50% - 12px);
+  	left: 113px;
+  	font-weight: 500;
+}
+.aga-ai {
+  	position: absolute;
+  	top: calc(50% - 12px);
+  	left: 258px;
+  	font-weight: 500;
+}
+.smart-investment {
+  	position: absolute;
+  	top: calc(50% - 12px);
+  	left: 381px;
+  	font-weight: 500;
+}
+.contact-us {
+  	position: absolute;
+  	top: calc(50% - 12px);
+  	left: 607px;
+  	font-weight: 500;
+}
+.home-parent {
+  	position: absolute;
+  	top: calc(50% - 12px);
+  	left: 362px;
+  	width: 715px;
+  	height: 24px;
+}
+.group-child30 {
+  	position: absolute;
+  	height: 83.33%;
+  	width: 16.81%;
+  	top: 8.33%;
+  	right: 83.19%;
+  	bottom: 8.33%;
+  	left: 0%;
+  	max-width: 100%;
+  	overflow: hidden;
+  	max-height: 100%;
+}
+.lets-talk {
+  	position: absolute;
+  	top: calc(50% - 12px);
+  	left: 34px;
+  	font-weight: 500;
+}
+.group-parent41 {
+  	position: absolute;
+  	height: 42.86%;
+  	width: 74.84%;
+  	top: 28.57%;
+  	right: 12.58%;
+  	bottom: 28.57%;
+  	left: 12.58%;
+}
+.cta-1 {
+  	position: absolute;
+  	top: calc(50% - 28px);
+  	left: 1181px;
+  	box-shadow: 0px 4px 54px 14px rgba(209, 209, 209, 0.2);
+  	border-radius: 12px;
+  	background: linear-gradient(178.73deg, #8e8e8e, #00008b 27.52%, #9e3623 75.99%, #c0c0c0);
+  	width: 159px;
+  	height: 56px;
+  	overflow: hidden;
+  	color: #fff;
+}
+.image-2-parent {
+  	position: absolute;
+  	top: 0px;
+  	left: calc(50% - 720px);
+  	width: 1440px;
+  	height: 120px;
+  	overflow: hidden;
+  	text-align: left;
+  	color: #222;
+}
+.all-rights-reserved {
+  	position: absolute;
+  	top: calc(50% - 13px);
+  	left: calc(50% - 218px);
+  	display: flex;
+  	align-items: center;
+  	justify-content: center;
+  	width: 436px;
+  	height: 26px;
+}
+.background {
+  	position: absolute;
+  	width: calc(100% + 2px);
+  	top: 431px;
+  	right: -2px;
+  	left: 0px;
+  	background-color: #303f60;
+  	height: 66px;
+  	text-align: center;
+  	color: #fff;
+}
+.border {
+  	position: absolute;
+  	height: 78.47%;
+  	width: 97.5%;
+  	top: 3.62%;
+  	right: 1.25%;
+  	bottom: 17.91%;
+  	left: 1.25%;
+  	border: 1px solid #cde0ef;
+  	box-sizing: border-box;
+}
+.heading-3 {
+  	position: absolute;
+  	top: 0px;
+  	left: 0px;
+  	font-size: 19.06px;
+  	line-height: 24px;
+  	text-transform: uppercase;
+  	font-weight: 600;
+}
+.item-link {
+  	position: absolute;
+  	top: 53.75px;
+  	left: 0px;
+  	width: 73.5px;
+  	height: 25.5px;
+  	font-size: 16.73px;
+}
+.item-link1 {
+  	position: absolute;
+  	top: 94.25px;
+  	left: 0px;
+  	width: 66.7px;
+  	height: 25.5px;
+}
+.item-link2 {
+  	position: absolute;
+  	top: 135px;
+  	left: 0px;
+  	width: 139px;
+  	height: 25px;
+}
+.aga-al {
+  	position: absolute;
+  	top: -1px;
+  	left: 0px;
+  	line-height: 25.5px;
+}
+.item-link3 {
+  	position: absolute;
+  	top: 175.25px;
+  	left: 0px;
+  	width: 84.3px;
+  	height: 25.5px;
+  	font-size: 16.34px;
+}
+.contact {
+  	position: absolute;
+  	top: 0px;
+  	left: 0px;
+  	line-height: 25.5px;
+  	display: flex;
+  	align-items: center;
+  	width: 99.4px;
+  	height: 25.5px;
+}
+.item-link4 {
+  	position: absolute;
+  	top: 215.75px;
+  	left: 0px;
+  	width: 99.2px;
+  	height: 25.5px;
+  	font-size: 16.34px;
+}
+.heading-3-information-parent {
+  	position: absolute;
+  	top: 74px;
+  	left: 459.75px;
+  	width: 139px;
+  	height: 241.3px;
+  	font-size: 16.6px;
+}
+.heading-31 {
+  	position: absolute;
+  	top: 0px;
+  	left: 0.61px;
+  	line-height: 24px;
+  	text-transform: uppercase;
+  	font-weight: 600;
+  	display: flex;
+  	align-items: center;
+  	width: 86px;
+  	height: 24px;
+}
+.icon {
+  	position: absolute;
+  	top: 24.59px;
+  	left: 0.25px;
+  	width: 20px;
+  	height: 20px;
+  	overflow: hidden;
+}
+.abcgmailcom {
+  	position: absolute;
+  	top: -0.41px;
+  	left: 35.25px;
+  	line-height: 24px;
+  	display: flex;
+  	align-items: center;
+  	width: 143.4px;
+  	height: 24px;
+}
+.item {
+  	position: absolute;
+  	width: calc(100% - 46px);
+  	top: 54px;
+  	right: 45.64px;
+  	left: 0.36px;
+  	height: 39px;
+  	font-size: 15.63px;
+}
+.div104 {
+  	position: absolute;
+  	top: -0.41px;
+  	left: 35.25px;
+  	line-height: 24px;
+  	display: flex;
+  	align-items: center;
+  	width: 143.5px;
+  	height: 24px;
+}
+.item1 {
+  	position: absolute;
+  	width: calc(100% - 46px);
+  	top: 93px;
+  	right: 45.64px;
+  	left: 0.36px;
+  	height: 39px;
+  	font-size: 15.5px;
+}
+.aga-global-usa {
+  	margin: 0;
+}
+.aga-global-usa-container1 {
+  	width: 100%;
+}
+.aga-global-usa-container {
+  	position: absolute;
+  	top: 3px;
+  	left: 35.64px;
+  	line-height: 24px;
+  	display: flex;
+  	align-items: center;
+  	width: 266px;
+  	height: 71px;
+}
+.item2 {
+  	position: absolute;
+  	width: 100%;
+  	top: 132px;
+  	right: 0px;
+  	left: 0px;
+  	height: 74px;
+  	font-size: 15.88px;
+}
+.heading-3-contact-parent {
+  	position: absolute;
+  	top: 74px;
+  	left: 688.75px;
+  	width: 297px;
+  	height: 206px;
+  	font-size: 17.34px;
+}
+.empowering-brands-to {
+  	position: absolute;
+  	top: 80.79px;
+  	left: 0.25px;
+  	line-height: 30.4px;
+  	display: flex;
+  	align-items: center;
+  	width: 261.4px;
+  	height: 91.2px;
+}
+.item-link5 {
+  	position: absolute;
+  	top: 10px;
+  	left: 0px;
+  	border-radius: 18px;
+  	width: 36px;
+  	height: 36px;
+}
+.item-link6 {
+  	position: absolute;
+  	top: 10px;
+  	left: 61px;
+  	border-radius: 18px;
+  	width: 36px;
+  	height: 36px;
+}
+.item-link7 {
+  	position: absolute;
+  	top: 10px;
+  	left: 122px;
+  	border-radius: 18px;
+  	width: 36px;
+  	height: 36px;
+}
+.item-link8 {
+  	position: absolute;
+  	top: 10px;
+  	left: 183px;
+  	border-radius: 18px;
+  	width: 36px;
+  	height: 36px;
+}
+.list {
+  	position: absolute;
+  	width: calc(100% - 0.3px);
+  	top: 184.97px;
+  	right: 0.05px;
+  	left: 0.25px;
+  	height: 46px;
+  	overflow: hidden;
+}
+.image-1-icon {
+  	position: absolute;
+  	top: 0px;
+  	left: 0px;
+  	width: 125.3px;
+  	height: 80px;
+  	object-fit: cover;
+}
+.empowering-brands-to-reach-the-parent {
+  	position: absolute;
+  	top: 74px;
+  	left: 102px;
+  	width: 267.8px;
+  	height: 231px;
+  	font-size: 15.63px;
+}
+.envelope-regular-1-icon {
+  	position: absolute;
+  	top: 0px;
+  	left: 0px;
+  	width: 22px;
+  	height: 25.8px;
+  	overflow: hidden;
+}
+.subscribe-to-newsletter {
+  	position: absolute;
+  	top: 2.86px;
+  	left: 38px;
+  	font-weight: 600;
+  	display: inline-block;
+  	width: 211px;
+  	height: 21px;
+}
+.envelope-regular-1-parent {
+  	position: absolute;
+  	top: 0px;
+  	left: 0px;
+  	width: 249px;
+  	height: 25.8px;
+}
+.enter-your-name {
+  	position: absolute;
+  	top: 12.4px;
+  	left: 22px;
+  	display: inline-block;
+  	width: 109px;
+  	height: 16.2px;
+}
+.rectangle-div {
+  	position: absolute;
+  	top: 0px;
+  	left: 0px;
+  	border-radius: 10px;
+  	border: 1px solid #bababa;
+  	box-sizing: border-box;
+  	width: 262px;
+  	height: 45.8px;
+}
+.enter-your-name-parent {
+  	position: absolute;
+  	top: 0px;
+  	left: 0px;
+  	width: 262px;
+  	height: 45.8px;
+}
+.enter-your-e-mail {
+  	position: absolute;
+  	top: 14.31px;
+  	left: 22px;
+  	display: inline-block;
+  	width: 114px;
+  	height: 16.2px;
+}
+.enter-your-e-mail-parent {
+  	position: absolute;
+  	top: 56.44px;
+  	left: 0px;
+  	width: 262px;
+  	height: 45.8px;
+}
+.group-parent43 {
+  	position: absolute;
+  	top: 48.56px;
+  	left: 0px;
+  	width: 262px;
+  	height: 102.2px;
+  	font-size: 14px;
+}
+.group-child32 {
+  	position: absolute;
+  	top: 0px;
+  	left: 0px;
+  	border-radius: 10px;
+  	background-color: rgba(239, 235, 206, 0);
+  	border: 1px solid #bababa;
+  	box-sizing: border-box;
+  	width: 50px;
+  	height: 47.7px;
+}
+.paper-plane-solid-1-icon {
+  	position: absolute;
+  	top: 10px;
+  	left: 10px;
+  	width: 29px;
+  	height: 27.7px;
+  	overflow: hidden;
+}
+.rectangle-parent {
+  	position: absolute;
+  	top: 169px;
+  	left: 0px;
+  	width: 50px;
+  	height: 47.7px;
+}
+.group-parent42 {
+  	position: absolute;
+  	top: 74px;
+  	left: 1076px;
+  	width: 262px;
+  	height: 216.7px;
+  	font-size: 18px;
+  	color: #2f2f2f;
+}
+.footer {
+  	position: absolute;
+  	bottom: 0px;
+  	left: calc(50% - 720px);
+  	background-color: #f9f9f9;
+  	width: 1440px;
+  	height: 497px;
+  	overflow: hidden;
+  	text-align: left;
+  	font-size: 14px;
+}
+.market-sentiment-page {
+  	width: 100%;
+  	position: relative;
+  	background-color: #fff;
+  	height: 3088px;
+  	overflow: hidden;
+  	text-align: center;
+  	font-size: 20px;
+  	color: #333;
+  	font-family: Inter;
+}
+
+
+    </style>
+  	
+  	
+  	
+</head>
+<body>
+  	
+  	<div class="market-sentiment-page">
+    		<div class="market-sentiment-page-inner">
+      			<div class="key-metrics-parent">
+        				<div class="key-metrics">Key Metrics</div>
+        				<div class="contract-data">Contract Data</div>
+        				<div class="overview-parent">
+          					<div class="overview">Overview</div>
+          					<div class="group-child">
+          					</div>
+        				</div>
+      			</div>
+    		</div>
+    		<div class="frame-parent">
+      			<div class="group-wrapper">
+        				<div class="all-parent">
+          					<div class="all">All</div>
+          					<div class="usdt">USDT</div>
+          					<div class="usde">USDE</div>
+          					<div class="eur">EUR</div>
+          					<div class="brd">BRD</div>
+          					<div class="usdc-parent">
+            						<div class="usdc">USDC</div>
+            						<div class="fees-wrapper">
+              							<div class="fees">0 fees</div>
+            						</div>
+          					</div>
+        				</div>
+      			</div>
+      			<div class="trading-pairs-parent">
+        				<div class="trading-pairs">Trading Pairs</div>
+        				<div class="last-traded-price">Last Traded Price</div>
+        				<div class="h-change-parent">
+          					<div class="h-change">24H Change %</div>
+          					<div class="h-high">24H High </div>
+          					<div class="h-low">24H Low </div>
+          					<div class="h-trading-volume">24H Trading Volume </div>
+          					<div class="charts">Charts</div>
+          					<div class="trade">Trade</div>
+        				</div>
+      			</div>
+      			<div class="group-parent">
+        				<div class="group-container">
+          					<div class="btcusdt-parent">
+            						<div class="btcusdt">
+              							<span>BTC</span>
+              							<span class="usdt1">/USDT</span>
+            						</div>
+            						<img class="bitcoin-1-icon" alt="" src="assets/bitcoin 1.png">
+            						
+            						<div class="x-wrapper">
+              							<div class="x">10X</div>
+            						</div>
+          					</div>
+          					<img class="vector-icon" alt="" src="assets/Vector.png">
+          					
+        				</div>
+        				<div class="div">60,666.66</div>
+        				<div class="div1">-0.36%</div>
+        				<div class="div2">62,400</div>
+        				<div class="div3">50,356</div>
+        				<div class="b-usdt">1.6B (USDT)</div>
+        				<div class="frame-group">
+          					<div class="trade-wrapper">
+            						<div class="trade1">Trade</div>
+          					</div>
+          					<div class="details">Details</div>
+        				</div>
+      			</div>
+      			<div class="frame-div">
+        				<div class="group-container">
+          					<div class="btcusdt-parent">
+            						<div class="btcusdt">
+              							<span>BTC</span>
+              							<span class="usdt1">/USDT</span>
+            						</div>
+            						<img class="bitcoin-1-icon" alt="" src="assets/bitcoin 1.png">
+            						
+            						<div class="x-wrapper">
+              							<div class="x">10X</div>
+            						</div>
+          					</div>
+          					<img class="vector-icon" alt="" src="assets/Vector.png">
+          					
+        				</div>
+        				<div class="div">60,666.66</div>
+        				<div class="div1">-0.36%</div>
+        				<div class="div2">62,400</div>
+        				<div class="div3">50,356</div>
+        				<div class="b-usdt">1.6B (USDT)</div>
+        				<div class="frame-group">
+          					<div class="trade-wrapper">
+            						<div class="trade1">Trade</div>
+          					</div>
+          					<div class="details">Details</div>
+        				</div>
+      			</div>
+      			<div class="group-parent1">
+        				<div class="group-container">
+          					<div class="btcusdt-parent">
+            						<div class="btcusdt">
+              							<span>BTC</span>
+              							<span class="usdt1">/USDT</span>
+            						</div>
+            						<img class="bitcoin-1-icon" alt="" src="assets/bitcoin 1.png">
+            						
+            						<div class="x-wrapper">
+              							<div class="x">10X</div>
+            						</div>
+          					</div>
+          					<img class="vector-icon" alt="" src="assets/Vector.png">
+          					
+        				</div>
+        				<div class="div">60,666.66</div>
+        				<div class="div1">-0.36%</div>
+        				<div class="div2">62,400</div>
+        				<div class="div3">50,356</div>
+        				<div class="b-usdt">1.6B (USDT)</div>
+        				<div class="frame-group">
+          					<div class="trade-wrapper">
+            						<div class="trade1">Trade</div>
+          					</div>
+          					<div class="details">Details</div>
+        				</div>
+      			</div>
+      			<div class="group-parent3">
+        				<div class="group-container">
+          					<div class="btcusdt-parent">
+            						<div class="btcusdt">
+              							<span>BTC</span>
+              							<span class="usdt1">/USDT</span>
+            						</div>
+            						<img class="bitcoin-1-icon" alt="" src="assets/bitcoin 1.png">
+            						
+            						<div class="x-wrapper">
+              							<div class="x">10X</div>
+            						</div>
+          					</div>
+          					<img class="vector-icon" alt="" src="assets/Vector.png">
+          					
+        				</div>
+        				<div class="div">60,666.66</div>
+        				<div class="div1">-0.36%</div>
+        				<div class="div2">62,400</div>
+        				<div class="div3">50,356</div>
+        				<div class="b-usdt">1.6B (USDT)</div>
+        				<div class="frame-group">
+          					<div class="trade-wrapper">
+            						<div class="trade1">Trade</div>
+          					</div>
+          					<div class="details">Details</div>
+        				</div>
+      			</div>
+      			<div class="group-parent5">
+        				<div class="group-container">
+          					<div class="btcusdt-parent">
+            						<div class="btcusdt">
+              							<span>BTC</span>
+              							<span class="usdt1">/USDT</span>
+            						</div>
+            						<img class="bitcoin-1-icon" alt="" src="assets/bitcoin 1.png">
+            						
+            						<div class="x-wrapper">
+              							<div class="x">10X</div>
+            						</div>
+          					</div>
+          					<img class="vector-icon" alt="" src="assets/Vector.png">
+          					
+        				</div>
+        				<div class="div">60,666.66</div>
+        				<div class="div1">-0.36%</div>
+        				<div class="div2">62,400</div>
+        				<div class="div3">50,356</div>
+        				<div class="b-usdt">1.6B (USDT)</div>
+        				<div class="frame-group">
+          					<div class="trade-wrapper">
+            						<div class="trade1">Trade</div>
+          					</div>
+          					<div class="details">Details</div>
+        				</div>
+      			</div>
+      			<div class="group-parent7">
+        				<div class="group-container">
+          					<div class="btcusdt-parent">
+            						<div class="xrpusdt">
+              							<span>XRP</span>
+              							<span class="usdt1">/USDT</span>
+            						</div>
+            						<img class="group-item" alt="" src="assets/Group 54.png">
+            						
+            						<div class="x-wrapper3">
+              							<div class="x">10X</div>
+            						</div>
+          					</div>
+          					<img class="vector-icon" alt="" src="assets/Vector.png">
+          					
+        				</div>
+        				<div class="div20">60,666.66</div>
+        				<div class="div21">-0.36%</div>
+        				<div class="div22">62,400</div>
+        				<div class="div23">50,356</div>
+        				<div class="b-usdt5">1.6B (USDT)</div>
+        				<div class="frame-parent4">
+          					<div class="trade-wrapper">
+            						<div class="trade1">Trade</div>
+          					</div>
+          					<div class="details">Details</div>
+        				</div>
+      			</div>
+      			<div class="group-parent9">
+        				<div class="group-container">
+          					<div class="btcusdt-parent">
+            						<div class="xrpusdt">
+              							<span>XRP</span>
+              							<span class="usdt1">/USDT</span>
+            						</div>
+            						<img class="group-item" alt="" src="assets/Group 54.png">
+            						
+            						<div class="x-wrapper3">
+              							<div class="x">10X</div>
+            						</div>
+          					</div>
+          					<img class="vector-icon" alt="" src="assets/Vector.png">
+          					
+        				</div>
+        				<div class="div20">60,666.66</div>
+        				<div class="div21">-0.36%</div>
+        				<div class="div22">62,400</div>
+        				<div class="div23">50,356</div>
+        				<div class="b-usdt5">1.6B (USDT)</div>
+        				<div class="frame-parent4">
+          					<div class="trade-wrapper">
+            						<div class="trade1">Trade</div>
+          					</div>
+          					<div class="details">Details</div>
+        				</div>
+      			</div>
+      			<div class="group-parent11">
+        				<div class="group-container">
+          					<div class="btcusdt-parent">
+            						<div class="xrpusdt">
+              							<span>XRP</span>
+              							<span class="usdt1">/USDT</span>
+            						</div>
+            						<img class="group-item" alt="" src="assets/Group 54.png">
+            						
+            						<div class="x-wrapper3">
+              							<div class="x">10X</div>
+            						</div>
+          					</div>
+          					<img class="vector-icon" alt="" src="assets/Vector.png">
+          					
+        				</div>
+        				<div class="div20">60,666.66</div>
+        				<div class="div21">-0.36%</div>
+        				<div class="div22">62,400</div>
+        				<div class="div23">50,356</div>
+        				<div class="b-usdt5">1.6B (USDT)</div>
+        				<div class="frame-parent4">
+          					<div class="trade-wrapper">
+            						<div class="trade1">Trade</div>
+          					</div>
+          					<div class="details">Details</div>
+        				</div>
+      			</div>
+      			<div class="group-parent13">
+        				<div class="group-container">
+          					<div class="btcusdt-parent">
+            						<div class="xrpusdt">
+              							<span>XRP</span>
+              							<span class="usdt1">/USDT</span>
+            						</div>
+            						<img class="group-item" alt="" src="assets/Group 54.png">
+            						
+            						<div class="x-wrapper3">
+              							<div class="x">10X</div>
+            						</div>
+          					</div>
+          					<img class="vector-icon" alt="" src="assets/Vector.png">
+          					
+        				</div>
+        				<div class="div20">60,666.66</div>
+        				<div class="div21">-0.36%</div>
+        				<div class="div22">62,400</div>
+        				<div class="div23">50,356</div>
+        				<div class="b-usdt5">1.6B (USDT)</div>
+        				<div class="frame-parent4">
+          					<div class="trade-wrapper">
+            						<div class="trade1">Trade</div>
+          					</div>
+          					<div class="details">Details</div>
+        				</div>
+      			</div>
+      			<div class="group-parent15">
+        				<div class="group-container">
+          					<div class="btcusdt-parent">
+            						<div class="xrpusdt">
+              							<span>XRP</span>
+              							<span class="usdt1">/USDT</span>
+            						</div>
+            						<img class="group-item" alt="" src="assets/Group 54.png">
+            						
+            						<div class="x-wrapper3">
+              							<div class="x">10X</div>
+            						</div>
+          					</div>
+          					<img class="vector-icon" alt="" src="assets/Vector.png">
+          					
+        				</div>
+        				<div class="div20">60,666.66</div>
+        				<div class="div21">-0.36%</div>
+        				<div class="div22">62,400</div>
+        				<div class="div23">50,356</div>
+        				<div class="b-usdt5">1.6B (USDT)</div>
+        				<div class="frame-parent4">
+          					<div class="trade-wrapper">
+            						<div class="trade1">Trade</div>
+          					</div>
+          					<div class="details">Details</div>
+        				</div>
+      			</div>
+      			<div class="group-parent17">
+        				<div class="group-container">
+          					<div class="btcusdt-parent">
+            						<div class="btcusdt">
+              							<span>ETH</span>
+              							<span class="usdt1">/USDT</span>
+            						</div>
+            						<img class="group-item" alt="" src="assets/Group 234.png">
+            						
+            						<div class="x-wrapper3">
+              							<div class="x">10X</div>
+            						</div>
+          					</div>
+          					<img class="vector-icon" alt="" src="assets/Vector.png">
+          					
+        				</div>
+        				<div class="div20">60,666.66</div>
+        				<div class="div41">-0.36%</div>
+        				<div class="div42">62,400</div>
+        				<div class="div43">50,356</div>
+        				<div class="b-usdt10">1.6B (USDT)</div>
+        				<div class="frame-parent9">
+          					<div class="trade-wrapper">
+            						<div class="trade1">Trade</div>
+          					</div>
+          					<div class="details">Details</div>
+        				</div>
+      			</div>
+      			<div class="group-parent19">
+        				<div class="group-container">
+          					<div class="btcusdt-parent">
+            						<div class="btcusdt">
+              							<span>ETH</span>
+              							<span class="usdt1">/USDT</span>
+            						</div>
+            						<img class="group-item" alt="" src="assets/Group 234.png">
+            						
+            						<div class="x-wrapper3">
+              							<div class="x">10X</div>
+            						</div>
+          					</div>
+          					<img class="vector-icon" alt="" src="assets/Vector.png">
+          					
+        				</div>
+        				<div class="div20">60,666.66</div>
+        				<div class="div41">-0.36%</div>
+        				<div class="div42">62,400</div>
+        				<div class="div43">50,356</div>
+        				<div class="b-usdt10">1.6B (USDT)</div>
+        				<div class="frame-parent9">
+          					<div class="trade-wrapper">
+            						<div class="trade1">Trade</div>
+          					</div>
+          					<div class="details">Details</div>
+        				</div>
+      			</div>
+      			<div class="group-parent21">
+        				<div class="group-container">
+          					<div class="btcusdt-parent">
+            						<div class="btcusdt">
+              							<span>ETH</span>
+              							<span class="usdt1">/USDT</span>
+            						</div>
+            						<img class="group-item" alt="" src="assets/Group 234.png">
+            						
+            						<div class="x-wrapper3">
+              							<div class="x">10X</div>
+            						</div>
+          					</div>
+          					<img class="vector-icon" alt="" src="assets/Vector.png">
+          					
+        				</div>
+        				<div class="div20">60,666.66</div>
+        				<div class="div41">-0.36%</div>
+        				<div class="div42">62,400</div>
+        				<div class="div43">50,356</div>
+        				<div class="b-usdt10">1.6B (USDT)</div>
+        				<div class="frame-parent9">
+          					<div class="trade-wrapper">
+            						<div class="trade1">Trade</div>
+          					</div>
+          					<div class="details">Details</div>
+        				</div>
+      			</div>
+      			<div class="group-parent23">
+        				<div class="group-container">
+          					<div class="btcusdt-parent">
+            						<div class="btcusdt">
+              							<span>ETH</span>
+              							<span class="usdt1">/USDT</span>
+            						</div>
+            						<img class="group-item" alt="" src="assets/Group 234.png">
+            						
+            						<div class="x-wrapper3">
+              							<div class="x">10X</div>
+            						</div>
+          					</div>
+          					<img class="vector-icon" alt="" src="assets/Vector.png">
+          					
+        				</div>
+        				<div class="div20">60,666.66</div>
+        				<div class="div41">-0.36%</div>
+        				<div class="div42">62,400</div>
+        				<div class="div43">50,356</div>
+        				<div class="b-usdt10">1.6B (USDT)</div>
+        				<div class="frame-parent9">
+          					<div class="trade-wrapper">
+            						<div class="trade1">Trade</div>
+          					</div>
+          					<div class="details">Details</div>
+        				</div>
+      			</div>
+      			<div class="group-parent25">
+        				<div class="group-container">
+          					<div class="btcusdt-parent">
+            						<div class="btcusdt">
+              							<span>ETH</span>
+              							<span class="usdt1">/USDT</span>
+            						</div>
+            						<img class="group-item" alt="" src="assets/Group 234.png">
+            						
+            						<div class="x-wrapper3">
+              							<div class="x">10X</div>
+            						</div>
+          					</div>
+          					<img class="vector-icon" alt="" src="assets/Vector.png">
+          					
+        				</div>
+        				<div class="div20">60,666.66</div>
+        				<div class="div41">-0.36%</div>
+        				<div class="div42">62,400</div>
+        				<div class="div43">50,356</div>
+        				<div class="b-usdt10">1.6B (USDT)</div>
+        				<div class="frame-parent9">
+          					<div class="trade-wrapper">
+            						<div class="trade1">Trade</div>
+          					</div>
+          					<div class="details">Details</div>
+        				</div>
+      			</div>
+    		</div>
+    		<div class="group-parent27">
+      			<div class="line-parent">
+        				<div class="line-div">
+        				</div>
+        				<div class="top-gainers-parent">
+          					<div class="top-gainers">Top Gainers</div>
+          					<div class="group-parent28">
+            						<div class="group-frame">
+              							<div class="group-frame">
+                								<div class="div60">137.487</div>
+                								<div class="div61">-4.28%</div>
+                								<div class="btcusdt-parent3">
+                  									<div class="btcusdt5">BTCUSDT</div>
+                  									<img class="bitcoin-1-icon5" alt="" src="assets/bitcoin 1.png">
+                  									
+                								</div>
+              							</div>
+            						</div>
+            						<div class="group-wrapper1">
+              							<div class="group-frame">
+                								<div class="div60">137.487</div>
+                								<div class="div61">-4.28%</div>
+                								<div class="btcusdt-parent3">
+                  									<div class="btcusdt5">BTCUSDT</div>
+                  									<img class="bitcoin-1-icon5" alt="" src="assets/bitcoin 1.png">
+                  									
+                								</div>
+              							</div>
+            						</div>
+            						<div class="container">
+              							<div class="div64">137.487</div>
+              							<div class="div65">-4.28%</div>
+              							<div class="xrpusdt-parent3">
+                								<div class="btcusdt5">XRPUSDT</div>
+                								<img class="group-child8" alt="" src="assets/Group 54.png">
+                								
+              							</div>
+            						</div>
+            						<div class="parent1">
+              							<div class="div64">137.487</div>
+              							<div class="div65">-4.28%</div>
+              							<div class="xrpusdt-parent3">
+                								<div class="btcusdt5">XRPUSDT</div>
+                								<img class="group-child8" alt="" src="assets/Group 54.png">
+                								
+              							</div>
+            						</div>
+            						<div class="parent2">
+              							<div class="div64">137.487</div>
+              							<div class="div65">-4.28%</div>
+              							<div class="xrpusdt-parent3">
+                								<div class="btcusdt5">ETHUSDT</div>
+                								<img class="group-child8" alt="" src="assets/Group 234.png">
+                								
+              							</div>
+            						</div>
+            						<div class="parent3">
+              							<div class="div64">137.487</div>
+              							<div class="div65">-4.28%</div>
+              							<div class="xrpusdt-parent3">
+                								<div class="btcusdt5">ETHUSDT</div>
+                								<img class="group-child8" alt="" src="assets/Group 234.png">
+                								
+              							</div>
+            						</div>
+          					</div>
+        				</div>
+      			</div>
+      			<div class="line-group">
+        				<div class="line-div">
+        				</div>
+        				<div class="top-gainers-parent">
+          					<div class="top-gainers">Newly Listed</div>
+          					<div class="group-parent28">
+            						<div class="group-frame">
+              							<div class="group-frame">
+                								<div class="div60">137.487</div>
+                								<div class="div73">-4.28%</div>
+                								<div class="btcusdt-parent3">
+                  									<div class="btcusdt5">BTCUSDT</div>
+                  									<img class="bitcoin-1-icon5" alt="" src="assets/bitcoin 1.png">
+                  									
+                								</div>
+              							</div>
+            						</div>
+            						<div class="group-wrapper1">
+              							<div class="group-frame">
+                								<div class="div60">137.487</div>
+                								<div class="div61">-4.28%</div>
+                								<div class="btcusdt-parent3">
+                  									<div class="btcusdt5">BTCUSDT</div>
+                  									<img class="bitcoin-1-icon5" alt="" src="assets/bitcoin 1.png">
+                  									
+                								</div>
+              							</div>
+            						</div>
+            						<div class="container">
+              							<div class="div64">137.487</div>
+              							<div class="div77">-4.28%</div>
+              							<div class="xrpusdt-parent3">
+                								<div class="btcusdt5">XRPUSDT</div>
+                								<img class="group-child8" alt="" src="assets/Group 54.png">
+                								
+              							</div>
+            						</div>
+            						<div class="parent1">
+              							<div class="div64">137.487</div>
+              							<div class="div65">-4.28%</div>
+              							<div class="xrpusdt-parent3">
+                								<div class="btcusdt5">XRPUSDT</div>
+                								<img class="group-child8" alt="" src="assets/Group 54.png">
+                								
+              							</div>
+            						</div>
+            						<div class="parent2">
+              							<div class="div64">137.487</div>
+              							<div class="div77">-4.28%</div>
+              							<div class="xrpusdt-parent3">
+                								<div class="btcusdt5">ETHUSDT</div>
+                								<img class="group-child8" alt="" src="assets/Group 234.png">
+                								
+              							</div>
+            						</div>
+            						<div class="parent3">
+              							<div class="div64">137.487</div>
+              							<div class="div65">-4.28%</div>
+              							<div class="xrpusdt-parent3">
+                								<div class="btcusdt5">ETHUSDT</div>
+                								<img class="group-child8" alt="" src="assets/Group 234.png">
+                								
+              							</div>
+            						</div>
+          					</div>
+        				</div>
+      			</div>
+      			<div class="line-container">
+        				<div class="line-div">
+        				</div>
+        				<div class="top-gainers-parent">
+          					<div class="top-gainers">Trending</div>
+          					<div class="group-parent28">
+            						<div class="group-frame">
+              							<div class="group-frame">
+                								<div class="div60">137.487</div>
+                								<div class="div61">-4.28%</div>
+                								<div class="btcusdt-parent3">
+                  									<div class="btcusdt5">BTCUSDT</div>
+                  									<img class="bitcoin-1-icon5" alt="" src="assets/bitcoin 1.png">
+                  									
+                								</div>
+              							</div>
+            						</div>
+            						<div class="group-wrapper1">
+              							<div class="group-frame">
+                								<div class="div60">137.487</div>
+                								<div class="div61">-4.28%</div>
+                								<div class="btcusdt-parent3">
+                  									<div class="btcusdt5">BTCUSDT</div>
+                  									<img class="bitcoin-1-icon5" alt="" src="assets/bitcoin 1.png">
+                  									
+                								</div>
+              							</div>
+            						</div>
+            						<div class="container">
+              							<div class="div64">137.487</div>
+              							<div class="div65">-4.28%</div>
+              							<div class="xrpusdt-parent3">
+                								<div class="btcusdt5">XRPUSDT</div>
+                								<img class="group-child8" alt="" src="assets/Group 54.png">
+                								
+              							</div>
+            						</div>
+            						<div class="parent1">
+              							<div class="div64">137.487</div>
+              							<div class="div77">-4.28%</div>
+              							<div class="xrpusdt-parent3">
+                								<div class="btcusdt5">XRPUSDT</div>
+                								<img class="group-child8" alt="" src="assets/Group 54.png">
+                								
+              							</div>
+            						</div>
+            						<div class="parent2">
+              							<div class="div64">137.487</div>
+              							<div class="div77">-4.28%</div>
+              							<div class="xrpusdt-parent3">
+                								<div class="btcusdt5">ETHUSDT</div>
+                								<img class="group-child8" alt="" src="assets/Group 234.png">
+                								
+              							</div>
+            						</div>
+            						<div class="parent3">
+              							<div class="div64">137.487</div>
+              							<div class="div65">-4.28%</div>
+              							<div class="xrpusdt-parent3">
+                								<div class="btcusdt5">ETHUSDT</div>
+                								<img class="group-child8" alt="" src="assets/Group 234.png">
+                								
+              							</div>
+            						</div>
+          					</div>
+        				</div>
+      			</div>
+    		</div>
+    		<div class="group-parent31">
+      			<div class="favorites-parent">
+        				<div class="favorites">Favorites</div>
+        				<div class="derivatives">Derivatives</div>
+        				<div class="derivatives1">Derivatives</div>
+        				<div class="spot-wrapper">
+          					<div class="spot">Spot</div>
+        				</div>
+      			</div>
+      			<div class="group-wrapper6">
+        				<div class="search-parent">
+          					<div class="search">Search</div>
+          					<img class="group-child22" alt="" src="assets/Group 49.svg">
+          					
+        				</div>
+      			</div>
+      			<div class="markets-wrapper">
+        				<div class="markets">Markets</div>
+      			</div>
+    		</div>
+    		<div class="group-parent32">
+      			<div class="frame-parent14">
+        				<div class="group-child23">
+        				</div>
+        				<div class="market-sentiment-parent">
+          					<div class="market-sentiment">Market Sentiment</div>
+          					<div class="group-parent33">
+            						<img class="group-child24" alt="" src="assets/Group 108.png">
+            						
+            						<div class="h-change">View more</div>
+          					</div>
+        				</div>
+        				<div class="group-parent34">
+          					<div class="long-parent">
+            						<div class="long">Long</div>
+            						<div class="short">Short</div>
+          					</div>
+          					<div class="image-20-parent">
+            						<img class="image-20-icon" alt="" src="assets/image 20.png">
+            						
+            						<div class="parent16">
+              							<div class="long">39</div>
+              							<div class="div97">79</div>
+            						</div>
+          					</div>
+        				</div>
+      			</div>
+      			<div class="frame-parent15">
+        				<div class="group-child23">
+        				</div>
+        				<div class="group-parent35">
+          					<div class="group-parent36">
+            						<img class="group-child26" alt="" src="assets/chartMinus.svg">
+            						
+            						<div class="usd-parent">
+              							<div class="usd">= 0.221 USD</div>
+              							<div class="current-eth-gas-parent">
+                								<div class="current-eth-gas">Current ETH Gas</div>
+                								<div class="gwei">Gwei</div>
+                								<div class="div98">4.863227</div>
+              							</div>
+            						</div>
+          					</div>
+          					<div class="group-parent37">
+            						<img class="group-child26" alt="" src="assets/chartPlus.svg.svg">
+            						
+            						<div class="group-wrapper7">
+              							<div class="trading-volume-parent">
+                								<div class="h-change">Trading Volume</div>
+                								<div class="b-usdt15">1.0947B USDT</div>
+                								<div class="div99">54.03%</div>
+              							</div>
+            						</div>
+          					</div>
+        				</div>
+        				<div class="market-data-parent">
+          					<div class="h-change">Market Data</div>
+          					<div class="group-parent38">
+            						<img class="group-child24" alt="" src="assets/Group 108.png">
+            						
+            						<div class="h-change">View more</div>
+          					</div>
+        				</div>
+      			</div>
+      			<div class="frame-parent16">
+        				<div class="group-child23">
+        				</div>
+        				<div class="group-parent39">
+          					<div class="group-wrapper8">
+            						<div class="group-parent40">
+              							<div class="nft-parent">
+                								<div class="nft-parent">
+                  									<div class="nft-parent">
+                    										<div class="nft-parent">
+                      											<div class="nft-parent">
+                        												<div class="h-change">NFT</div>
+                        												<div class="div100">-1.76%</div>
+                        												<div class="chrp-724">
+                          													<span>CHRP </span>
+                          													<span class="span">7.24%</span>
+                        												</div>
+                      											</div>
+                    										</div>
+                  									</div>
+                								</div>
+              							</div>
+              							<div class="group-wrapper13">
+                								<div class="nft-parent">
+                  									<div class="nft-parent">
+                    										<div class="nft-parent">
+                      											<div class="nft-parent">
+                        												<div class="h-change">Fan Token</div>
+                        												<div class="div100">-1.76%</div>
+                        												<div class="chrp-724">
+                          													<span>CHRP </span>
+                          													<span class="span">7.24%</span>
+                        												</div>
+                      											</div>
+                    										</div>
+                  									</div>
+                								</div>
+              							</div>
+              							<div class="group-wrapper17">
+                								<div class="nft-parent">
+                  									<div class="nft-parent">
+                    										<div class="nft-parent">
+                      											<div class="nft-parent">
+                        												<div class="h-change">Polygon Ecosystem</div>
+                        												<div class="div100">-1.76%</div>
+                        												<div class="chrp-724">
+                          													<span>CHRP </span>
+                          													<span class="span">7.24%</span>
+                        												</div>
+                      											</div>
+                    										</div>
+                  									</div>
+                								</div>
+              							</div>
+              							<div class="group-wrapper21">
+                								<div class="nft-parent">
+                  									<div class="nft-parent">
+                    										<div class="nft-parent">
+                      											<div class="nft-parent">
+                        												<div class="h-change">Storage</div>
+                        												<div class="div100">-1.76%</div>
+                        												<div class="chrp-724">
+                          													<span>CHRP </span>
+                          													<span class="span">7.24%</span>
+                        												</div>
+                      											</div>
+                    										</div>
+                  									</div>
+                								</div>
+              							</div>
+            						</div>
+          					</div>
+          					<div class="trending-sectors-wrapper">
+            						<div class="h-change">Trending Sectors</div>
+          					</div>
+        				</div>
+      			</div>
+    		</div>
+    		<div class="image-2-parent">
+      			<img class="image-2-icon" alt="" src="assets/image 1.png">
+      			
+      			<div class="home-parent">
+                    <button class="home" onclick="location.href='index.html'">Home</button>
+                    <button class="about-us" onclick="location.href='aboutus.html'">About Us</button>
+                    <button class="aga-ai" onclick="location.href='agaAI.html'">AGA AI</button>
+                    <button class="smart-investment" onclick="location.href='smartInvest.html'">Smart Investment</button>
+                    <button class="contact-us" onclick="location.href='contactus.html'">Contact Us</button>
+                </div>
+      			<div class="cta-1">
+        				<div class="group-parent41">
+          					<img class="group-child30" alt="" src="assets/Group 1.png">
+          					
+          					<div class="lets-talk">Let’s talk</div>
+        				</div>
+      			</div>
+    		</div>
+    		<div class="footer">
+      			<div class="background">
+        				<div class="all-rights-reserved">© 2024 All Rights Reserved. Design by Salman.UI UX</div>
+      			</div>
+      			<div class="border">
+      			</div>
+      			<div class="heading-3-information-parent">
+        				<div class="heading-3">Quick links</div>
+        				<div class="item-link">
+          					<div class="aga-al">Home</div>
+        				</div>
+        				<div class="item-link1">
+          					<div class="aga-al">About Us</div>
+        				</div>
+        				<div class="item-link2">
+          					<div class="aga-al">Smart Investment</div>
+        				</div>
+        				<div class="item-link3">
+          					<div class="aga-al">Aga Al</div>
+        				</div>
+        				<div class="item-link4">
+          					<div class="contact">Contact</div>
+        				</div>
+      			</div>
+      			<div class="heading-3-contact-parent">
+        				<div class="heading-31">Contact</div>
+        				<div class="item">
+                            <i class="fas fa-envelope icon"></i>
+          					
+          					<div class="abcgmailcom">abc@gmail.com</div>
+        				</div>
+        				<div class="item1">
+                            <i class="fas fa-phone icon"></i> <!-- Phone icon -->
+          					
+          					<div class="div104">+92 3488 400 155</div>
+        				</div>
+        				<div class="item2">
+                            <i class="fas fa-map-marker-alt icon"></i> <!-- Location icon -->
+          					
+          					<div class="aga-global-usa-container">
+            						<span class="aga-global-usa-container1">
+              							<p class="aga-global-usa">AGA GLOBAL USA US</p>
+              							<p class="aga-global-usa">DIVISION 2 Granite Avenue Milton, MA 02186</p>
+            						</span>
+          					</div>
+        				</div>
+      			</div>
+      			<div class="empowering-brands-to-reach-the-parent">
+        				<div class="empowering-brands-to">Empowering brands to reach their fullest potential through innovative digital marketing solutions.</div>
+        				<div class="list">
+                            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+                            <i class="fab fa-facebook item-link5"></i>
+                            <i class="fab fa-twitter item-link6"></i>
+                            <i class="fab fa-google item-link7"></i>
+                            <i class="fab fa-instagram item-link8"></i>
+        				</div>
+        				<img class="image-1-icon" alt="" src="image 1.png">
+        				
+      			</div>
+      			<div class="group-parent42">
+        				<div class="envelope-regular-1-parent">
+                            <i class="fas fa-envelope envelope-regular-1-icon"></i>
+          					
+          					<div class="subscribe-to-newsletter">Subscribe to Newsletter</div>
+        				</div>
+        				<div class="group-parent43">
+          					<div class="enter-your-name-parent">
+            						<div class="enter-your-name">Enter your name</div>
+            						<div class="rectangle-div">
+            						</div>
+          					</div>
+          					<div class="enter-your-e-mail-parent">
+            						<div class="enter-your-e-mail">Enter your e-mail</div>
+            						<div class="rectangle-div">
+            						</div>
+          					</div>
+        				</div>
+        				<div class="rectangle-parent">
+          					<div class="group-child32">
+          					</div>
+                              <i class="fas fa-paper-plane paper-plane-solid-1-icon"></i>
+          					
+        				</div>
+      			</div>
+    		</div>
+  	</div>
+  	
+  	
+  	
+  	
+</body>
+</html>

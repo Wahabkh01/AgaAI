@@ -1,0 +1,1179 @@
+<!DOCTYPE html>
+<html>
+<head>
+  	<meta charset="utf-8">
+  	<meta name="viewport" content="initial-scale=1, width=device-width">
+  	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" />
+  	
+  	
+  	<style>
+
+        *{
+            margin: 0%;
+            padding: 0%;
+        }
+
+        button {
+    background: none; /* Remove default button background */
+    border: none; /* Remove default button border */
+    font-size: 16px;
+    color: #333; /* Adjust text color */
+    cursor: pointer;
+    padding: 10px 20px; /* Add spacing */
+    text-align: center;
+    border-radius: 5px; /* Optional: add rounded corners */
+    transition: background-color 0.3s, color 0.3s; /* Add hover effect */
+}
+
+button:hover {
+    background-color: #f0f0f0; /* Change background on hover */
+    color: #000; /* Change text color on hover */
+}
+
+button:focus {
+    outline: none; /* Remove focus outline */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5); /* Optional: add focus effect */
+}
+
+
+.image-1-icon {
+  	position: absolute;
+  	top: calc(50% - 40px);
+  	left: 300px;
+  	width: 125.3px;
+  	height: 80px;
+  	object-fit: cover;
+}
+.home {
+  	position: absolute;
+  	top: calc(50% - 12px);
+  	left: 0px;
+  	text-decoration: underline;
+  	font-weight: 500;
+  	background: linear-gradient(178.73deg, #8e8e8e, #00008b 27.52%, #9e3623 75.99%, #c0c0c0);
+  	-webkit-background-clip: text;
+  	-webkit-text-fill-color: transparent;
+}
+.about-us {
+  	position: absolute;
+  	top: calc(50% - 12px);
+  	left: 113px;
+  	font-weight: 500;
+}
+.aga-ai {
+  	position: absolute;
+  	top: calc(50% - 12px);
+  	left: 258px;
+  	font-weight: 500;
+}
+.smart-investment {
+  	position: absolute;
+  	top: calc(50% - 12px);
+  	left: 381px;
+  	font-weight: 500;
+}
+.contact-us {
+  	position: absolute;
+  	top: calc(50% - 12px);
+  	left: 607px;
+  	font-weight: 500;
+}
+.home-parent {
+  	position: absolute;
+  	top: calc(50% - 12px);
+  	left: 562px;
+  	width: 715px;
+  	height: 24px;
+}
+.group-child {
+  	position: absolute;
+  	height: 83.33%;
+  	width: 16.81%;
+  	top: 8.33%;
+  	right: 83.19%;
+  	bottom: 8.33%;
+  	left: 0%;
+  	max-width: 100%;
+  	max-height: 100%;
+}
+.lets-talk {
+  	position: absolute;
+  	top: calc(50% - 12px);
+  	left: 34px;
+  	font-weight: 500;
+}
+.group-parent {
+  	position: absolute;
+  	height: 42.86%;
+  	width: 74.84%;
+  	top: 28.57%;
+  	right: 2.58%;
+  	bottom: 28.57%;
+  	left: 2.58%;
+}
+.cta-1 {
+  	position: absolute;
+  	top: calc(50% - 28px);
+  	left: 1381px;
+  	box-shadow: 0px 4px 54px 14px rgba(209, 209, 209, 0.2);
+  	border-radius: 12px;
+  	background: linear-gradient(178.73deg, #8e8e8e, #00008b 27.52%, #9e3623 75.99%, #c0c0c0);
+  	width: 159px;
+  	height: 56px;
+  	color: #fff;
+}
+.image-1-parent {
+  	position: absolute;
+  	top: 0px;
+  	left: 0px;
+  	width: 1580px;
+  	height: 120px;
+  	overflow: hidden;
+}
+.image-icon {
+  	position: absolute;
+  	top: 0px;
+  	left: 0px;
+  	width: 2140px;
+  	height: 650px;
+  	object-fit: fill;
+}
+.about-us1 {
+  	position: absolute;
+  	top: calc(50% - 37.5px);
+  	left: calc(50% - 140px);
+}
+.image-parent {
+  	position: absolute;
+  	top: 120px;
+  	width: 2040px;
+  	height: 513px;
+  	overflow: hidden;
+  	font-size: 62px;
+  	color: #fff;
+}
+.learn-more {
+  	position: absolute;
+  	top: calc(50% - 14px);
+  	left: calc(50% - 65.5px);
+  	font-weight: 500;
+}
+.learn-more-wrapper {
+  	position: absolute;
+  	top: 475px;
+  	left: 2px;
+  	box-shadow: 0px 4px 44px 4px rgba(255, 255, 255, 0.1);
+  	border-radius: 190px;
+  	background: linear-gradient(178.73deg, #8e8e8e, #00008b 27.52%, #9e3623 75.99%, #c0c0c0);
+  	border: 0.5px solid #939393;
+  	box-sizing: border-box;
+  	width: 269.5px;
+  	height: 72.5px;
+  	overflow: hidden;
+  	color: #fff;
+}
+
+.about-us2 {
+  	position: absolute;
+  	top: 0px;
+  	left: 0px;
+  	font-weight: 500;
+}
+.at-aga-global {
+  	position: absolute;
+  	top: 153px;
+  	left: 2px;
+  	font-size: 20px;
+  	letter-spacing: 0.01em;
+  	text-align: left;
+  	display: inline-block;
+  	width: 776px;
+}
+.our-quantum-al {
+  	position: absolute;
+  	top: 317px;
+  	left: 2px;
+  	font-size: 20px;
+  	letter-spacing: 0.01em;
+  	text-align: left;
+  	display: inline-block;
+  	width: 776px;
+}
+.your-trusted-financial {
+  	position: absolute;
+  	top: 41px;
+  	left: 0px;
+  	font-size: 32px;
+  	font-weight: 600;
+}
+.power-of-quantum {
+  	position: absolute;
+  	top: 90px;
+  	left: 0px;
+  	font-size: 32px;
+  	font-weight: 600;
+}
+.frame-parent {
+  	position: absolute;
+  	top: 20px;
+  	left: 515px;
+  	width: 778px;
+  	height: 547px;
+}
+.group-item {
+  	position: absolute;
+  	top: 0px;
+  	left: 0px;
+  	border-radius: 20px 0px 0px 20px;
+  	border: 8px solid #303f60;
+  	box-sizing: border-box;
+  	width: 143px;
+  	height: 594px;
+}
+.group-inner {
+  	position: absolute;
+  	top: 15px;
+  	left: 16px;
+  	border-radius: 10px;
+  	width: 455px;
+  	height: 556px;
+  	overflow: hidden;
+  	object-fit: cover;
+}
+.rectangle-parent {
+  	position: absolute;
+  	top: 0px;
+  	left: 0px;
+  	width: 471px;
+  	height: 586px;
+}
+.group-container {
+  	position: absolute;
+  	top: 0px;
+  	left: 0px;
+  	width: 1293px;
+  	height: 586px;
+}
+.about-us-page-inner {
+  	position: absolute;
+  	top: 733px;
+  	left: 74px;
+  	width: 1293px;
+  	height: 586px;
+  	text-align: center;
+  	font-size: 24px;
+}
+.we-will-develop {
+  	position: absolute;
+  	top: 105px;
+  	left: calc(50% - 260px);
+  	line-height: 21px;
+  	color: #222;
+  	display: inline-block;
+  	width: 490px;
+}
+.lets-communicate {
+  	position: absolute;
+  	top: 0px;
+  	left: calc(50% - 250px);
+  	letter-spacing: 0.01em;
+  	font-weight: 500;
+}
+.line-div {
+  	position: absolute;
+  	top: 14.5px;
+  	left: 238.5px;
+  	border-top: 1px solid #8e8e8e;
+  	box-sizing: border-box;
+  	width: 262px;
+  	height: 1px;
+}
+.lets-communicate-parent {
+  	position: absolute;
+  	top: 54px;
+  	left: calc(50% - 260px);
+  	width: 500px;
+  	height: 29px;
+  	text-align: center;
+  	font-size: 24px;
+  	color: #222;
+}
+.icon {
+  	position: absolute;
+  	top: 24.59px;
+  	left: 0.25px;
+  	width: 20px;
+  	height: 20px;
+  	overflow: hidden;
+}
+.abcgmailcom {
+  	position: absolute;
+  	top: -0.41px;
+  	left: 35.25px;
+  	line-height: 24px;
+  	display: flex;
+  	align-items: center;
+  	width: 143.4px;
+  	height: 24px;
+}
+.item {
+  	position: absolute;
+  	width: calc(100% - 357px);
+  	top: 194px;
+  	right: 312.64px;
+  	left: 44.36px;
+  	height: 39px;
+  	font-size: 15.63px;
+}
+.div {
+  	position: absolute;
+  	top: -0.41px;
+  	left: 35.25px;
+  	line-height: 24px;
+  	display: flex;
+  	align-items: center;
+  	width: 143.5px;
+  	height: 24px;
+}
+.item1 {
+  	position: absolute;
+  	width: calc(100% - 357px);
+  	top: 233px;
+  	right: 312.64px;
+  	left: 44.36px;
+  	height: 39px;
+  	font-size: 15.5px;
+}
+.icon2 {
+  	position: absolute;
+  	top: 29px;
+  	left: 0.25px;
+  	width: 20px;
+  	height: 20px;
+  	overflow: hidden;
+}
+.aga-global-usa {
+  	position: absolute;
+  	top: 3px;
+  	left: 36px;
+  	display: flex;
+  	align-items: center;
+  	width: 602px;
+  	height: 31px;
+}
+.item2 {
+  	position: absolute;
+  	width: calc(100% - 64px);
+  	top: 272px;
+  	right: 20px;
+  	left: 44px;
+  	height: 29px;
+  	font-size: 15.88px;
+}
+.we-will-develop-a-customized-q-parent {
+  	position: absolute;
+  	top: 1675.5px;
+  	left: 192.5px;
+  	border-radius: 20px;
+  	border: 1px solid #303f60;
+  	box-sizing: border-box;
+  	width: 609px;
+  	height: 553px;
+  	overflow: hidden;
+  	font-size: 16px;
+  	color: #333;
+}
+.get-a-quote {
+  	position: absolute;
+  	top: 44px;
+  	left: calc(50% - 160px);
+  	font-size: 30px;
+  	letter-spacing: 0.01em;
+  	font-weight: 500;
+  	text-align: center;
+}
+.name {
+  	position: absolute;
+  	top: 0px;
+  	left: calc(50% - 264px);
+}
+.group-child1 {
+  	position: absolute;
+  	top: 40px;
+  	left: 0px;
+  	border-top: 1px solid #8e8e8e;
+  	box-sizing: border-box;
+  	width: 529px;
+  	height: 1px;
+}
+.name-parent {
+  	position: absolute;
+  	top: 0px;
+  	left: calc(50% - 264px);
+  	width: 528px;
+  	height: 40px;
+}
+.group-wrapper {
+  	position: absolute;
+  	top: 120px;
+  	left: calc(50% - 260px);
+  	width: 528px;
+  	height: 40px;
+}
+.group-frame {
+  	position: absolute;
+  	top: 184px;
+  	left: calc(50% - 260px);
+  	width: 528px;
+  	height: 40px;
+}
+.group-div {
+  	position: absolute;
+  	top: 248px;
+  	left: calc(50% - 260px);
+  	width: 528px;
+  	height: 40px;
+}
+.group-child4 {
+  	position: absolute;
+  	top: 100px;
+  	left: 0px;
+  	border-top: 1px solid #8e8e8e;
+  	box-sizing: border-box;
+  	width: 529px;
+  	height: 1px;
+}
+.message-parent {
+  	position: absolute;
+  	top: 0px;
+  	left: calc(50% - 264px);
+  	width: 528px;
+  	height: 100px;
+}
+.group-wrapper1 {
+  	position: absolute;
+  	top: 312px;
+  	left: calc(50% - 260px);
+  	width: 528px;
+  	height: 100px;
+}
+.submit-now {
+  	position: absolute;
+  	top: calc(50% - 12px);
+  	left: calc(50% - 56.5px);
+  	font-weight: 500;
+}
+.submit-now-wrapper {
+  	position: absolute;
+  	top: 459px;
+  	left: calc(50% - 270px);
+  	border-radius: 120px;
+  	background: linear-gradient(178.73deg, #8e8e8e, #00008b 27.52%, #9e3623 75.99%, #c0c0c0);
+  	width: 241px;
+  	height: 56px;
+  	overflow: hidden;
+  	color: #fff;
+}
+.get-a-quote-parent {
+  	position: absolute;
+  	top: 1675.5px;
+  	left: 1037.5px;
+  	border-radius: 20px;
+  	border: 1px solid #303f60;
+  	box-sizing: border-box;
+  	width: 609px;
+  	height: 553px;
+  	overflow: hidden;
+}
+.div1 {
+  	position: absolute;
+  	top: 0px;
+  	left: calc(50% - 74.5px);
+  	letter-spacing: 0.01em;
+  	font-weight: 600;
+}
+.completed-projects {
+  	position: absolute;
+  	top: 84px;
+  	left: calc(50% - 115.5px);
+  	font-size: 24px;
+  	letter-spacing: 0.01em;
+  	font-weight: 500;
+}
+.parent {
+  	position: absolute;
+  	top: 0px;
+  	left: calc(50% - 545.5px);
+  	width: 231px;
+  	height: 113px;
+}
+.div2 {
+  	position: absolute;
+  	top: 0px;
+  	left: calc(50% - 50.5px);
+  	letter-spacing: 0.01em;
+  	font-weight: 600;
+}
+.experience {
+  	position: absolute;
+  	top: 84px;
+  	left: calc(50% - 65.5px);
+  	font-size: 24px;
+  	letter-spacing: 0.01em;
+  	font-weight: 500;
+}
+.group {
+  	position: absolute;
+  	top: 0px;
+  	left: calc(50% - 184.5px);
+  	width: 131px;
+  	height: 113px;
+}
+.div3 {
+  	position: absolute;
+  	top: 0px;
+  	left: calc(50% - 42.5px);
+  	letter-spacing: 0.01em;
+  	font-weight: 600;
+}
+.team-member {
+  	position: absolute;
+  	top: 84px;
+  	left: calc(50% - 83.5px);
+  	font-size: 24px;
+  	letter-spacing: 0.01em;
+  	font-weight: 500;
+}
+.container {
+  	position: absolute;
+  	top: 0px;
+  	left: calc(50% + 76.5px);
+  	width: 167px;
+  	height: 113px;
+}
+.div4 {
+  	position: absolute;
+  	top: 0px;
+  	left: calc(50% - 73px);
+  	letter-spacing: 0.01em;
+  	font-weight: 600;
+}
+.client-reviews {
+  	position: absolute;
+  	top: 84px;
+  	left: calc(50% - 86px);
+  	font-size: 24px;
+  	letter-spacing: 0.01em;
+  	font-weight: 500;
+}
+.parent1 {
+  	position: absolute;
+  	top: 0px;
+  	left: calc(50% + 373.5px);
+  	width: 172px;
+  	height: 113px;
+}
+.group-parent1 {
+  	position: absolute;
+  	top: 52px;
+  	left: calc(50% - 545px);
+  	width: 1091px;
+  	height: 113px;
+}
+.about-us-page-child {
+  	position: absolute;
+  	top: 1399px;
+  	left: calc(50% - 720px);
+  	background-color: #f3f3f3;
+  	width: 1440px;
+  	height: 217px;
+  	overflow: hidden;
+  	font-size: 56px;
+}
+.all-rights-reserved {
+  	position: absolute;
+  	top: calc(50% - 13px);
+  	left: calc(50% - 218px);
+  	display: flex;
+  	align-items: center;
+  	justify-content: center;
+  	width: 436px;
+  	height: 26px;
+}
+.background {
+  	position: absolute;
+  	width: calc(100% + 2px);
+  	top: 431px;
+  	right: -2px;
+  	left: 0px;
+  	background-color: #303f60;
+  	height: 66px;
+  	text-align: center;
+  	color: #fff;
+}
+.border {
+  	position: absolute;
+  	height: 78.47%;
+  	width: 97.5%;
+  	top: 3.62%;
+  	right: 1.25%;
+  	bottom: 17.91%;
+  	left: 1.25%;
+  	border: 1px solid #cde0ef;
+  	box-sizing: border-box;
+}
+.heading-3 {
+  	position: absolute;
+  	top: 0px;
+  	left: 0px;
+  	font-size: 19.06px;
+  	line-height: 24px;
+  	text-transform: uppercase;
+  	font-weight: 600;
+}
+.item-link {
+  	position: absolute;
+  	top: 53.75px;
+  	left: 0px;
+  	width: 73.5px;
+  	height: 25.5px;
+  	font-size: 16.73px;
+}
+.item-link1 {
+  	position: absolute;
+  	top: 94.25px;
+  	left: 0px;
+  	width: 66.7px;
+  	height: 25.5px;
+}
+.item-link2 {
+  	position: absolute;
+  	top: 135px;
+  	left: 0px;
+  	width: 139px;
+  	height: 25px;
+}
+.aga-al {
+  	position: absolute;
+  	top: -1px;
+  	left: 0px;
+  	line-height: 25.5px;
+}
+.item-link3 {
+  	position: absolute;
+  	top: 175.25px;
+  	left: 0px;
+  	width: 84.3px;
+  	height: 25.5px;
+  	font-size: 16.34px;
+}
+.contact {
+  	position: absolute;
+  	top: 0px;
+  	left: 0px;
+  	line-height: 25.5px;
+  	display: flex;
+  	align-items: center;
+  	width: 99.4px;
+  	height: 25.5px;
+}
+.item-link4 {
+  	position: absolute;
+  	top: 215.75px;
+  	left: 0px;
+  	width: 99.2px;
+  	height: 25.5px;
+  	font-size: 16.34px;
+}
+.heading-3-information-parent {
+  	position: absolute;
+  	top: 74px;
+  	left: 459.75px;
+  	width: 139px;
+  	height: 241.3px;
+  	font-size: 16.6px;
+}
+.heading-31 {
+  	position: absolute;
+  	top: 0px;
+  	left: 0.61px;
+  	line-height: 24px;
+  	text-transform: uppercase;
+  	font-weight: 600;
+  	display: flex;
+  	align-items: center;
+  	width: 86px;
+  	height: 24px;
+}
+.item3 {
+  	position: absolute;
+  	width: calc(100% - 46px);
+  	top: 54px;
+  	right: 45.64px;
+  	left: 0.36px;
+  	height: 39px;
+  	font-size: 15.63px;
+}
+.item4 {
+  	position: absolute;
+  	width: calc(100% - 46px);
+  	top: 93px;
+  	right: 45.64px;
+  	left: 0.36px;
+  	height: 39px;
+  	font-size: 15.5px;
+}
+.division-2-granite {
+  	margin: 0;
+}
+.aga-global-usa-container1 {
+  	width: 100%;
+}
+.aga-global-usa-container {
+  	position: absolute;
+  	top: 3px;
+  	left: 35.64px;
+  	line-height: 24px;
+  	display: flex;
+  	align-items: center;
+  	width: 266px;
+  	height: 71px;
+}
+.item5 {
+  	position: absolute;
+  	width: 100%;
+  	top: 132px;
+  	right: 0px;
+  	left: 0px;
+  	height: 74px;
+  	font-size: 15.88px;
+}
+.heading-3-contact-parent {
+  	position: absolute;
+  	top: 74px;
+  	left: 688.75px;
+  	width: 297px;
+  	height: 206px;
+  	font-size: 17.34px;
+}
+.empowering-brands-to {
+  	position: absolute;
+  	top: 80.79px;
+  	left: 0.25px;
+  	line-height: 30.4px;
+  	display: flex;
+  	align-items: center;
+  	width: 261.4px;
+  	height: 91.2px;
+}
+.item-link5 {
+  	position: absolute;
+  	top: 10px;
+  	left: 0px;
+  	border-radius: 18px;
+  	width: 36px;
+  	height: 36px;
+}
+.item-link6 {
+  	position: absolute;
+  	top: 10px;
+  	left: 61px;
+  	border-radius: 18px;
+  	width: 36px;
+  	height: 36px;
+}
+.item-link7 {
+  	position: absolute;
+  	top: 10px;
+  	left: 122px;
+  	border-radius: 18px;
+  	width: 36px;
+  	height: 36px;
+}
+.item-link8 {
+  	position: absolute;
+  	top: 10px;
+  	left: 183px;
+  	border-radius: 18px;
+  	width: 36px;
+  	height: 36px;
+}
+.list {
+  	position: absolute;
+  	width: calc(100% - 0.3px);
+  	top: 184.97px;
+  	right: 0.05px;
+  	left: 0.25px;
+  	height: 46px;
+  	overflow: hidden;
+}
+.image-1-icon1 {
+  	position: absolute;
+  	top: 0px;
+  	left: 0px;
+  	width: 125.3px;
+  	height: 80px;
+  	object-fit: cover;
+}
+.empowering-brands-to-reach-the-parent {
+  	position: absolute;
+  	top: 74px;
+  	left: 102px;
+  	width: 267.8px;
+  	height: 231px;
+  	font-size: 15.63px;
+}
+.envelope-regular-1-icon {
+  	position: absolute;
+  	top: 0px;
+  	left: 0px;
+  	width: 22px;
+  	height: 25.8px;
+  	overflow: hidden;
+}
+.subscribe-to-newsletter {
+  	position: absolute;
+  	top: 2.86px;
+  	left: 38px;
+  	font-weight: 600;
+  	display: inline-block;
+  	width: 211px;
+  	height: 21px;
+}
+.envelope-regular-1-parent {
+  	position: absolute;
+  	top: 0px;
+  	left: 0px;
+  	width: 249px;
+  	height: 25.8px;
+}
+.enter-your-name {
+  	position: absolute;
+  	top: 12.4px;
+  	left: 22px;
+  	display: inline-block;
+  	width: 109px;
+  	height: 16.2px;
+}
+.rectangle-div {
+  	position: absolute;
+  	top: 0px;
+  	left: 0px;
+  	border-radius: 10px;
+  	border: 1px solid #bababa;
+  	box-sizing: border-box;
+  	width: 262px;
+  	height: 45.8px;
+}
+.enter-your-name-parent {
+  	position: absolute;
+  	top: 0px;
+  	left: 0px;
+  	width: 262px;
+  	height: 45.8px;
+}
+.enter-your-e-mail {
+  	position: absolute;
+  	top: 14.31px;
+  	left: 22px;
+  	display: inline-block;
+  	width: 114px;
+  	height: 16.2px;
+}
+.enter-your-e-mail-parent {
+  	position: absolute;
+  	top: 56.44px;
+  	left: 0px;
+  	width: 262px;
+  	height: 45.8px;
+}
+.group-parent3 {
+  	position: absolute;
+  	top: 48.56px;
+  	left: 0px;
+  	width: 262px;
+  	height: 102.2px;
+  	font-size: 14px;
+}
+.group-child6 {
+  	position: absolute;
+  	top: 0px;
+  	left: 0px;
+  	border-radius: 10px;
+  	background-color: rgba(239, 235, 206, 0);
+  	border: 1px solid #bababa;
+  	box-sizing: border-box;
+  	width: 50px;
+  	height: 47.7px;
+}
+.paper-plane-solid-1-icon {
+  	position: absolute;
+  	top: 10px;
+  	left: 10px;
+  	width: 29px;
+  	height: 27.7px;
+  	overflow: hidden;
+}
+.rectangle-group {
+  	position: absolute;
+  	top: 169px;
+  	left: 0px;
+  	width: 50px;
+  	height: 47.7px;
+}
+.group-parent2 {
+  	position: absolute;
+  	top: 74px;
+  	left: 1076px;
+  	width: 262px;
+  	height: 216.7px;
+  	font-size: 18px;
+  	color: #2f2f2f;
+}
+.footer {
+  	position: absolute;
+  	top: 2328px;
+  	background-color: #f9f9f9;
+  	width: 100%;
+  	height: 497px;
+  	overflow: hidden;
+  	font-size: 14px;
+  	color: #333;
+}
+.about-us-page {
+  	width: 100%;
+  	position: relative;
+  	background-color: #fff;
+  	height: 2825px;
+  	overflow: hidden;
+  	text-align: left;
+  	font-size: 20px;
+  	color: #222;
+  	font-family: Inter;
+}
+
+
+    </style>
+</head>
+<body>
+  	
+  	<div class="about-us-page">
+    		<div class="image-1-parent">
+      			<img class="image-1-icon" alt="" src="assets/image 1.png">
+      			
+      			<div class="home-parent">
+        				<button class="home" onclick="location.href='index.html'">Home</button>
+        				<button class="about-us">About Us</button>
+        				<button class="aga-ai" onclick="location.href='agaAI.html'">AGA AI</button>
+        				<button class="smart-investment" onclick="location.href='smartInvest.html'">Smart Investment</button>
+        				<button class="contact-us" onclick="location.href='contactus.html'">Contact Us</button>
+      			</div>
+      			<div class="cta-1">
+        				<div class="group-parent">
+          					<img class="group-child" alt="" src="assets/Group 1.png">
+          					
+          					<div class="lets-talk">Let’s talk</div>
+        				</div>
+      			</div>
+    		</div>
+    		<div class="image-parent">
+      			<img class="image-icon" alt="" src="assets/image.png">
+      			
+      			<b class="about-us1">About Us</b>
+    		</div>
+    		<div class="about-us-page-inner">
+      			<div class="group-container">
+        				<div class="frame-parent">
+          					<div class="learn-more-wrapper">
+            						<div class="learn-more">Learn more</div>
+          					</div>
+          					<div class="about-us2">About Us</div>
+          					<div class="at-aga-global">At AGA Global USA, we are redefining the investment landscape by combining cutting-edge technology with unparalleled financial expertise. With our proprietary AGA's Power of Quantum Al investing technology, we offer a revolutionary approach to managing and growing your wealth. Our mission is to empower individual investors, institutions, and corporations with innovative tools and strategies that drive smarter, data-driven investment decisions.</div>
+          					<div class="our-quantum-al">Our Quantum Al technology leverages artificial intelligence and advanced analytics to analyse market trends, optimize portfolios, and identify new opportunities in real-time. This intelligent system ensures that your investments are always aligned with the most up-to-date market insights, providing you with a competitive edge in an ever- evolving financial world.</div>
+          					<div class="your-trusted-financial">Your Trusted Financial Partner</div>
+          					<div class="power-of-quantum">Power Of Quantum Al For Smarter Investments.</div>
+        				</div>
+        				<div class="rectangle-parent">
+          					<div class="group-item">
+          					</div>
+          					<img class="group-inner" alt="" src="assets/dunia.png">
+          					
+        				</div>
+      			</div>
+    		</div>
+    		<div class="we-will-develop-a-customized-q-parent">
+      			<div class="we-will-develop">We will develop a customized quote according to your goals and budget. Let's get started.</div>
+      			<div class="lets-communicate-parent">
+        				<div class="lets-communicate">Let's Communicate</div>
+        				<div class="line-div">
+        				</div>
+      			</div>
+      			<div class="item">
+                    <i class="fas fa-envelope icon"></i>
+                      
+                      <div class="abcgmailcom">abc@gmail.com</div>
+                </div>
+                <div class="item1">
+              
+                    <i class="fas fa-phone icon"></i> <!-- Phone icon -->
+                      
+                      <div class="div">+92 3488 400 155</div>
+                </div>
+                <div class="item2">
+                
+                    <i class="fas fa-map-marker-alt icon"></i> <!-- Location icon -->
+        				
+        				<div class="aga-global-usa">AGA GLOBAL USA US
+ DIVISION 2 Granite Avenue Milton, MA 02186</div>
+      			</div>
+    		</div>
+    		<div class="get-a-quote-parent">
+      			<div class="get-a-quote">Get a Quote</div>
+      			<div class="group-wrapper">
+        				<div class="name-parent">
+          					<div class="name">Name</div>
+          					<div class="group-child1">
+          					</div>
+        				</div>
+      			</div>
+      			<div class="group-frame">
+        				<div class="name-parent">
+          					<div class="name">Email</div>
+          					<div class="group-child1">
+          					</div>
+        				</div>
+      			</div>
+      			<div class="group-div">
+        				<div class="name-parent">
+          					<div class="name">Phone</div>
+          					<div class="group-child1">
+          					</div>
+        				</div>
+      			</div>
+      			<div class="group-wrapper1">
+        				<div class="message-parent">
+          					<div class="name">Message</div>
+          					<div class="group-child4">
+          					</div>
+        				</div>
+      			</div>
+      			<div class="submit-now-wrapper">
+        				<div class="submit-now">Submit now</div>
+      			</div>
+    		</div>
+    		<div class="about-us-page-child">
+      			<div class="group-parent1">
+        				<div class="parent">
+          					<div class="div1">500+</div>
+          					<div class="completed-projects">Completed Projects</div>
+        				</div>
+        				<div class="group">
+          					<div class="div2">15+</div>
+          					<div class="experience">Experience</div>
+        				</div>
+        				<div class="container">
+          					<div class="div3">50+</div>
+          					<div class="team-member">Team Member</div>
+        				</div>
+        				<div class="parent1">
+          					<div class="div4">250+</div>
+          					<div class="client-reviews">Client Reviews</div>
+        				</div>
+      			</div>
+    		</div>
+    		<div class="footer">
+      			<div class="background">
+        				<div class="all-rights-reserved">© 2024 All Rights Reserved. Design by Salman.UI UX</div>
+      			</div>
+      			<div class="border">
+      			</div>
+      			<div class="heading-3-information-parent">
+        				<div class="heading-3">Quick links</div>
+        				<div class="item-link">
+          					<div class="aga-al">Home</div>
+        				</div>
+        				<div class="item-link1">
+          					<div class="aga-al">About Us</div>
+        				</div>
+        				<div class="item-link2">
+          					<div class="aga-al">Smart Investment</div>
+        				</div>
+        				<div class="item-link3">
+          					<div class="aga-al">Aga Al</div>
+        				</div>
+        				<div class="item-link4">
+          					<div class="contact">Contact</div>
+        				</div>
+      			</div>
+      			<div class="heading-3-contact-parent">
+        				<div class="heading-31">Contact</div>
+        				<div class="item3">
+                            <i class="fas fa-envelope icon"></i>
+          					
+          					<div class="abcgmailcom">abc@gmail.com</div>
+        				</div>
+        				<div class="item4">
+                      
+                            <i class="fas fa-phone icon"></i> <!-- Phone icon -->
+          					
+          					<div class="div">+92 3488 400 155</div>
+        				</div>
+        				<div class="item5">
+                        
+                            <i class="fas fa-map-marker-alt icon"></i> <!-- Location icon -->
+          					
+          					<div class="aga-global-usa-container">
+            						<span class="aga-global-usa-container1">
+              							<p class="division-2-granite">AGA GLOBAL USA US</p>
+              							<p class="division-2-granite">DIVISION 2 Granite Avenue Milton, MA 02186</p>
+            						</span>
+          					</div>
+        				</div>
+      			</div>
+      			<div class="empowering-brands-to-reach-the-parent">
+        				<div class="empowering-brands-to">Empowering brands to reach their fullest potential through innovative digital marketing solutions.</div>
+        				<div class="list">
+                            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+                            <i class="fab fa-facebook item-link5"></i>
+                            <i class="fab fa-twitter item-link6"></i>
+                            <i class="fab fa-google item-link7"></i>
+                            <i class="fab fa-instagram item-link8"></i>
+          					
+        				</div>
+        				<img class="image-1-icon1" alt="" src="assets/image 1.png">
+        				
+      			</div>
+      			<div class="group-parent2">
+        				<div class="envelope-regular-1-parent">
+                            <i class="fas fa-envelope envelope-regular-1-icon"></i>
+          					
+          					<div class="subscribe-to-newsletter">Subscribe to Newsletter</div>
+        				</div>
+        				<div class="group-parent3">
+          					<div class="enter-your-name-parent">
+            						<div class="enter-your-name">Enter your name</div>
+            						<div class="rectangle-div">
+            						</div>
+          					</div>
+          					<div class="enter-your-e-mail-parent">
+            						<div class="enter-your-e-mail">Enter your e-mail</div>
+            						<div class="rectangle-div">
+            						</div>
+          					</div>
+        				</div>
+        				<div class="rectangle-group">
+          					<div class="group-child6">
+          					</div>
+          					<i class="fas fa-paper-plane paper-plane-solid-1-icon"></i>
+          					
+        				</div>
+      			</div>
+    		</div>
+  	</div>
+  	
+  	
+  	
+  	
+</body>
+</html>

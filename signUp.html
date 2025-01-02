@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html>
+<head>
+  	<meta charset="utf-8">
+  	<meta name="viewport" content="initial-scale=1, width=device-width">
+  	
+  	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" />
+    
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  	
+  	<style>
+
+button {
+            background: none;
+            /* Remove default button background */
+            border: none;
+            /* Remove default button border */
+
+            cursor: pointer;
+            /* Add spacing */
+            border-radius: 5px;
+            /* Optional: add rounded corners */
+            transition: background-color 0.3s, color 0.3s;
+            /* Add hover effect */
+            color: white;
+        }
+
+        .welcome-to-aga {
+  	position: absolute;
+  	top: 0px;
+  	left: calc(50% - 280.9px);
+  	letter-spacing: 0.5px;
+  	font-weight: 600;
+}
+.sign-in {
+            top: 0px;
+            color: #DDB18B;
+            font-size: 20px;
+            font-weight: bolder;
+        }
+.group-child1 {
+            position: absolute;
+            height: 100%;
+            width: 64.16%;
+            top: 10%;
+            right: 75.84%;
+            bottom: 0%;
+            left: 0%;
+            max-width: 100%;
+            overflow: hidden;
+            max-height: 100%;
+        }
+.sign-in-parent {
+  	position: absolute;
+  	top: 10px;
+  	left: 469px;
+  	width: 92.8px;
+  	height: 19px;
+  	text-align: center;
+  	font-size: 16px;
+  	color: #ddb18b;
+}
+.welcome-to-aga-global-parent {
+  	position: absolute;
+  	top: 0px;
+  	left: calc(50% - 178.9px);
+  	width: 561.8px;
+  	height: 39px;
+}
+.create-account {
+            position: absolute;
+            top: calc(50% - 14.5px);
+            left: 40%;
+            font-weight: 600;
+            font-size: larger;
+        }
+.create-account-wrapper {
+  	position: absolute;
+  	top: 0px;
+  	left: calc(50% - 371.5px);
+  	border-radius: 20px;
+  	background: linear-gradient(178.73deg, #8e8e8e, #00008b 27.52%, #9e3623 75.99%, #c0c0c0);
+  	width: 743px;
+  	height: 81px;
+  	overflow: hidden;
+}
+.frame-wrapper {
+  	position: absolute;
+  	top: 422px;
+  	left: calc(50% - 371.5px);
+  	width: 743px;
+  	height: 81px;
+  	text-align: left;
+}
+.or-log-in {
+  	position: absolute;
+  	top: calc(50% - 52.5px);
+  	left: calc(50% - 43px);
+}
+.group-item {
+  	position: absolute;
+  	height: 100%;
+  	width: 31.64%;
+  	top: 0%;
+  	right: 68.36%;
+  	bottom: 0%;
+  	left: 0%;
+  	max-width: 100%;
+  	overflow: hidden;
+  	max-height: 100%;
+}
+.google {
+  	position: absolute;
+  	top: 6px;
+  	left: 43.64px;
+  	font-weight: 500;
+}
+.group-div {
+  	position: absolute;
+  	height: 57.14%;
+  	width: 58%;
+  	top: 21.43%;
+  	right: 20.82%;
+  	bottom: 21.43%;
+  	left: 21.18%;
+}
+
+.password-wrapper input {
+            background-color: transparent !important;
+            outline: none !important;
+            border: none; /* If there's a border, it will show an outline-like effect */
+            font-size: 1.5rem; /* Make the font size larger for a bigger input box */
+            width: 100%; /* Adjust the width as needed */
+            padding: 10px; /* Add padding for a larger input field */
+        }
+
+        .email-wrapper input {
+            background-color: transparent !important;
+            outline: none !important;
+            border: none; /* If there's a border, it will show an outline-like effect */
+            font-size: 1.5rem; /* Make the font size larger for a bigger input box */
+            width: 100%; /* Adjust the width as needed */
+            padding: 10px; /* Add padding for a larger input field */
+        }
+
+.group-wrapper {
+  	position: absolute;
+  	top: 0px;
+  	left: 0px;
+  	border-radius: 8px;
+  	border: 0.5px solid #999;
+  	box-sizing: border-box;
+  	width: 170.5px;
+  	height: 56.5px;
+  	overflow: hidden;
+}
+.group-inner {
+  	position: absolute;
+  	height: 100%;
+  	width: 24.16%;
+  	top: 0%;
+  	right: 75.84%;
+  	bottom: 0%;
+  	left: 0%;
+  	max-width: 100%;
+  	overflow: hidden;
+  	max-height: 100%;
+}
+.apple {
+  	position: absolute;
+  	top: 4px;
+  	left: 47.3px;
+  	font-weight: 500;
+}
+.group-parent1 {
+  	position: absolute;
+  	height: 46.43%;
+  	width: 54.29%;
+  	top: 26.79%;
+  	right: 29.24%;
+  	bottom: 26.79%;
+  	left: 16.47%;
+}
+.group-frame {
+  	position: absolute;
+  	top: 0px;
+  	left: 190px;
+  	border-radius: 8px;
+  	border: 0.5px solid #999;
+  	box-sizing: border-box;
+  	width: 170.5px;
+  	height: 56.5px;
+  	overflow: hidden;
+}
+.frame-parent {
+  	position: absolute;
+  	top: 49px;
+  	left: 0px;
+  	width: 360px;
+  	height: 56px;
+  	font-size: 16px;
+  	color: #333;
+}
+.or-log-in-with-parent {
+  	position: absolute;
+  	top: calc(50% + 220px);
+  	left: calc(50% - 179.5px);
+  	width: 360px;
+  	height: 105px;
+  	font-size: 14px;
+  	color: #999;
+}
+.mobile {
+  	position: absolute;
+  	top: 1px;
+  	left: 133px;
+  	font-weight: 600;
+}
+.email {
+  	position: absolute;
+  	top: 0px;
+  	left: 0px;
+  	font-weight: 600;
+}
+.rectangle-div {
+  	position: absolute;
+  	top: 25px;
+  	left: 3px;
+  	border-radius: 10px;
+  	background-color: #ddb18b;
+  	width: 48px;
+  	height: 2px;
+}
+.email-parent {
+  	position: absolute;
+  	top: 0px;
+  	left: 0px;
+  	width: 400px;
+  	height: 27px;
+  	color: #ddb18b;
+}
+.mobile-parent {
+  	position: absolute;
+  	top: 0px;
+  	left: 3px;
+  	width: 400px;
+  	height: 27px;
+}
+.email-wrapper {
+  	position: absolute;
+  	top: calc(50% - 12.5px);
+  	left: 42px;
+  	width: 400px;
+  	height: 24px;
+}
+.frame-div {
+  	position: absolute;
+  	top: 0px;
+  	left: calc(50% - 371.5px);
+  	border-radius: 10px;
+  	background-color: #f4f5f7;
+  	width: 743px;
+  	height: 65px;
+  	overflow: hidden;
+}
+.password {
+  	position: absolute;
+  	top: calc(50% - 12px);
+  	left: 0px;
+  	font-weight: 500;
+}
+.password-wrapper {
+            position: absolute;
+            top: calc(50% - 12.5px);
+            left: 42px;
+            width: 400px;
+            height: 24px;
+        }
+.frame-child {
+  	position: absolute;
+  	height: 36.92%;
+  	width: 3.59%;
+  	top: 30.77%;
+  	right: 5.69%;
+  	bottom: 32.31%;
+  	left: 90.71%;
+  	max-width: 100%;
+  	overflow: hidden;
+  	max-height: 100%;
+}
+.group-parent4 {
+  	position: absolute;
+  	top: 89px;
+  	left: calc(50% - 371.5px);
+  	border-radius: 10px;
+  	background-color: #f4f5f7;
+  	width: 743px;
+  	height: 65px;
+  	overflow: hidden;
+}
+.wrapper {
+  	position: absolute;
+  	top: calc(50% - 12.5px);
+  	left: 42px;
+  	width: 84px;
+  	height: 24px;
+}
+.group-wrapper1 {
+  	position: absolute;
+  	top: 35px;
+  	left: calc(50% - 371.5px);
+  	border-radius: 10px;
+  	background-color: #f4f5f7;
+  	width: 743px;
+  	height: 65px;
+  	overflow: hidden;
+}
+.referral-code-optional {
+  	position: absolute;
+  	top: 0px;
+  	left: 0px;
+  	font-size: 16px;
+  	font-weight: 500;
+  	color: #555;
+  	text-align: center;
+}
+.frame-container {
+  	position: absolute;
+  	top: 178px;
+  	left: calc(50% - 371.5px);
+  	width: 743px;
+  	height: 100px;
+}
+.frame-group {
+  	position: absolute;
+  	top: 0px;
+  	left: calc(50% - 371.5px);
+  	width: 743px;
+  	height: 278px;
+}
+.terms-of-services {
+  	color: #ddb18b;
+}
+.group-icon {
+            position: absolute;
+            height: 100%;
+            width: 31.64%;
+            top: 10%;
+            right: 68.36%;
+            bottom: 0%;
+            left: 0%;
+            max-width: 100%;
+            overflow: hidden;
+            max-height: 100%;
+        }
+.by-clickingcreate-account-container {
+  	position: absolute;
+  	top: calc(50% - 8.5px);
+  	left: 27px;
+  	display: inline-block;
+  	width: 525px;
+}
+.frame-icon {
+  	position: absolute;
+  	top: 1px;
+  	left: 0px;
+  	border-radius: 2px;
+  	width: 16px;
+  	height: 15px;
+  	overflow: hidden;
+}
+.by-clickingcreate-account-y-parent {
+  	position: absolute;
+  	top: calc(50% + 138.5px);
+  	left: 0px;
+  	width: 552px;
+  	height: 17px;
+  	text-align: center;
+  	font-size: 14px;
+  	color: #b0b0b0;
+}
+.group-parent3 {
+  	position: absolute;
+  	top: 63px;
+  	left: calc(50% - 371.5px);
+  	width: 743px;
+  	height: 311px;
+  	text-align: left;
+  	color: #777;
+}
+.group-parent2 {
+  	position: absolute;
+  	top: 0px;
+  	left: 0px;
+  	width: 743px;
+  	height: 374px;
+  	font-size: 20px;
+  	color: #000;
+}
+.group-container {
+  	position: absolute;
+  	top: 85px;
+  	left: calc(50% - 382.9px);
+  	width: 743px;
+  	height: 650px;
+  	text-align: center;
+  	font-size: 24px;
+  	color: #fff;
+}
+.group-parent {
+  	position: absolute;
+  	top: 69px;
+  	left: calc(50% - 373px);
+  	width: 765.8px;
+  	height: 735px;
+}
+.sign-in-page-inner {
+  	position: absolute;
+  	top: calc(50% - 437px);
+  	left: calc(50% - 620px);
+  	box-shadow: 0px 4px 15px 4px rgba(216, 216, 216, 0.25);
+  	border-radius: 12px;
+  	background-color: #fff;
+  	width: 1240px;
+  	height: 874px;
+  	overflow: hidden;
+}
+.sign-in-page {
+  	width: 100%;
+  	position: relative;
+  	background-color: #f8f8f8;
+  	height: 1024px;
+  	overflow: hidden;
+  	text-align: left;
+  	font-size: 32px;
+  	color: #333;
+  	font-family: Inter;
+}
+
+
+    </style>
+  	
+</head>
+<body>
+  	
+  	<div class="sign-in-page">
+    		<div class="sign-in-page-inner">
+      			<div class="group-parent">
+        				<div class="welcome-to-aga-global-parent">
+          					<div class="welcome-to-aga">Welcome to AGA Global</div>
+          					<div class="sign-in-parent">
+                                <button class="sign-in" onclick="location.href='login.html'">Sign In</button>
+            						
+          					</div>
+        				</div>
+        				<div class="group-container">
+          					<div class="frame-wrapper">
+            						<div class="create-account-wrapper">
+                                        <button class="create-account" onclick="location.href='login.html'">Create Account</button>
+            						</div>
+          					</div>
+          					<div class="or-log-in-with-parent">
+            						<div class="or-log-in">or log in with</div>
+            						<div class="frame-parent">
+              							<div class="group-wrapper">
+                								<div class="group-div">
+                                                    <i class="fab fa-google group-icon"></i>
+                  									
+                  									<div class="google">Google</div>
+                								</div>
+              							</div>
+              							<div class="group-frame">
+                								<div class="group-parent1">
+                                                    <i class="fab fa-apple group-child1"></i>
+                  									
+                  									<div class="apple">Apple</div>
+                								</div>
+              							</div>
+            						</div>
+          					</div>
+          					<div class="group-parent2">
+            						<div class="mobile-parent">
+              							<div class="mobile">Mobile</div>
+              							<div class="email-parent">
+                								<div class="email">Email</div>
+                								<div class="rectangle-div">
+                								</div>
+              							</div>
+            						</div>
+            						<div class="group-parent3">
+              							<div class="frame-group">
+                								<div class="frame-div">
+                                                    <div class="email-wrapper">
+                                                        <input class="password" placeholder="Enter Email">
+                                                    </div>
+                								</div>
+                								<div class="group-parent4">
+                                                    <div class="password-wrapper">
+                                                        <input class="password"  id="password" placeholder="Enter password">
+                                                    </div>
+                
+                                                    <i class="fas fa-eye frame-child" onclick="togglePassword()"></i>
+                
+                                                    <script>
+                                                        function togglePassword() {
+                                                            var passwordField = document.getElementById('password');
+                                                            var icon = document.querySelector('.frame-child');
+                
+                                                            if (passwordField.type === "password") {
+                                                                passwordField.type = "text";  // Show password
+                                                                icon.classList.remove('fa-eye');
+                                                                icon.classList.add('fa-eye-slash');  // Change to "eye-slash" icon
+                                                            } else {
+                                                                passwordField.type = "password";  // Hide password
+                                                                icon.classList.remove('fa-eye-slash');
+                                                                icon.classList.add('fa-eye');  // Change back to "eye" icon
+                                                            }
+                                                        }
+                                                    </script>
+                
+                
+                                                </div>
+                								<div class="frame-container">
+                  									<div class="group-wrapper1">
+                    										<div class="wrapper">
+                      											<div class="password">---------</div>
+                    										</div>
+                  									</div>
+                  									<div class="referral-code-optional">Referral Code (optional)</div>
+                								</div>
+              							</div>
+              							<div class="by-clickingcreate-account-y-parent">
+                								<div class="by-clickingcreate-account-container">
+                  									<span>By clicking”Create Account”, you agree to </span>
+                  									<span class="terms-of-services">Terms of Services</span>
+                  									<span> and </span>
+                  									<span class="terms-of-services">Privacy Policy</span>
+                								</div>
+                								<img class="frame-icon" alt="" src="assets/Frame 48.svg">
+                								
+              							</div>
+            						</div>
+          					</div>
+        				</div>
+      			</div>
+    		</div>
+  	</div>
+  	
+  	
+  	
+  	
+</body>
+</html>
